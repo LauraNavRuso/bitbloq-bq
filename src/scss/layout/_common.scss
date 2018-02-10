@@ -4,3 +4,51 @@ body {
   font-family: sans-serif;
 	box-sizing: border-box;
 }
+.profile {
+  position: relative;
+  padding: 1em;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index:1;
+    left:0;
+    bottom: 0;
+    height: 50%;
+    background: grey;
+    width: 100%;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+ }
+.profile--avatar {
+  grid-column: 1/2;
+  grid-row: span 2;
+}
+.profile--avatar-image {
+  width: 100%;
+  border-radius: 50%;
+}
+.profile--name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  grid-column: 2/3;
+}
+.profile--name-real{
+  margin-right: 15px;
+}
+.profile--name-user{
+  margin-top: 27px;
+  color: #b9bca9;
+}
+.profile--role {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin:0;
+}
