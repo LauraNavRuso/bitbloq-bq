@@ -1,6 +1,6 @@
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 30px; }
 
 .button--social {
@@ -55,17 +55,22 @@ body {
 
 .profile--name {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  grid-column: 2/3; }
+  flex-direction: column; }
+  @media all and (min-width: 600px) {
+    .profile--name {
+      flex-direction: row;
+      justify-content: flex-start;
+      grid-column: 2/3; } }
 
 .profile--name-real {
   margin-right: 15px; }
 
 .profile--name-user {
-  font-size: 20px;
-  margin-top: 31px;
+  font-size: 1em;
   color: #b9bca9; }
+  @media all and (min-width: 600px) {
+    .profile--name-user {
+      margin-top: 35px; } }
 
 .profile--role {
   grid-column: 2/3;
@@ -75,6 +80,18 @@ body {
 .icon {
   height: 20px;
   width: 20px; }
+
+.user--data {
+  display: flex;
+  flex-direction: column; }
+  @media all and (min-width: 800px) {
+    .user--data {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.proyect--number {
+  font-size: 1.2em;
+  margin-top: 31px; }
 
 .header {
   height: 70px;
