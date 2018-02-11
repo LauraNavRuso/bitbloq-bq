@@ -7,7 +7,63 @@ body {
 .header {
   height: 70px;
   max-height: 70px;
-  background-color: #4f4e4d; }
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  background-color: #373b44; }
+
+.header--icon {
+  background-color: #82ad3a;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header--icon:hover {
+    background-color: #5b7929; }
+
+.header--icon--logo {
+  height: 30px;
+  width: 30px; }
+
+.header--menu {
+  width: 420px; }
 
 .header--menu--list {
-  list-style: none; }
+  list-style: none;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 15px; }
+
+.header--menu--link {
+  color: #676a71;
+  display: flex;
+  flex-direction: row;
+  align-self: center; }
+  .header--menu--link:hover {
+    color: #FFFFFF; }
+
+.menu--link-icon {
+  margin-right: 5px; }
+
+.menu--button {
+  position: absolute;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px; }
+
+.header--menu--button {
+  width: 170px;
+  height: 35px;
+  background-color: #ebebeb;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0; }
+  .header--menu--button:hover {
+    background-color: #f6f5f5; }
