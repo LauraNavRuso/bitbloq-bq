@@ -9,6 +9,10 @@ button, input, select {
   outline: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 .profile {
   position: relative;
   padding: 1em;

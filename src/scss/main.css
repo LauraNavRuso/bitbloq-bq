@@ -1,4 +1,4 @@
-.order-view {
+.order--view {
   min-width: 70px;
   height: 34px;
   background-color: #ffffff;
@@ -7,6 +7,9 @@
   font-style: italic;
   margin-right: 20px;
   border-radius: 4px; }
+
+.order--option {
+  height: 34px; }
 
 .views--grid {
   border-top-left-radius: 4px;
@@ -35,7 +38,8 @@
   font-style: italic;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  cursor: pointer; }
 
 .search {
   min-width: 70px;
@@ -79,6 +83,9 @@ body {
 
 button, input, select {
   outline: none; }
+
+button {
+  cursor: pointer; }
 
 .profile {
   position: relative;
