@@ -6,14 +6,15 @@ import Search from './actionsBar/Search';
 class ActionsBar extends Component {
 	render() {
 		return (
-			<div className="App">
-
-				<Dropdown />
-				<Visualization />
-				<Dropdown />
-				<Search />
-
-
+			<div className="explore--toolbar--container">
+				<div className="views">
+					<Dropdown />
+					<Visualization />
+				</div>
+				<div className="filter--search">
+					<Dropdown />
+					<Search />
+				</div>
 			</div>
 		);
 	}

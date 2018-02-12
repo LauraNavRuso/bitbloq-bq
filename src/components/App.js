@@ -10,10 +10,12 @@ class App extends Component {
 		return (
 			<div>
 				<Header />
-				<User />
-				<ActionsBar />
-				<ProjectCard />
-				<PaginationBar />
+				<div className="main">
+					<User />
+					<ActionsBar />
+					<ProjectCard />
+					<PaginationBar />
+				</div>
 			</div>
 		);
 	}
