@@ -4,7 +4,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div>
-				<input placeholder="Search"></input>
+				<input className="search" placeholder="Search"></input>
 			</div>
 		);
 	}

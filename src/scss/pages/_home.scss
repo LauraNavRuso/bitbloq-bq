@@ -1,0 +1,12 @@
+//Actions bar
+.explore--toolbar--container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+}
+
+//Visualization
+.views, .filter--search {
+  display: flex;
+}
