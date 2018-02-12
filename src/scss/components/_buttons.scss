@@ -8,6 +8,7 @@
 	cursor:pointer;
 	border: none;
 	margin-right: 5px;
+  padding: 5px;
 }
 
 .button--social:after {
@@ -16,8 +17,13 @@
 }
 .box--button{
 	display: flex;
-
+  margin-right: 20px;
 }
 .counter{
 	background-color:  #ffffff;
+  font-size: 15px;
+}
+.icon--social{
+  width: 12px;
+  height: 12px;
 }

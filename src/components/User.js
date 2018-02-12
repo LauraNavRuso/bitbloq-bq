@@ -5,7 +5,7 @@ import SocialNetwork from './user/SocialNetwork';
 class User extends Component {
 	render() {
 		return (
-			<div className="App">
+			<div className="page">
 				<div className="profile">
 					<div className="wrapper">
 						<div className="profile--avatar">
