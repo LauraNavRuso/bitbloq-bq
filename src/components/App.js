@@ -8,12 +8,16 @@ import PaginationBar from './PaginationBar';
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<Header />
-				<User />
-				<ActionsBar />
-				<ProjectCard />
-				<PaginationBar />
+			<div className="page">
+				<div className="nav">
+					<Header />
+					<User />
+				</div>
+				<div className="main">
+					<ActionsBar />
+					<ProjectCard />
+					<PaginationBar />
+				</div>
 			</div>
 		);
 	}

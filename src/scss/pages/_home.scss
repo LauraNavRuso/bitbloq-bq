@@ -1,0 +1,101 @@
+//Actions bar
+.explore--toolbar {
+  width: 100;
+  height: 35px;
+  padding: 20px;
+}
+
+.explore--toolbar--container {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+//Visualization
+.views--container, .filter-search--container {
+  display: flex;
+}
+//Profile User
+.wrapper {
+  margin: 0 20px;
+}
+.profile {
+  position: relative;
+  padding: 1em;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index:1;
+    left:0;
+    bottom: 0;
+    height: 50%;
+    background: #e0e0e0;
+    width: 100%;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+ }
+.profile--avatar {
+  grid-column: 1/2;
+  grid-row: span 2;
+}
+.profile--avatar-image {
+  width: 100%;
+  border-radius: 50%;
+}
+.profile--name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  grid-column: 2/3;
+}
+.profile--name-real{
+  margin-bottom: 5px;
+  margin-right: 15px;
+  font-size: 1.2em;
+  @media all and (min-width:770px) {
+    font-size: 1.5em;
+    }
+}
+.profile--name-user{
+  font-size: 0.8em;
+  color: #8c8c8c;
+  margin-top: 18px;
+  @media all and (min-width:770px) {
+    margin-top: 23px;
+    font-size: 1em;
+    }
+}
+.profile--role {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin:0;
+}
+.proyect--number{
+  font-size: 1em;
+  margin-top: 5px;
+  color: #6b6b6b;
+  @media all and (min-width:770px) {
+    margin-top: 17px;
+    font-size: 1.2em;
+    }
+}
+.icon{
+  height: 20px;
+  width: 20px;
+}
+.user--data{
+  display: flex;
+  flex-direction: column;
+  @media all and (min-width:770px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    }
+}
