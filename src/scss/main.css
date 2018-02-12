@@ -116,7 +116,8 @@ body {
   width: 30px; }
 
 .header--menu {
-  width: 420px; }
+  width: 420px;
+  padding-left: 5px; }
 
 .header--menu--list {
   list-style: none;
@@ -125,17 +126,44 @@ body {
   justify-content: space-between;
   margin-top: 24px;
   margin-bottom: 15px; }
+  @media all and (max-width: 520px) {
+    .header--menu--list {
+      padding-left: 5px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: initial; } }
 
 .header--menu--link {
-  color: #676a71;
+  padding-right: 8px; }
+
+.menu--link {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-self: center; }
-  .header--menu--link:hover {
+  @media all and (max-width: 520px) {
+    .menu--link {
+      display: flex;
+      flex-direction: column;
+      padding-right: 5px; } }
+
+.menu--link--span {
+  color: #676a71; }
+  .menu--link--span:hover {
     color: #FFFFFF; }
 
 .menu--link-icon {
-  margin-right: 5px; }
+  margin-right: 5px;
+  width: 18px;
+  height: 18px; }
+  @media all and (max-width: 520px) {
+    .menu--link-icon {
+      margin-right: 0;
+      display: flex;
+      align-self: flex-start; } }
+
+.menu--link-projects {
+  background-image: url("../images/icon-students.svg"); }
 
 .menu--button {
   position: absolute;
@@ -156,3 +184,7 @@ body {
   padding: 0; }
   .header--menu--button:hover {
     background-color: #f6f5f5; }
+  @media all and (max-width: 520px) {
+    .header--menu--button {
+      width: 70px;
+      margin-right: 5px; } }

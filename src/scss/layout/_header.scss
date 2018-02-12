@@ -25,10 +25,10 @@
 }
 
 .header--menu {
-	// background-color: #373b44;
-	width: 420px;
-
+		width: 420px;
+		padding-left: 5px;
 }
+
 .header--menu--list {
 	list-style: none;
 	padding-left: 20px;
@@ -36,13 +36,29 @@
 	justify-content: space-between;
 	margin-top: 24px;
 	margin-bottom: 15px;
+	@media all and (max-width: 520px){
+		padding-left: 5px;
+		margin-top: 15px;
+		display: flex;
+    justify-content: initial;
+	}
 }
-
-.header--menu--link {
-	color: #676a71;
+.header--menu--link{
+	padding-right: 8px;
+}
+.menu--link{
+	text-decoration: none;
 	display: flex;
   flex-direction: row;
   align-self: center;
+	@media all and (max-width: 520px){
+		display: flex;
+		flex-direction: column;
+		padding-right: 5px;
+	}
+}
+.menu--link--span{
+	color: #676a71;
 	&:hover {
 		color: #FFFFFF;
 	}
@@ -50,6 +66,17 @@
 
 .menu--link-icon {
 	margin-right: 5px;
+	width: 18px;
+  height: 18px;
+	@media all and (max-width: 520px){
+		margin-right: 0;
+		display: flex;
+		align-self: flex-start;
+	}
+}
+.menu--link-projects{
+	background-image: url('../images/icon-students.svg');
+
 }
 
 .menu--button {
@@ -70,8 +97,12 @@
 	justify-content: center;
 	border-radius: 5px;
 	padding: 0;
+
 	&:hover {
 		background-color: #f6f5f5;
-
+	}
+	@media all and (max-width: 520px){
+		width: 70px;
+		margin-right: 5px;
 	}
 }
