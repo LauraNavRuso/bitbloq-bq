@@ -6,6 +6,17 @@
   border: 1px solid #cfcfcf;
   background-color: #ffffff; }
 
+.search, .order-view {
+  color: #8c919b;
+  text-align: left;
+  height: 34px;
+  font-style: italic;
+  min-width: 70px;
+  padding-right: .2em;
+  padding-left: .5em;
+  align-items: center;
+  background-color: #ffffff; }
+
 body {
   margin: 0;
   padding: 0;
@@ -84,14 +95,3 @@ body {
 
 .views, .filter--search {
   display: flex; }
-
-select, input {
-  color: #8c919b;
-  text-align: left;
-  height: 34px;
-  font-style: italic;
-  min-width: 70px;
-  padding-right: .2em;
-  padding-left: .5em;
-  align-items: center;
-  background-color: #ffffff; }
