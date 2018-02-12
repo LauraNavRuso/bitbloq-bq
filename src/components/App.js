@@ -8,14 +8,17 @@ import PaginationBar from './PaginationBar';
 class App extends Component {
 	constructor(props){
 			super(props);
-			// this.onChangeListener = this.onChangeListener.bind(this);
+			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
 				projectsForSpecificUser: []
 			};
 		}
 
 	componentDidMount() {
-		fetch('https://api-beta-bitbloq.bq.com/bitbloq/v1/project?page=0&query=%7B%22creator%22:{%22_id%22:%225a42d48efd2db9001cd5c48c%22,%22username%22:%22piqui%22}%7D')
+		let userInputContent = document.getElementById('user-input-id-creator').value;
+		let usernameInputContent = document.getElementById('user-input-username').value;
+
+		fetch(`https://api-beta-bitbloq.bq.com/bitbloq/v1/project?page=0&query=%7B%22creator%22:{%22_id%22:%22569cd00be4b03b226c664f6a%22,%22username%22:%22naiara1712%22}%7D`)
 		.then(response => response.json())
 		.then(json => {
 			this.setState({
@@ -28,10 +31,20 @@ class App extends Component {
 		}
 	)};
 
+
+	onChangeInputUserListener() {
+		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
+		let usernameInputContent = document.getElementById('user-input-username').value;
+		console.log('id creator ' + idCreatorInputContent);
+		console.log('username ' + usernameInputContent);
+	}
+
+
 	render() {
 		return (
 			<div>
-				<input placeholder="Introduce el usuario"></input>
+				<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
+				<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
 				<Header />
 				<User />
 				<ActionsBar />
