@@ -3,13 +3,15 @@ import React, { Component } from 'react';
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
-				<p className="App-intro">
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
+			<div className="pagination">
+				<button className="pagination-page">Anterior</button>
+				<button className="page">1</button>
+				<button className="page">2</button>
+				<button className="page">3</button>
+				<button className="page">4</button>
+				<button className="page">5</button>
+				<button className="pagination-page">Siguiente</button>
+
 			</div>
 		);
 	}

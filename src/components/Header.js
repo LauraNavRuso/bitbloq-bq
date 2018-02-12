@@ -19,32 +19,27 @@ class Header extends Component {
 						<nav className="header--menu">
 							<ul className="header--menu--list">
 								<li className="header--menu--link">
-									<a className="menu--link menu--link-projects" href="">
-
-										<span className="menu--link--span">Proyectos</span>
-									</a>
+									<a className="menu--link menu--link-projects" href="http://bitbloq.bq.com/#/bloqsproject">
+											<span className="menu--link--span">Proyectos</span>
+										</a>
 								</li>
-								<li className="header--menu--link menu--link-explore">
-									<a className="menu--link" href="">
-										<img src={iconStudents} className="menu--link-icon" />
+								<li className="header--menu--link">
+									<a className="menu--link  menu--link-explore" href="http://bitbloq.bq.com/#/explore">
 										<span className="menu--link--span">Explora</span>
 									</a>
 								</li>
 								<li className="header--menu--link">
-									<a className="menu--link" href="">
-										<img src={iconStudents} className="menu--link-icon menu--link-users" />
+									<a className="menu--link menu--link-users" href="">
 										<span className="menu--link--span">Usuarios</span>
 									</a>
 								</li>
 								<li className="header--menu--link">
-									<a className="menu--link" href="">
-										<img src={iconStory} className="menu--link-icon menu--link-learn" />
+									<a className="menu--link menu--link-learn" href="http://bitbloq.bq.com/#/learn">
 										<span className="menu--link--span">Aprende</span>
 									</a>
 								</li>
 								<li className="header--menu--link">
-									<a className="menu--link" href="">
-										<img src={iconStory} className="menu--link-icon menu--link-forum" />
+									<a className="menu--link menu--link-forum" href="http://bitbloq.bq.com/#/forum">
 										<span className="menu--link--span">Foro</span>
 									</a>
 								</li>
