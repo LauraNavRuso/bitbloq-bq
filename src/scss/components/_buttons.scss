@@ -1,3 +1,16 @@
+//Explore tools bar buttons
+//Order button
+.order-view {
+  min-width: 70px;
+  height: 34px;
+  background-color: #ffffff;
+  color: #8c919b;
+  text-align: left;
+  font-style: italic;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
 //Visualizations action buttons
 .views--grid {
   border-top-left-radius: 4px;
@@ -15,6 +28,36 @@
   height: 35px;
   border: 1px solid #cfcfcf;
   background-color: #ffffff;
+}
+
+//Filter button
+.filter {
+  width: 150px;
+  height: 34px;
+  color: #8c919b;
+  background-color: #ffffff;
+  background: url(../components/images/icon-caret-bottom.svg) no-repeat 130px 12px;
+  background-size: 7px;
+  text-align: left;
+  font-style: italic;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+//Search input
+.search {
+  min-width: 70px;
+  height: 30px;
+  color: #8c919b;
+  background-color: #ffffff;
+  background: url(../components/images/icon-hint.svg) no-repeat 4px 7px;
+  background-size: 17px;
+  padding-left:30px;
+  text-align: left;
+  font-style: italic;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
 }
 
 .social{

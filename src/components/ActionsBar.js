@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dropdown from './actionsBar/Dropdown';
 import Visualization from './actionsBar/Visualization';
 import Search from './actionsBar/Search';
+import Filter from './actionsBar/Filter';
 
 class ActionsBar extends Component {
 	render() {
@@ -13,7 +14,7 @@ class ActionsBar extends Component {
 						<Visualization />
 					</div>
 					<div className="filter-search--container">
-						<Dropdown />
+						<Filter />
 						<Search />
 					</div>
 				</div>
