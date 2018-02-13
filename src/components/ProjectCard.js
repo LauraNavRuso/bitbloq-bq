@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import placa1 from './images/placa1.jpg';
 
-class App extends Component {
+class ProjectCard extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
-				<p className="App-intro">
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
+				<div className="grid--project-card">
+					<div className="App-header">
+						<img className="App-title" src={placa1}/>
+					</div>
+
+					<div className="App-intro">
+						AQUÍ QUEREMOS PRINTEAR PARTE DEL RESULTADO DEL JSON
+
+						{/* <p>{this.props.projectList}</p> */}
+
+					</div>
+				</div>
 			</div>
-		);
+				);
 	}
 }
 
-export default App;
+export default ProjectCard;
