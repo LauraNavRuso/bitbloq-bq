@@ -9,9 +9,12 @@ class ProjectCard extends Component {
 					<img className="App-title" src={placa1}/>
 				</div>
 
-				<p className="App-intro">
+				<div className="App-intro">
 					AQUÍ QUEREMOS PRINTEAR PARTE DEL RESULTADO DEL JSON
-				</p>
+
+					{/* <p>{this.props.projectList}</p> */}
+
+				</div>
 			</div>
 		);
 	}

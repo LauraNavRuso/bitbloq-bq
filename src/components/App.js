@@ -10,15 +10,51 @@ class App extends Component {
 			super(props);
 			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
+				projects: [{}],
 				projectsForSpecificUser: []
 			};
 		}
 
 	componentDidMount() {
-		let userInputContent = document.getElementById('user-input-id-creator').value;
+		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
+		let apiPagination = `page=0`;
+		let apiEndpoint = baseApiUrl + apiPagination;
+
+		fetch(apiEndpoint)
+		.then(response => response.json())
+		.then(json => {
+			this.setState({
+				projects: json
+			});
+			console.log(json);
+		})
+		.catch(function(error){
+			console.log('Ha sucedido un error: ' + error);
+		}
+	)};
+
+	onChangeInputUserListener() {
+		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
 		let usernameInputContent = document.getElementById('user-input-username').value;
 
-		fetch(`https://api-beta-bitbloq.bq.com/bitbloq/v1/project?page=0&query=%7B%22creator%22:{%22_id%22:%22569cd00be4b03b226c664f6a%22,%22username%22:%22naiara1712%22}%7D`)
+		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
+		let objectUserInputs = {
+			creator: {
+				// _id: "569cd00be4b03b226c664f6a",
+				// username: "naiara1712"
+				_id: idCreatorInputContent,
+				username: usernameInputContent
+			}
+		}
+		let apiPagination = `page=0`;
+		let creatorData = JSON.stringify(objectUserInputs);
+		let apiEndpoint = baseApiUrl + apiPagination + `&query=` + creatorData;
+
+		console.log('id creator ' + idCreatorInputContent);
+		console.log('username ' + usernameInputContent);
+
+
+		fetch(apiEndpoint)
 		.then(response => response.json())
 		.then(json => {
 			this.setState({
@@ -29,26 +65,18 @@ class App extends Component {
 		.catch(function(error){
 			console.log('Ha sucedido un error: ' + error);
 		}
-	)};
-
-
-	onChangeInputUserListener() {
-		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
-		let usernameInputContent = document.getElementById('user-input-username').value;
-		console.log('id creator ' + idCreatorInputContent);
-		console.log('username ' + usernameInputContent);
-	}
-
+	)
+}
 
 	render() {
 		return (
 			<div>
-				<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
-				<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
 				<Header />
 				<User />
 				<ActionsBar />
-				<ProjectCard />
+				<ProjectCard  />
+				<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
+				<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
 				<PaginationBar />
 			</div>
 		);
