@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-// import images from '../images/facebook.svg';
-// import images from '../images/google-plus.svg';
-// import images from '../images/pinterest.svg';
-// import images from '../images/twitter.svg';
+import Facebook from '../images/facebook.svg';
+import Twitter from '../images/twitter.svg';
+import Pinterest from '../images/pinterest.svg';
+import Google from '../images/google-plus-logo.svg';
+
+
 
 class App extends Component {
 	constructor(props) {
@@ -40,22 +42,24 @@ class App extends Component {
 			<div className="App">
 				<div className="social">
 					<div className="box--button">
-							<button onClick={this.handleClick} className="button--social" type="submit" value="facebook" ><img className="icon" src="../images/facebook.svg" alt="x" />Share</button>
+							<button onClick={this.handleClick} className="button--social" type="submit" value="facebook" ><img className="icon--social" src={Facebook} alt="x" />Share</button>
 							<div className="counter">{this.state.countFacebook}</div>
 						</div>
 						<div className="box--button">
-							<button onClick={this.handleClick} className="button--social"  type="submit" value="twitter"><img className="icon" src="../images/twitter.svg" alt="x" />Tweet</button>
+							<button onClick={this.handleClick} className="button--social"  type="submit" value="twitter"><img className="icon--social" src={Twitter} alt="x" />Tweet</button>
 							<div className="counter">{this.state.countTwitter}</div>
 						</div>
 						<div className="box--button">
-							<button onClick={this.handleClick} className="button--social" type="submit" value="pinterest"><img className="icon" src="../images/pinterest.svg" alt="x" />Pin it</button>
+							<button onClick={this.handleClick} className="button--social" type="submit" value="pinterest"><img className="icon--social" src={Pinterest} alt="x" />Pin it</button>
 							<div className="counter">{this.state.countPinterest}</div>
 						</div>
 						<div className="box--button">
-							<button onClick={this.handleClick} className="button--social" type="submit" value="google"><img className="icon" src="../images/google-plus.svg" alt="x" /></button>
+							<button onClick={this.handleClick} className="button--social" type="submit" value="google"><img className="icon--social" src={Google} alt="x" /></button>
 							<div className="counter">{this.state.countGoogle}</div>
 						</div>
+						<div className="box--link">
 							<button className="button--social" type="submit">Enlace</button>
+						</div>
 					</div>
 				</div>
 
