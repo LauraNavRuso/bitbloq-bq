@@ -66,9 +66,9 @@
 }
 
 .social{
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 30px;
 }
 
 .button--social{
@@ -96,4 +96,37 @@
   height: 12px;
 	background-color: #ffffff;
 
+}
+.pagination{
+	display: flex;
+  justify-content: center;
+}
+.pagination-page{
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px #c7c7c7;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #5d6069;
+	margin-left: 20px;
+  margin-right: 20px;
+	max-height: 35px;
+	min-height: 35px;
+	line-height: 15px;
+	&:hover{
+		background-color: #dbdee3;
+    color: #8c919b;
+    cursor: default;
+	}
+}
+.button-page{
+	overflow: visible;
+	background-color: #fff;
+	cursor: pointer;
+	line-height: 0;
+	&:hover{
+		background-color: #dbdee3;
+    color: #8c919b;
+    cursor: default;
+	}
 }
