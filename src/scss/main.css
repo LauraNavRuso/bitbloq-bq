@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  box-sizing: border-box; }
-
 .order--view {
   min-width: 70px;
   height: 34px;
@@ -16,7 +10,6 @@ body {
 
 .order--option {
   height: 34px; }
-
 
 .views--grid {
   border-top-left-radius: 4px;
@@ -33,7 +26,6 @@ body {
   height: 35px;
   border: 1px solid #cfcfcf;
   background-color: #ffffff; }
-
 
 .filter {
   width: 150px;
@@ -107,7 +99,6 @@ body {
   max-height: 35px;
   min-height: 35px;
   line-height: 15px; }
-
   .pagination-page:hover {
     background-color: #dbdee3;
     color: #8c919b;
@@ -118,110 +109,22 @@ body {
   background-color: #fff;
   cursor: pointer;
   line-height: 0; }
-
   .button-page:hover {
     background-color: #dbdee3;
     color: #8c919b;
     cursor: default; }
 
-.order-view {
-  min-width: 70px;
-  height: 34px;
-  background-color: #ffffff;
-  color: #8c919b;
-  text-align: left;
-  font-style: italic;
-  margin-right: 20px;
-  border-radius: 4px; }
-
-
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box; }
 
 button, input, select {
   outline: none; }
 
 button, select {
   cursor: pointer; }
-
-.header {
-  height: 70px;
-  max-height: 70px;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  background-color: #373b44; }
-
-.header--icon {
-  background-color: #82ad3a;
-  height: 70px;
-  width: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .header--icon:hover {
-    background-color: #5b7929; }
-
-.header--icon--logo {
-  height: 30px;
-  width: 30px; }
-
-.header--menu {
-  width: 420px; }
-
-.header--menu--list {
-  list-style: none;
-  padding-left: 20px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
-  margin-bottom: 15px; }
-
-.header--menu--link {
-  color: #676a71;
-  display: flex;
-  flex-direction: row;
-  align-self: center; }
-  .header--menu--link:hover {
-    color: #FFFFFF; }
-
-.menu--link-icon {
-  margin-right: 5px; }
-
-.menu--button {
-  position: absolute;
-  right: 0;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  margin-right: 20px; }
-
-.header--menu--button {
-  width: 170px;
-  height: 35px;
-  background-color: #ebebeb;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding: 0; }
-  .header--menu--button:hover {
-    background-color: #f6f5f5; }
-
-.explore--toolbar {
-  width: 100;
-  height: 35px;
-  padding: 20px; }
-
-.explore--toolbar--container {
-  height: 35px;
-  display: flex;
-  justify-content: space-between; }
-
-.views--container, .filter-search--container {
-  display: flex; }
-
-.icon-down {
-  width: 10px;
-  height: 10px; }
 
 .header {
   height: 70px;
@@ -338,6 +241,10 @@ button, select {
 
 .views--container, .filter-search--container {
   display: flex; }
+
+.icon-down {
+  width: 10px;
+  height: 10px; }
 
 .wrapper {
   margin: 0 20px; }
