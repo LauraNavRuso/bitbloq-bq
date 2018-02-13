@@ -70,15 +70,19 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
-				<Header />
-				<User />
-				<ActionsBar />
-				<ProjectCard  />
-				<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
-				<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
-				<PaginationBar />
-			</div>
+				<div className="page">
+					<div className="nav">
+						<Header />
+						<User />
+					</div>
+					<div className="main">
+						<ActionsBar />
+						<ProjectCard />
+						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
+						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
+						<PaginationBar />
+					</div>
+				</div>
 		);
 	}
 }
