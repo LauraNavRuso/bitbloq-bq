@@ -11,19 +11,19 @@
   border-radius: 4px;
   border-color: #cfcfcf;
   padding-left: 5px;
-  /*for firefox*/
+  /*Delete default icon in select for firefox*/
   -moz-appearance: none;
-  /*for chrome*/
+  /*Delete default icon in select for chrome*/
   -webkit-appearance: none;
 }
 
+/*Delete default icon in select for explorer*/
 .order--view::-ms-expand {
     display: none;
 }
 
-
-.order--option {
-  height: 34px;
+.order--option:hover {
+  background-color: #ebebeb;
 }
 
 //Visualizations action buttons
