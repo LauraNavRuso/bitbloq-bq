@@ -13,6 +13,11 @@ button, select{
   cursor: pointer;
 }
 
+.main {
+  background-color:#e0e0e0;
+  flex: 1;
+}
+
 // {.profile {
 //   position: relative;
 //   padding: 1em;
@@ -38,12 +43,7 @@ button, select{
 // .profile--avatar {
 //   grid-column: 1/2;
 //   grid-row: span 2;
-// =======
-// .main{
-//   background-color:#e0e0e0;
-//   flex: 1;
-// >>>>>>> dev
-// }
+
 // .page {
 //   min-height: 100vh;
 //   display: flex;

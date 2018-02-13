@@ -95,6 +95,10 @@ button, input, select {
 button, select {
   cursor: pointer; }
 
+.main {
+  background-color: #e0e0e0;
+  flex: 1; }
+
 .header {
   height: 70px;
   max-height: 70px;
