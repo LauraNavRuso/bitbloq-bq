@@ -4,20 +4,21 @@ import Twitter from '../images/twitter.svg';
 import Pinterest from '../images/pinterest.svg';
 import Google from '../images/google-plus-logo.svg';
 
+//API KEY - AIzaSyBSUbqT3dIdr5ulOjOfHdgCFf7sdFeG484
 
-
-class App extends Component {
+class SocialNetwork extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			countFacebook: 0,
 		 	countTwitter: 0,
 			countPinterest: 0,
-			countGoogle: 0
-	 };
+			countGoogle: 0,
+			shortUrl:''
+	  };
 
 	 this.handleClick = this.handleClick.bind(this);
- }
+ 	}
 
   handleClick(e) {
 		var socialName = e.currentTarget.value;
@@ -35,6 +36,19 @@ class App extends Component {
 				this.setState({countGoogle: this.state.countGoogle + 1});
 				break;
 		}
+  }
+
+	makeShort(longUrl){
+	  let str ="<a href='"+longUrl+"' target='aboutblank'>"+longUrl+"</a>";
+		document.querySelector(".url--link").innerHTML = str;
+	}
+
+  componentDidMount() {
+		const { setKey, shorten } = require('react-native-google-shortener');
+		setKey(this.props.apiKey);
+		shorten('www.programadorwebapp.com').then(response => {
+			this.makeShort(response.id);
+		});
   }
 
 	render() {
@@ -58,7 +72,7 @@ class App extends Component {
 							<div className="counter">{this.state.countGoogle}</div>
 						</div>
 						<div className="box--link">
-							<button className="button--social" type="submit">Enlace</button>
+							<button className="button--social url--link" type="submit">{this.state.shortUrl}</button>
 						</div>
 					</div>
 				</div>
@@ -67,4 +81,8 @@ class App extends Component {
 	}
 }
 
-export default App;
+SocialNetwork.defaultProps = {
+	apiKey: 'AIzaSyBSUbqT3dIdr5ulOjOfHdgCFf7sdFeG484'
+};
+
+export default SocialNetwork;
