@@ -257,12 +257,16 @@ button, select {
   display: flex;
   justify-content: space-between; }
 
-.views--container, .filter-search--container {
+.order--views--container, .filter-search--container, .filter--options {
   display: flex; }
 
-.icon-down {
-  width: 10px;
-  height: 10px; }
+.filter--options {
+  width: 100%;
+  background-color: red; }
+
+.filters {
+  display: flex;
+  flex-direction: column; }
 
 .wrapper {
   margin: 0 20px; }

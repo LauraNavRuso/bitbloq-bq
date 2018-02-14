@@ -5,6 +5,7 @@ class Dropdown extends Component {
 		return (
 			<div>
 				<select className="order--view">
+					<option className="order--option" value=''>Orden:</option>
 					<option className="order--option" value='recientes'>Orden: Más recientes</option>
 					<option className="order--option" value='antiguos'>Más antiguos</option>
 					<option className="order--option" value='a-z'>Nombre A-Z</option>

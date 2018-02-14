@@ -12,14 +12,25 @@
 }
 
 //Visualization
-.views--container, .filter-search--container {
+.order--views--container, .filter-search--container, .filter--options {
   display: flex;
 }
 
-.icon-down {
-  width: 10px;
-  height: 10px;
+.filter--options {
+  width: 100%;
+  background-color: red;
 }
+
+//All filters
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
+// .icon-down {
+//   width: 10px;
+//   height: 10px;
+// }
 
 //Profile User
 .wrapper {
