@@ -66,17 +66,30 @@
   margin-right: 5px;
   padding: 5px; }
 
-.button--social:after {
-  border-left: 10px solid transparent;
-  border-right: 20px solid transparent; }
-
 .box--button {
   display: flex;
   margin-right: 20px; }
 
 .counter {
-  background-color: #ffffff;
+  position: relative;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
   font-size: 15px; }
+
+.counter:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid #ffffff;
+  margin-top: -5px; }
 
 .icon--social {
   width: 12px;
