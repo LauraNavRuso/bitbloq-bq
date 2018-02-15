@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import icon from './images/icon-bitbloq.svg';
 import iconStory from './images/icon-story.svg';
 import iconStudents from './images/icon-students.svg';
+import iconUser from './images/profile.svg';
 
 
 
@@ -45,8 +46,8 @@ class Header extends Component {
 								</li>
 							</ul>
 						</nav>
-						<div className="menu--button">
-							<button className="header--menu--button">Entrar</button>
+						<div className="menu--image">
+							<img className="header--menu-image" src={iconUser} />
 						</div>
 					</header>
 				);

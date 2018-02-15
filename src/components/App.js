@@ -7,11 +7,18 @@ import PaginationBar from './PaginationBar';
 
 class App extends Component {
 	constructor(props){
-			super(props);
+		super(props);
+
+			// una matriz de ejemplo de elementos para ser paginado
+    	let exampleItems = exampleItems.range(1, 217).map(i => { return { id: i, name: 'Item ' + i }; });
+
+      this.onChangePage = this.onChangePage.bind(this);
 			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
 				projects: [{}],
-				projectsForSpecificUser: []
+				projectsForSpecificUser: [],
+				exampleItems: exampleItems,
+				pageOfItems: []
 			};
 		}
 
@@ -67,7 +74,10 @@ class App extends Component {
 		}
 	)
 }
-
+onChangePage(pageOfItems) {
+        // estado de actualización con nueva página de elementos
+        this.setState({ pageOfItems: pageOfItems });
+    }
 	render() {
 		return (
 				<div className="page">
@@ -80,7 +90,14 @@ class App extends Component {
 						<ProjectCard />
 						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
 						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
-						<PaginationBar />
+						<div className="container">
+							<div className="text-center">
+								{this.state.pageOfItems.map(item =>
+									<div key={item.id}>{item.name}</div>
+								)}
+								<PaginationBar items={this.state.exampleItems} onChangePage={this.onChangePage} />
+							</div>
+						</div>
 					</div>
 				</div>
 		);
