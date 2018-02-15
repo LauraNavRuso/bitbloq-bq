@@ -309,7 +309,11 @@ button, select {
 
 .profile--avatar-image {
   width: 100%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  height: 60%; }
+  @media all and (min-width: 615px) {
+    .profile--avatar-image {
+      height: 90%; } }
 
 .profile--name {
   display: flex;
