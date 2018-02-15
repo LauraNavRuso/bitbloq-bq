@@ -10,7 +10,7 @@ class ProjectCard extends Component {
 			<div className="App">
 				<div className="grid--project-card">
 					<div className="App-header">
-						<img className="App-title" src={projectImgUrl}/>
+						<img className="App-title" src={projectImgUrl} height="100"/>
 					</div>
 
 					<div className="App-intro">
@@ -18,7 +18,6 @@ class ProjectCard extends Component {
 						<p>Nombre del proyecto: {this.props.name}</p>
 						<p>Veces descargado: {this.props.timesAdded}</p>
 						<p>Veces visto: {this.props.timesViewed}</p>
-						<p>Id proyecto: {this.props.idProject}</p>
 					</div>
 				</div>
 			</div>
