@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 .order--view {
   width: 170px;
   height: 35px;
@@ -272,7 +273,7 @@ ul {
 .filter--options {
   padding: 20px 0;
   position: absolute;
-  background: red;
+  background: #ffffff;
   transform: translateX(-45%);
   width: 99vw;
   top: 100%;
@@ -282,20 +283,43 @@ ul {
   display: flex;
   flex-direction: column; }
 
+.filter--item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-align: left;
+  color: #5d6069;
+  vertical-align: middle; }
+
 .list {
-  padding-left: 1em; }
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.filter--title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: #373b44; }
 
 .projects, .boards-robots, .components {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-gap: 10px; }
+  grid-gap: 15px; }
 
 .boards-robots {
   grid-template-columns: repeat(2, 1fr); }
 
 .components {
   grid-template-columns: repeat(5, 1fr); }
+
+input[type="checkbox"]:not(:checked) {
+  width: 20px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: black;
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
   margin: 0 20px; }
