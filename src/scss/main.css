@@ -57,7 +57,11 @@
 .social {
   display: flex;
   justify-content: flex-start;
-  margin-top: 30px; }
+  margin-top: 15px;
+  flex-wrap: wrap; }
+  @media all and (min-width: 770px) {
+    .social {
+      margin-top: 30px; } }
 
 .button--social {
   background-color: #ffffff;
@@ -68,7 +72,8 @@
 
 .box--button {
   display: flex;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 15px; }
 
 .counter {
   position: relative;
@@ -90,6 +95,10 @@
   border-top: 5px solid transparent;
   border-right: 5px solid #ffffff;
   margin-top: -5px; }
+
+.counter:before {
+  border-color: black;
+  border-right-color: black; }
 
 .icon--social {
   width: 12px;
@@ -280,9 +289,12 @@ button, select {
     z-index: 1;
     left: 0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: #e0e0e0;
     width: 100%; }
+    @media all and (min-width: 615px) {
+      .profile::before {
+        height: 50%; } }
   .profile .wrapper {
     position: relative;
     z-index: 2;
