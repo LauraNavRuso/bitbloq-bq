@@ -57,7 +57,11 @@
 .social {
   display: flex;
   justify-content: flex-start;
-  margin-top: 30px; }
+  margin-top: 15px;
+  flex-wrap: wrap; }
+  @media all and (min-width: 770px) {
+    .social {
+      margin-top: 30px; } }
 
 .button--social {
   background-color: #ffffff;
@@ -66,17 +70,35 @@
   margin-right: 5px;
   padding: 5px; }
 
-.button--social:after {
-  border-left: 10px solid transparent;
-  border-right: 20px solid transparent; }
-
 .box--button {
   display: flex;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 15px; }
 
 .counter {
-  background-color: #ffffff;
+  position: relative;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
   font-size: 15px; }
+
+.counter:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid #ffffff;
+  margin-top: -5px; }
+
+.counter:before {
+  border-color: black;
+  border-right-color: black; }
 
 .icon--social {
   width: 12px;
@@ -125,6 +147,15 @@ button, input, select {
 
 button, select {
   cursor: pointer; }
+
+.main {
+  background-color: #e0e0e0;
+  flex: 1; }
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .header {
   height: 70px;
@@ -250,9 +281,12 @@ button, select {
     z-index: 1;
     left: 0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: #e0e0e0;
     width: 100%; }
+    @media all and (min-width: 615px) {
+      .profile::before {
+        height: 50%; } }
   .profile .wrapper {
     position: relative;
     z-index: 2;
@@ -267,7 +301,11 @@ button, select {
 
 .profile--avatar-image {
   width: 100%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  height: 60%; }
+  @media all and (min-width: 615px) {
+    .profile--avatar-image {
+      height: 90%; } }
 
 .profile--name {
   display: flex;

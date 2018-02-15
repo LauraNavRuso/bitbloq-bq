@@ -72,7 +72,11 @@
 .social{
 	display: flex;
 	justify-content: flex-start;
-	margin-top: 30px;
+	margin-top: 15px;
+  flex-wrap: wrap;
+  @media all and (min-width:770px) {
+    margin-top: 30px;
+    }
 }
 
 .button--social{
@@ -83,17 +87,37 @@
   padding: 5px;
 }
 
-.button--social:after {
-	border-left: 10px solid transparent;
-	border-right: 20px solid transparent;
-}
 .box--button{
 	display: flex;
   margin-right: 20px;
+  margin-bottom: 15px;
 }
-.counter{
-	background-color:  #ffffff;
+
+.counter {
+	position: relative;
+	background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
   font-size: 15px;
+}
+.counter:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  border-bottom:5px solid transparent;
+  border-top:5px solid transparent;
+  border-right:5px solid #ffffff;
+	margin-top: -5px;
+}
+.counter:before {
+	border-color: black;
+	border-right-color: black;
+
 }
 .icon--social{
   width: 12px;
