@@ -162,15 +162,14 @@ button, select {
 
 .menu--link {
   text-decoration: none; }
-  @media all and (max-width: 520px) {
-    .menu--link {
-      display: block; } }
 
 .menu--link-projects {
   background-image: url("../components/images/icon-students.svg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding: 0; }
   .menu--link-projects:hover {
-    background-image: url("../components/images/icon-students-2.svg"); }
+    background-image: url("../components/images/icon-students-2.svg");
+    padding: 0 0 10px; }
 
 .menu--link-explore {
   background-image: url("../components/images/icon-story.svg");
@@ -206,7 +205,7 @@ button, select {
     .menu--link--span {
       padding-right: 5px; } }
 
-.menu--button {
+.menu--image {
   position: absolute;
   right: 0;
   height: 70px;
@@ -214,20 +213,13 @@ button, select {
   align-items: center;
   margin-right: 20px; }
 
-.header--menu--button {
-  width: 170px;
-  height: 35px;
-  background-color: #ebebeb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  padding: 0; }
-  .header--menu--button:hover {
-    background-color: #f6f5f5; }
+.header--menu-image {
+  width: 40px;
+  height: 40px; }
   @media all and (max-width: 520px) {
-    .header--menu--button {
-      width: 70px; } }
+    .header--menu-image {
+      width: 30px;
+      height: 30px; } }
 
 .explore--toolbar {
   width: 100;

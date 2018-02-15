@@ -5,6 +5,7 @@ class ProjectCard extends Component {
 	render() {
 		return (
 			<div className="App">
+
 				<div className="grid--project-card">
 					<div className="App-header">
 						<img className="App-title" src={placa1}/>
@@ -19,6 +20,7 @@ class ProjectCard extends Component {
 
 					</div>
 				</div>
+
 			</div>
 				);
 	}
