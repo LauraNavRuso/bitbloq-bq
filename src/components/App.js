@@ -77,7 +77,7 @@ class App extends Component {
 						<ActionsBar />
 						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
 						{this.state.projectsForSpecificUser.map(x =>(
-							<ProjectCard username={x.creator.username} name={x.name} timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
 						))}
 						<PaginationBar />
 					</div>
