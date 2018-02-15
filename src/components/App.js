@@ -8,48 +8,21 @@ import PaginationBar from './PaginationBar';
 class App extends Component {
 	constructor(props){
 			super(props);
-			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
-				projects: [],
 				projectsForSpecificUser: []
 			};
 		}
 
 	componentDidMount() {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
-		let apiPagination = `page=0`;
-		let apiEndpoint = baseApiUrl + apiPagination;
-
-		fetch(apiEndpoint)
-		.then(response => response.json())
-		.then(json => {
-			this.setState({
-				projects: json
-			});
-			console.log(json);
-		})
-		.catch(function(error){
-			console.log('Ha sucedido un error: ' + error);
-		}
-	)};
-
-	onChangeInputUserListener() {
-		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
-
-		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
-				// _id: "569cd00be4b03b226c664f6a",
-				// username: "naiara1712"
-				_id: idCreatorInputContent,
+				_id: `546e259ce4b0bde006d07afe`
 			}
 		}
 		let apiPagination = `page=0`;
 		let creatorData = JSON.stringify(objectUserInputs);
 		let apiEndpoint = baseApiUrl + apiPagination + `&query=` + creatorData;
-
-		console.log('id creator ' + idCreatorInputContent);
-
 
 		fetch(apiEndpoint)
 		.then(response => response.json())
@@ -75,7 +48,6 @@ class App extends Component {
 					<div className="main">
 
 						<ActionsBar />
-						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
 						))}
