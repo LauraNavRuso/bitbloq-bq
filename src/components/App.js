@@ -10,7 +10,7 @@ class App extends Component {
 			super(props);
 			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
-				projects: [{}],
+				projects: [],
 				projectsForSpecificUser: []
 			};
 		}
@@ -72,12 +72,17 @@ class App extends Component {
 		return (
 				<div className="page">
 					<div className="nav">
-						<Header />
+						<Header />q
 						<User />
 					</div>
 					<div className="main">
+
 						<ActionsBar />
-						<ProjectCard />
+						{this.state.projectsForSpecificUser.map(x =>(
+							<ProjectCard name={x.name} />
+						))}
+
+
 						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
 						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
 						<PaginationBar />

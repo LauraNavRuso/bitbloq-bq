@@ -11,10 +11,7 @@ class ProjectCard extends Component {
 					</div>
 
 					<div className="App-intro">
-						AQUÍ QUEREMOS PRINTEAR PARTE DEL RESULTADO DEL JSON
-
-						{/* <p>{this.props.projectList}</p> */}
-
+						{this.props.name}
 					</div>
 				</div>
 			</div>
