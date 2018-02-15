@@ -216,6 +216,10 @@ button, select {
 .header--menu-image {
   width: 40px;
   height: 40px; }
+  @media all and (max-width: 520px) {
+    .header--menu-image {
+      width: 30px;
+      height: 30px; } }
 
 .explore--toolbar {
   width: 100;
