@@ -35,7 +35,6 @@ class App extends Component {
 
 	onChangeInputUserListener() {
 		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
-		let usernameInputContent = document.getElementById('user-input-username').value;
 
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
@@ -43,7 +42,6 @@ class App extends Component {
 				// _id: "569cd00be4b03b226c664f6a",
 				// username: "naiara1712"
 				_id: idCreatorInputContent,
-				username: usernameInputContent
 			}
 		}
 		let apiPagination = `page=0`;
@@ -51,7 +49,6 @@ class App extends Component {
 		let apiEndpoint = baseApiUrl + apiPagination + `&query=` + creatorData;
 
 		console.log('id creator ' + idCreatorInputContent);
-		console.log('username ' + usernameInputContent);
 
 
 		fetch(apiEndpoint)
@@ -72,19 +69,16 @@ class App extends Component {
 		return (
 				<div className="page">
 					<div className="nav">
-						<Header />q
+						<Header />
 						<User />
 					</div>
 					<div className="main">
 
 						<ActionsBar />
-						{this.state.projectsForSpecificUser.map(x =>(
-							<ProjectCard name={x.name} />
-						))}
-
-
 						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
-						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
+						{this.state.projectsForSpecificUser.map(x =>(
+							<ProjectCard username={x.creator.username} name={x.name} timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+						))}
 						<PaginationBar />
 					</div>
 				</div>

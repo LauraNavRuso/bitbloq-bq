@@ -11,7 +11,10 @@ class ProjectCard extends Component {
 					</div>
 
 					<div className="App-intro">
-						{this.props.name}
+						Usuario: {this.props.username}
+						Nombre del proyecto: {this.props.name}
+						Veces descargado: {this.props.timesAdded}
+						Veces visto: {this.props.timesViewed}
 					</div>
 				</div>
 			</div>
