@@ -39,7 +39,7 @@
   background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
   background-color: #ffffff; }
 
-.filter {
+.filter--button {
   width: 170px;
   height: 35px;
   color: #5d6069;
@@ -140,6 +140,9 @@ button, input, select {
 button, select {
   cursor: pointer; }
 
+ul {
+  list-style: none; }
+
 .main {
   background-color: #e0e0e0;
   flex: 1; }
@@ -147,7 +150,7 @@ button, select {
 .header {
   height: 70px;
   max-height: 70px;
-  width: 100vw;
+  width: 100%;
   background-color: #373b44;
   display: flex;
   flex-direction: row; }
@@ -257,16 +260,42 @@ button, select {
   display: flex;
   justify-content: space-between; }
 
-.order--views--container, .filter-search--container, .filter--options {
+.order--views--container, .filter-search--container {
   display: flex; }
 
-.filter--options {
-  width: 100%;
-  background-color: red; }
-
 .filters {
+  display: inline-block; }
+
+.filter--container {
+  position: relative; }
+
+.filter--options {
+  padding: 20px 0;
+  position: absolute;
+  background: red;
+  transform: translateX(-45%);
+  width: 99vw;
+  top: 100%;
+  display: flex; }
+
+.filters--active .filter--options {
   display: flex;
   flex-direction: column; }
+
+.list {
+  padding-left: 1em; }
+
+.projects, .boards-robots, .components {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px; }
+
+.boards-robots {
+  grid-template-columns: repeat(2, 1fr); }
+
+.components {
+  grid-template-columns: repeat(5, 1fr); }
 
 .wrapper {
   margin: 0 20px; }

@@ -12,25 +12,56 @@
 }
 
 //Visualization
-.order--views--container, .filter-search--container, .filter--options {
+.order--views--container, .filter-search--container {
   display: flex;
 }
 
-.filter--options {
-  width: 100%;
-  background-color: red;
+//Filter button container --General container
+.filters {
+  display: inline-block;
 }
 
-//All filters
-.filters {
+//filter button and opotions container
+.filter--container {
+  position: relative;
+}
+
+//All filter options
+.filter--options {
+  padding: 20px 0;
+  position: absolute;
+  background: red;
+  // left: 30%;
+  transform: translateX(-45%);
+  width: 99vw;
+  top: 100%;
+  // display: none;
+  display: flex;
+}
+//
+.filters--active .filter--options {
   display: flex;
   flex-direction: column;
 }
 
-// .icon-down {
-//   width: 10px;
-//   height: 10px;
-// }
+.list {
+  padding-left: 1em;
+}
+
+.projects, .boards-robots, .components {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.boards-robots {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.components {
+  grid-template-columns: repeat(5, 1fr);
+}
 
 //Profile User
 .wrapper {
