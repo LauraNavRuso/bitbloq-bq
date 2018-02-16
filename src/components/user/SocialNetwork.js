@@ -46,7 +46,7 @@ class SocialNetwork extends Component {
   componentDidMount() {
 		const { setKey, shorten } = require('react-native-google-shortener');
 		setKey(this.props.apiKey);
-		shorten('www.programadorwebapp.com').then(response => {
+		shorten('bitbloq.bq.com/#/').then(response => {
 			this.makeShort(response.id);
 		});
   }
