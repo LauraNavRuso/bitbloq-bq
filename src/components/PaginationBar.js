@@ -1,12 +1,12 @@
-
-import React, { PropTypes } from 'react';
-
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const propTypes = {
     items: PropTypes.array.isRequired,
     onChangePage: PropTypes.func.isRequired,
     initialPage: PropTypes.number
 }
+
 
 const defaultProps = {
     initialPage: 1
@@ -34,6 +34,7 @@ class PaginationBar extends React.Component {
 			 }
 	 }
 
+
 	 setPage(page) {
 			 let items = this.props.items;
 			 let pager = this.state.pager;
@@ -46,13 +47,10 @@ class PaginationBar extends React.Component {
 			 pager = this.getPager(items.length, page);
 
 			 // obtener nueva página de elementos de la matriz de elementos
-			 let pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
+			 let pageOfItems = items.toString().slice(pager.startIndex, pager.endIndex + 1);
 
-			 // estado de actualización
-			 this.setState({ pager: pager });
+       this.setState({ pager }, () => this.props.onChangePage(this.state.pager.currentPage))
 
-			 // llamar a la función de cambio de página en el componente principal
-			 this.props.onChangePage(pageOfItems);
 	 }
 
 	 getPager(totalItems, currentPage, pageSize) {
@@ -63,9 +61,9 @@ class PaginationBar extends React.Component {
         pageSize = pageSize || 10;
 
         // calcular el total de páginas
-        var totalPages = Math.ceil(totalItems / pageSize);
+        let totalPages = Math.ceil(totalItems / pageSize);
 
-        var startPage, endPage;
+        let startPage, endPage;
         if (totalPages <= 10) {
             // menos de 10 páginas en total, así que muestre todo
             startPage = 1;
@@ -89,7 +87,10 @@ class PaginationBar extends React.Component {
         let endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
 
         // crear una matriz de páginas para ng-repeat en el control de buscapersonas
-        let pages = pages.range(startPage, endPage + 1);
+        const range = (start, end) => (
+          Array.from(Array(end - start + 1).keys()).map(i => i + start)
+          )
+          const pages = range(startPage, endPage)
 
         // objeto de retorno con todas las propiedades del buscapersonas requeridas por la vista
         return {

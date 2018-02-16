@@ -10,14 +10,18 @@ class App extends Component {
 		super(props);
 
 			// una matriz de ejemplo de elementos para ser paginado
-    	let exampleItems = exampleItems.range(1, 217).map(i => { return { id: i, name: 'Item ' + i }; });
+			// create an array of pages to ng-repeat in the pager control
+const range = (start, end) => (
+Array.from(Array(end - start + 1).keys()).map(i => i + start)
+)
+const pages = range(1, 217);
 
       this.onChangePage = this.onChangePage.bind(this);
 			this.onChangeInputUserListener = this.onChangeInputUserListener.bind(this);
 			this.state = {
 				projects: [{}],
 				projectsForSpecificUser: [],
-				exampleItems: exampleItems,
+				range: [],
 				pageOfItems: []
 			};
 		}
@@ -74,32 +78,36 @@ class App extends Component {
 		}
 	)
 }
+
+
 onChangePage(pageOfItems) {
         // estado de actualización con nueva página de elementos
         this.setState({ pageOfItems: pageOfItems });
     }
 	render() {
 		return (
-				<div className="page">
-					<div className="nav">
-						<Header />
-						<User />
-					</div>
-					<div className="main">
-						<ActionsBar />
-						<ProjectCard />
-						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
-						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
+			<div className="page">
+				<div className="nav">
+					<Header />
+					<User />
+				</div>
+				<div className="main">
+					<ActionsBar />
+					<ProjectCard />
+					<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
+					<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
+					<div>
 						<div className="container">
 							<div className="text-center">
 								{this.state.pageOfItems.map(item =>
 									<div key={item.id}>{item.name}</div>
 								)}
-								<PaginationBar items={this.state.exampleItems} onChangePage={this.onChangePage} />
+								<PaginationBar items={this.state.range} onChangePage={this.onChangePage} />
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		);
 	}
 }
