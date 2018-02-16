@@ -24,59 +24,55 @@
 	width: 30px;
 }
 
-.header--menu{
+.header--menu {
 	width: 420px;
 }
 
-.header--menu--list{
+.header--menu--list {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 25px;
 	@media all and (max-width: 520px){
 		padding: 5px;
-
 	}
 }
 
-.menu--link{
+.menu--link {
 	text-decoration: none;
-	@media all and (max-width: 520px){
-		display: block;
-	}
-
+	
 }
 
-.menu--link-projects{
+.menu--link-projects {
 	background-image: url('../components/images/icon-students.svg');
 	background-repeat: no-repeat;
-
-	&:hover{
+	padding: 0;
+	&:hover {
 		background-image: url('../components/images/icon-students-2.svg');
+		padding: 0 0 10px;
 	}
 }
 
-.menu--link-explore{
+.menu--link-explore {
 	background-image: url('../components/images/icon-story.svg');
 	background-repeat: no-repeat;
-
-	&:hover{
+	&:hover {
 		background-image: url('../components/images/icon-story-2.svg');
 	}
 }
 
-.menu--link-users{
+.menu--link-users {
 	background-image: url('../components/images/icon-students.svg');
 	background-repeat: no-repeat;
-	&:hover{
+	&:hover {
 		background-image: url('../components/images/icon-students-2.svg');
 	}
 }
 
-.menu--link-learn{
+.menu--link-learn {
 	background-image: url('../components/images/icon-story.svg');
 	background-repeat: no-repeat;
-	&:hover{
+	&:hover {
 		background-image: url('../components/images/icon-story-2.svg');
 	}
 }
@@ -84,12 +80,12 @@
 .menu--link-forum {
 	background-image: url('../components/images/icon-students.svg');
 	background-repeat: no-repeat;
-	&:hover{
+	&:hover {
 		background-image: url('../components/images/icon-students-2.svg');
 	}
 }
 
-.menu--link--span{
+.menu--link--span {
 	color: #676a71;
 	padding-right: 20px;
 	padding-left: 20px;
@@ -101,7 +97,8 @@
 	}
 }
 
-.menu--button {
+
+.menu--image {
 	position: absolute;
 	right: 0;
 	height: 70px;
@@ -110,19 +107,11 @@
 	margin-right: 20px;
 }
 
-.header--menu--button {
-	width: 170px;
-	height: 35px;
-	background-color: #ebebeb;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 5px;
-	padding: 0;
-	&:hover {
-		background-color: #f6f5f5;
-	}
-	@media all and (max-width: 520px) {
-		width: 70px;
+.header--menu-image {
+	width: 40px;
+	height: 40px;
+	@media all and(max-width: 520px) {
+		width: 30px;
+		height: 30px;
 	}
 }

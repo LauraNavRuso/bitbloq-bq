@@ -11,15 +11,25 @@ button, input, select {
   outline: none;
 }
 
-button, select{
+button, select {
   cursor: pointer;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
 .main {
   background-color:#e0e0e0;
   flex: 1;
+}
+
+.main{
+  background-color:#e0e0e0;
+  flex: 1;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

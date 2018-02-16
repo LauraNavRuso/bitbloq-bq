@@ -102,9 +102,12 @@ input[type="checkbox"]:not(:checked) {
     z-index:1;
     left:0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: #e0e0e0;
     width: 100%;
+    @media all and (min-width:615px) {
+      height: 50%;
+    }
   }
   .wrapper {
     position: relative;
@@ -122,6 +125,10 @@ input[type="checkbox"]:not(:checked) {
 .profile--avatar-image {
   width: 100%;
   border-radius: 50%;
+  height: 60%;
+  @media all and (min-width:615px) {
+    height: 90%;
+  }
 }
 .profile--name {
   display: flex;
