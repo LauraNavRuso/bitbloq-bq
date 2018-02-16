@@ -30,10 +30,10 @@ class App extends Component {
 			this.setState({
 				projectsForSpecificUser: json
 			});
-			console.log(json);
+			// console.log(json);
 		})
 		.catch(function(error){
-			console.log('Ha sucedido un error: ' + error);
+			// console.log('Ha sucedido un error: ' + error);
 		}
 	)
 }
