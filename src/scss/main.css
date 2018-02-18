@@ -66,9 +66,9 @@
 .button--social {
   background-color: #ffffff;
   cursor: pointer;
-  border: none;
-  margin-right: 5px;
-  padding: 5px; }
+  border: 1px solid #e0e0e0;
+  padding: 5px 15px 5px 5px;
+  border-radius: 2px 0px 0px 2px; }
 
 .box--button {
   display: flex;
@@ -79,10 +79,14 @@
   position: relative;
   background: #ffffff;
   padding: 5px;
-  border-radius: 2px;
-  font-size: 15px; }
+  font-size: 15px;
+  border-top: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0px 2px 2px 0px; }
 
-.counter:after {
+.counter:after,
+.counter:before {
   right: 100%;
   top: 50%;
   border: solid transparent;
@@ -91,14 +95,18 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom: 5px solid transparent;
-  border-top: 5px solid transparent;
-  border-right: 5px solid #ffffff;
+  border-style: solid;
   margin-top: -5px; }
 
+.counter:after {
+  top: 14px;
+  border-color: transparent white transparent transparent;
+  border-width: 5px; }
+
 .counter:before {
-  border-color: black;
-  border-right-color: black; }
+  top: 13px;
+  border-color: transparent #c7c3c3 transparent transparent;
+  border-width: 6px; }
 
 .icon--social {
   width: 12px;
