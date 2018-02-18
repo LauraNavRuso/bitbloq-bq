@@ -13,8 +13,10 @@ class ActionsBar extends Component {
 						<Dropdown />
 						<Visualization />
 					</div>
+					<div className="filter-search--container">
 						<Filter />
 						<Search />
+					</div>
 				</div>
 			</div>
 		);

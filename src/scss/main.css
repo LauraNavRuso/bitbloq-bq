@@ -170,10 +170,6 @@ ul {
   background-color: #e0e0e0;
   flex: 1; }
 
-.main {
-  background-color: #e0e0e0;
-  flex: 1; }
-
 .page {
   min-height: 100vh;
   display: flex;
@@ -297,7 +293,7 @@ ul {
   padding: 20px 0;
   position: absolute;
   background: #ffffff;
-  transform: translateX(-45%);
+  transform: translateX(-68%);
   width: 99vw;
   top: 100%;
   display: flex; }
