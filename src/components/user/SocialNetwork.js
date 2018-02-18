@@ -38,16 +38,18 @@ class SocialNetwork extends Component {
 		}
   }
 
-	makeShort(longUrl){
-	  let str ="<a href='"+longUrl+"' target='aboutblank'>"+longUrl+"</a>";
-		document.querySelector(".url--link").innerHTML = str;
+	setShortUrl(shortUrl){
+	  let str ="<a href='"+shortUrl+"' target='aboutblank'>"+shortUrl+"</a>";
+		this.setState({
+			shortUrl: str
+		});
 	}
 
   componentDidMount() {
 		const { setKey, shorten } = require('react-native-google-shortener');
 		setKey(this.props.apiKey);
 		shorten('bitbloq.bq.com/#/').then(response => {
-			this.makeShort(response.id);
+			this.setShortUrl(response.id);
 		});
   }
 
@@ -72,7 +74,7 @@ class SocialNetwork extends Component {
 							<div className="counter">{this.state.countGoogle}</div>
 						</div>
 						<div className="box--link">
-							<button className="button--social url--link" type="submit">{this.state.shortUrl}</button>
+							<button className="button--social url--link" type="submit" dangerouslySetInnerHTML={{__html:this.state.shortUrl}}></button>
 						</div>
 					</div>
 				</div>
