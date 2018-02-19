@@ -37,8 +37,11 @@
     height: 60%;
     background: #e0e0e0;
     width: 100%;
-    @media all and (min-width:615px) {
-      height: 50%;
+    @media all and (min-width:578px) {
+      height: 55%;
+    }
+    @media all and (min-width:804px) {
+      height: 52%;
     }
   }
   .wrapper {
@@ -55,12 +58,12 @@
   grid-row: span 2;
 }
 .profile--avatar-image {
-  width: 100%;
+  width: 150px;
   border-radius: 50%;
-  height: 60%;
-  @media all and (min-width:615px) {
-    height: 90%;
-  }
+  height: 150px;
+  // @media all and (min-width:615px) {
+  //   height: 90%;
+  // }
 }
 .profile--name {
   display: flex;
@@ -109,6 +112,6 @@
   @media all and (min-width:770px) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: auto;
+    margin-top: 10px;
     }
 }

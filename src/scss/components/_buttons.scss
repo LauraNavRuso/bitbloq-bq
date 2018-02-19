@@ -72,10 +72,9 @@
 .social{
 	display: flex;
 	justify-content: flex-start;
-	margin-top: 15px;
   flex-wrap: wrap;
   @media all and (min-width:770px) {
-    margin-top: 30px;
+    margin-top: 17px;
     }
 }
 .button--social {
@@ -120,7 +119,7 @@
 }
 .counter:before {
   top: 13px;
-  border-color: transparent #c7c3c3 transparent transparent;
+  border-color: transparent #959595 transparent transparent;
   border-width: 6px;
 }
 .icon--social{

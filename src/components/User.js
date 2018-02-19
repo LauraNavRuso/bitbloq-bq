@@ -32,7 +32,7 @@ class User extends Component {
 						<div className="user--data">
 							<div className="profile--name">
 								<h1 className="profile--name-real">Nombre y apellido</h1>
-								<h2 className="profile--name-user">{this.username}</h2>
+								<h2 className="profile--name-user">Username</h2>
 							</div>
 							<div className="proyect">
 								<h2 className="proyect--number">{this.state.totalProjectsUser} proyectos</h2>
