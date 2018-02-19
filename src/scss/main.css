@@ -189,52 +189,85 @@ button, select {
   margin-top: 25px; }
   @media all and (max-width: 520px) {
     .header--menu--list {
-      padding: 5px; } }
-
-.menu--link {
-  text-decoration: none; }
+      padding: 0;
+      width: 380px;
+      margin-left: 5px; } }
 
 .menu--link-projects {
   background-image: url("../components/images/icon-students.svg");
+  background-position: left;
   background-repeat: no-repeat;
-  padding: 0; }
+  text-decoration: none;
+  padding: 0;
+  display: block; }
   .menu--link-projects:hover {
-    background-image: url("../components/images/icon-students-2.svg");
-    padding: 0 0 10px; }
+    background-image: url("../components/images/icon-students-2.svg"); }
+  @media all and (max-width: 520px) {
+    .menu--link-projects {
+      padding: 0; } }
 
 .menu--link-explore {
   background-image: url("../components/images/icon-story.svg");
-  background-repeat: no-repeat; }
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  padding: 0;
+  display: block; }
   .menu--link-explore:hover {
     background-image: url("../components/images/icon-story-2.svg"); }
+  @media all and (max-width: 520px) {
+    .menu--link-explore {
+      padding: 0; } }
 
 .menu--link-users {
   background-image: url("../components/images/icon-students.svg");
-  background-repeat: no-repeat; }
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  padding: 0;
+  display: block; }
   .menu--link-users:hover {
     background-image: url("../components/images/icon-students-2.svg"); }
+  @media all and (max-width: 520px) {
+    .menu--link-users {
+      padding: 0; } }
 
 .menu--link-learn {
   background-image: url("../components/images/icon-story.svg");
-  background-repeat: no-repeat; }
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  padding: 0;
+  display: block; }
   .menu--link-learn:hover {
     background-image: url("../components/images/icon-story-2.svg"); }
+  @media all and (max-width: 520px) {
+    .menu--link-learn {
+      padding: 0; } }
 
 .menu--link-forum {
   background-image: url("../components/images/icon-students.svg");
-  background-repeat: no-repeat; }
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  padding: 0;
+  display: block; }
   .menu--link-forum:hover {
     background-image: url("../components/images/icon-students-2.svg"); }
+  @media all and (max-width: 520px) {
+    .menu--link-forum {
+      padding: 0; } }
 
 .menu--link--span {
   color: #676a71;
   padding-right: 20px;
-  padding-left: 20px; }
+  padding-left: 20px;
+  display: block; }
   .menu--link--span:hover {
     color: #FFFFFF; }
   @media all and (max-width: 520px) {
     .menu--link--span {
-      padding-right: 5px; } }
+      padding: 0; } }
 
 .menu--image {
   position: absolute;
@@ -243,6 +276,9 @@ button, select {
   display: flex;
   align-items: center;
   margin-right: 20px; }
+  @media all and (max-width: 520px) {
+    .menu--image {
+      margin-right: 25px; } }
 
 .header--menu-image {
   width: 40px;

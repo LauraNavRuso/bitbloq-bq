@@ -18,23 +18,24 @@ class PaginationBar extends Component {
 			this.setState({
 				totalProjectsUser: json.count
 			});
-			let total = this.state. totalProjectsUser;
-			let suma = total/20;
-			let hola=Math.ceil(suma);
-			console.log(hola);
+			// let total = this.state.totalProjectsUser;
+			// let suma = total/20;
+			// let hola = Math.ceil(suma);
+			// console.log(this.state.totalProjectsUser);
 		});
 
 	}
 
-// const onClickTotalPages = (event) => {
-// 	alert ('esta función funciona');
-// }
 
 
 totalPages(){
-	let totalPage = this.total/20;
-	console.log(totalPage);
+	let total = this.state.totalProjectsUser;
+	let totalPage = total/20;
+	let pageUser = Math.ceil(totalPage);
+	console.log(pageUser);
+	alert(pageUser);
 }
+
 
 
 
