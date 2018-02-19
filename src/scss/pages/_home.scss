@@ -21,11 +21,19 @@
 .filters {
   display: inline-block;
   order: 1;
+
+  @media all and (min-width: 650px) {
+    order: 0;
+  }
 }
 
 //filter button and options container
 .filter-search--container {
   flex-direction: column;
+
+  @media all and (min-width: 650px) {
+    flex-direction: row;
+  }
 }
 
 .filter--container {
@@ -37,15 +45,19 @@
   padding: 20px 0;
   position: absolute;
   background: #ffffff;
-  // left: 30%;
-  // transform: translateX(-68%);
   width: 98vw;
   top: 100%;
   right: -7%;
   //display: none;
   display: flex;
   justify-content: flex-start;
+  @include border();
+
+  @media all and (min-width: 650px) {
+    right: -97%;
+  }
 }
+
 //
 .filters--active .filter--options {
   display: flex;

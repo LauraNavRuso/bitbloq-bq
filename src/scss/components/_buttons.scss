@@ -8,7 +8,7 @@
   background-color: #ffffff;
   background-size: 9px;
   margin-right: 8px;
-  @include border-round();
+  @include border();
   padding-left: 5px;
   /*Delete default icon in select for firefox*/
   -moz-appearance: none;
@@ -57,7 +57,7 @@
   text-align: left;
   margin-right: 20px;
   cursor: pointer;
-  @include border-round();
+  @include border();
   // flex: 1;
   // order: 2;
 }
@@ -73,7 +73,7 @@
   padding-left:30px;
   text-align: left;
   font-style: italic;
-  @include border-round();
+  @include border();
   line-height: 47px;
 }
 
