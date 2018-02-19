@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dropdown from './actionsBar/Dropdown';
+import Dropdown from './actionsBar/Sort';
 import Visualization from './actionsBar/Visualization';
 import Search from './actionsBar/Search';
 import Filter from './actionsBar/Filter';
@@ -10,7 +10,7 @@ class ActionsBar extends Component {
 			<div className="explore--toolbar">
 				<div className="explore--toolbar--container">
 					<div className="order--views--container">
-						<Dropdown />
+						<Sort />
 						<Visualization />
 					</div>
 					<div className="filter-search--container">
