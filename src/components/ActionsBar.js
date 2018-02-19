@@ -9,14 +9,12 @@ class ActionsBar extends Component {
 		return (
 			<div className="explore--toolbar">
 				<div className="explore--toolbar--container">
-					<div className="views--container">
+					<div className="order--views--container">
 						<Dropdown />
 						<Visualization />
 					</div>
-					<div className="filter-search--container">
 						<Filter />
 						<Search />
-					</div>
 				</div>
 			</div>
 		);

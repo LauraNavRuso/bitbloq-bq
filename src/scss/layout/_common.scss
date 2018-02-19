@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 body {
   margin: 0;
   padding: 0;
@@ -9,8 +11,17 @@ button, input, select {
   outline: none;
 }
 
-button, select{
+button, select {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  background-color:#e0e0e0;
+  flex: 1;
 }
 
 .main{
