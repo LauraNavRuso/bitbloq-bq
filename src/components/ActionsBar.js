@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dropdown from './actionsBar/Sort';
+import Sort from './actionsBar/Sort';
 import Visualization from './actionsBar/Visualization';
 import Search from './actionsBar/Search';
 import Filter from './actionsBar/Filter';

@@ -9,6 +9,7 @@ class App extends Component {
 	constructor(props){
 			super(props);
 			this.state = {
+				projects: [],
 				projectsForSpecificUser: []
 			};
 		}
@@ -37,6 +38,21 @@ class App extends Component {
 		}
 	)
 }
+
+//Get dta from API with promises
+	// componentDidMount() {
+	// 	fetch('https://hp-api.herokuapp.com/api/characters')
+	// 	.then(response => response.json())
+	// 	.then(json => {
+	// 		this.setState({
+	// 			projects: json
+	// 		});
+	// 	});
+	// }
+
+
+
+
 
 render() {
 		return (
