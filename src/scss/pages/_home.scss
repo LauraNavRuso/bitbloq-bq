@@ -12,19 +12,87 @@
 }
 
 //Visualization
-.views--container, .filter-search--container {
+.order--views--container, .filter-search--container {
   display: flex;
 }
 
-.icon-down {
-  width: 10px;
-  height: 10px;
+//Filter button container --General container
+.filters {
+  display: inline-block;
+}
+
+//filter button and opotions container
+.filter--container {
+  position: relative;
+}
+
+//All filter options
+.filter--options {
+  padding: 20px 0;
+  position: absolute;
+  background: #ffffff;
+  // left: 30%;
+  transform: translateX(-45%);
+  width: 99vw;
+  top: 100%;
+  // display: none;
+  display: flex;
+}
+//
+.filters--active .filter--options {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter--item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-align: left;
+  color: #5d6069;
+  vertical-align: middle;
+}
+
+.list {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.filter--title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: #373b44;
+}
+.projects, .boards-robots, .components {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.boards-robots {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.components {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+input[type="checkbox"]:not(:checked) {
+  width: 20px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 //Profile User
 .wrapper {
   margin: 0 20px;
 }
+
 .profile {
   position: relative;
   padding: 1em;
@@ -34,9 +102,12 @@
     z-index:1;
     left:0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: #e0e0e0;
     width: 100%;
+    @media all and (min-width:615px) {
+      height: 50%;
+    }
   }
   .wrapper {
     position: relative;
@@ -54,6 +125,10 @@
 .profile--avatar-image {
   width: 100%;
   border-radius: 50%;
+  height: 60%;
+  @media all and (min-width:615px) {
+    height: 90%;
+  }
 }
 .profile--name {
   display: flex;

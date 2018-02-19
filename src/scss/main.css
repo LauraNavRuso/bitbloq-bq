@@ -1,15 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 .order--view {
-  min-width: 70px;
-  height: 34px;
+  width: 170px;
+  height: 35px;
+  color: #5d6069;
+  background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
   background-color: #ffffff;
-  color: #8c919b;
-  text-align: left;
-  font-style: italic;
+  background-size: 9px;
   margin-right: 20px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  border-color: #cfcfcf;
+  padding-left: 5px;
+  /*Delete default icon in select for firefox*/
+  -moz-appearance: none;
+  /*Delete default icon in select for chrome*/
+  -webkit-appearance: none; }
 
-.order--option {
-  height: 34px; }
+/*Delete default icon in select for explorer*/
+.order--view::-ms-expand {
+  display: none; }
+
+.order--option:hover {
+  background-color: #ebebeb; }
 
 .views--grid {
   border-top-left-radius: 4px;
@@ -17,7 +28,8 @@
   width: 35px;
   height: 35px;
   border: 1px solid #cfcfcf;
-  background-color: #ffffff; }
+  background: url(../components/images/ico-vista-galeria.svg) no-repeat 11px 10px;
+  background-color: #ebebeb; }
 
 .views--list {
   border-top-right-radius: 4px;
@@ -25,39 +37,46 @@
   width: 35px;
   height: 35px;
   border: 1px solid #cfcfcf;
+  background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
   background-color: #ffffff; }
 
-.filter {
-  width: 150px;
-  height: 34px;
-  color: #8c919b;
+.filter--button {
+  width: 170px;
+  height: 35px;
+  color: #5d6069;
+  background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
   background-color: #ffffff;
-  background: url(../components/images/icon-caret-bottom.svg) no-repeat 130px 12px;
-  background-size: 7px;
+  background-size: 9px;
   text-align: left;
-  font-style: italic;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
   margin-right: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-color: #cfcfcf; }
 
 .search {
-  min-width: 70px;
-  height: 30px;
+  width: 170px;
+  height: 31px;
   color: #8c919b;
+  background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
   background-color: #ffffff;
-  background: url(../components/images/icon-hint.svg) no-repeat 4px 7px;
   background-size: 17px;
   padding-left: 30px;
   text-align: left;
   font-style: italic;
   border: 1px solid #cfcfcf;
-  border-radius: 4px; }
+  border-radius: 4px;
+  border-color: #cfcfcf;
+  line-height: 47px; }
 
 .social {
   display: flex;
   justify-content: flex-start;
-  margin-top: 30px; }
+  margin-top: 15px;
+  flex-wrap: wrap; }
+  @media all and (min-width: 770px) {
+    .social {
+      margin-top: 30px; } }
 
 .button--social {
   background-color: #ffffff;
@@ -66,17 +85,35 @@
   margin-right: 5px;
   padding: 5px; }
 
-.button--social:after {
-  border-left: 10px solid transparent;
-  border-right: 20px solid transparent; }
-
 .box--button {
   display: flex;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 15px; }
 
 .counter {
-  background-color: #ffffff;
+  position: relative;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
   font-size: 15px; }
+
+.counter:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid #ffffff;
+  margin-top: -5px; }
+
+.counter:before {
+  border-color: black;
+  border-right-color: black; }
 
 .icon--social {
   width: 12px;
@@ -125,6 +162,22 @@ button, input, select {
 
 button, select {
   cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.main {
+  background-color: #e0e0e0;
+  flex: 1; }
+
+.main {
+  background-color: #e0e0e0;
+  flex: 1; }
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .header {
   height: 70px;
@@ -216,6 +269,10 @@ button, select {
 .header--menu-image {
   width: 40px;
   height: 40px; }
+  @media all and (max-width: 520px) {
+    .header--menu-image {
+      width: 30px;
+      height: 30px; } }
 
 .explore--toolbar {
   width: 100;
@@ -227,12 +284,65 @@ button, select {
   display: flex;
   justify-content: space-between; }
 
-.views--container, .filter-search--container {
+.order--views--container, .filter-search--container {
   display: flex; }
 
-.icon-down {
-  width: 10px;
-  height: 10px; }
+.filters {
+  display: inline-block; }
+
+.filter--container {
+  position: relative; }
+
+.filter--options {
+  padding: 20px 0;
+  position: absolute;
+  background: #ffffff;
+  transform: translateX(-45%);
+  width: 99vw;
+  top: 100%;
+  display: flex; }
+
+.filters--active .filter--options {
+  display: flex;
+  flex-direction: column; }
+
+.filter--item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-align: left;
+  color: #5d6069;
+  vertical-align: middle; }
+
+.list {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.filter--title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: #373b44; }
+
+.projects, .boards-robots, .components {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 15px; }
+
+.boards-robots {
+  grid-template-columns: repeat(2, 1fr); }
+
+.components {
+  grid-template-columns: repeat(5, 1fr); }
+
+input[type="checkbox"]:not(:checked) {
+  width: 20px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: black;
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
   margin: 0 20px; }
@@ -246,9 +356,12 @@ button, select {
     z-index: 1;
     left: 0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: #e0e0e0;
     width: 100%; }
+    @media all and (min-width: 615px) {
+      .profile::before {
+        height: 50%; } }
   .profile .wrapper {
     position: relative;
     z-index: 2;
@@ -263,7 +376,11 @@ button, select {
 
 .profile--avatar-image {
   width: 100%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  height: 60%; }
+  @media all and (min-width: 615px) {
+    .profile--avatar-image {
+      height: 90%; } }
 
 .profile--name {
   display: flex;

@@ -4,18 +4,29 @@
 //Explore tools bar buttons
 //Order button
 .order--view {
-  min-width: 70px;
-  height: 34px;
+  width: 170px;
+  height: 35px;
+  color: #5d6069;
+  background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
   background-color: #ffffff;
-  color: #8c919b;
-  text-align: left;
-  font-style: italic;
+  background-size: 9px;
   margin-right: 20px;
   border-radius: 4px;
+  border-color: #cfcfcf;
+  padding-left: 5px;
+  /*Delete default icon in select for firefox*/
+  -moz-appearance: none;
+  /*Delete default icon in select for chrome*/
+  -webkit-appearance: none;
 }
 
-.order--option {
-  height: 34px;
+/*Delete default icon in select for explorer*/
+.order--view::-ms-expand {
+    display: none;
+}
+
+.order--option:hover {
+  background-color: #ebebeb;
 }
 
 //Visualizations action buttons
@@ -26,7 +37,8 @@
   width: 35px;
   height: 35px;
   border: 1px solid #cfcfcf;
-  background-color: #ffffff;
+  background: url(../components/images/ico-vista-galeria.svg) no-repeat 11px 10px;
+  background-color: #ebebeb;
 }
 
 .views--list {
@@ -35,44 +47,51 @@
   width: 35px;
   height: 35px;
   border: 1px solid #cfcfcf;
+  background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
   background-color: #ffffff;
 }
 
-//Filter button
-.filter {
-  width: 150px;
-  height: 34px;
-  color: #8c919b;
+//Filter
+.filter--button {
+  width: 170px;
+  height: 35px;
+  color: #5d6069;
+  background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
   background-color: #ffffff;
-  background: url(../components/images/icon-caret-bottom.svg) no-repeat 130px 12px;
-  background-size: 7px;
+  background-size: 9px;
   text-align: left;
-  font-style: italic;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
   margin-right: 20px;
   cursor: pointer;
+  border-color: #cfcfcf;
 }
 
 //Search input
 .search {
-  min-width: 70px;
-  height: 30px;
+  width: 170px;
+  height: 31px;
   color: #8c919b;
+  background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
   background-color: #ffffff;
-  background: url(../components/images/icon-hint.svg) no-repeat 4px 7px;
   background-size: 17px;
   padding-left:30px;
   text-align: left;
   font-style: italic;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
+  border-color: #cfcfcf;
+  line-height: 47px;
 }
 
-.social{
+.social {
 	display: flex;
 	justify-content: flex-start;
-	margin-top: 30px;
+	margin-top: 15px;
+  flex-wrap: wrap;
+  @media all and (min-width:770px) {
+    margin-top: 30px;
+    }
 }
 
 .button--social{
@@ -83,17 +102,37 @@
   padding: 5px;
 }
 
-.button--social:after {
-	border-left: 10px solid transparent;
-	border-right: 20px solid transparent;
-}
 .box--button{
 	display: flex;
   margin-right: 20px;
+  margin-bottom: 15px;
 }
-.counter{
-	background-color:  #ffffff;
+
+.counter {
+	position: relative;
+	background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
   font-size: 15px;
+}
+.counter:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  border-bottom:5px solid transparent;
+  border-top:5px solid transparent;
+  border-right:5px solid #ffffff;
+	margin-top: -5px;
+}
+.counter:before {
+	border-color: black;
+	border-right-color: black;
+
 }
 .icon--social{
   width: 12px;

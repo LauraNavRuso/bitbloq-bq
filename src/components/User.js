@@ -4,11 +4,14 @@ import SocialNetwork from './user/SocialNetwork';
 
 class User extends Component {
 	render() {
+		let ImgUrl = `https://storage.googleapis.com/bitbloq/images/avatar/`;
+		let avatarImgUrl = ImgUrl + "5a5ca1c4458faa001864b94a";
+
 		return (
 				<div className="profile">
 					<div className="wrapper">
 						<div className="profile--avatar">
-							<img src="https://thumbs.dreamstime.com/b/icono-del-vector-de-la-silueta-de-la-persona-ejemplo-blanco-y-negro-del-avatar-del-usuario-icono-linear-del-esquema-93005311.jpg" alt="name" className="profile--avatar-image"/>
+							<img src={avatarImgUrl} alt="avatar" className="profile--avatar-image"/>
 						</div>
 						<div className="user--data">
 							<div className="profile--name">
@@ -21,7 +24,7 @@ class User extends Component {
 						</div>
 						<SocialNetwork className="profile--role"/>
 					</div>
-				
+
 
 			</div>
 

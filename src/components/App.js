@@ -7,6 +7,7 @@ import PaginationBar from './PaginationBar';
 
 class App extends Component {
 	constructor(props){
+<<<<<<< HEAD
 		super(props);
 
 			// una matriz de ejemplo de elementos para ser paginado
@@ -19,47 +20,24 @@ class App extends Component {
 				projectsForSpecificUser: [],
 				exampleItems: exampleItems,
 				pageOfItems: []
+=======
+			super(props);
+			this.state = {
+				projectsForSpecificUser: []
+>>>>>>> 0a8095a8151a9e310fb8718dad18da148808ffd7
 			};
 		}
 
 	componentDidMount() {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
-		let apiPagination = `page=0`;
-		let apiEndpoint = baseApiUrl + apiPagination;
-
-		fetch(apiEndpoint)
-		.then(response => response.json())
-		.then(json => {
-			this.setState({
-				projects: json
-			});
-			console.log(json);
-		})
-		.catch(function(error){
-			console.log('Ha sucedido un error: ' + error);
-		}
-	)};
-
-	onChangeInputUserListener() {
-		let idCreatorInputContent = document.getElementById('user-input-id-creator').value;
-		let usernameInputContent = document.getElementById('user-input-username').value;
-
-		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
-				// _id: "569cd00be4b03b226c664f6a",
-				// username: "naiara1712"
-				_id: idCreatorInputContent,
-				username: usernameInputContent
+				_id: `546e259ce4b0bde006d07afe`
 			}
 		}
 		let apiPagination = `page=0`;
 		let creatorData = JSON.stringify(objectUserInputs);
 		let apiEndpoint = baseApiUrl + apiPagination + `&query=` + creatorData;
-
-		console.log('id creator ' + idCreatorInputContent);
-		console.log('username ' + usernameInputContent);
-
 
 		fetch(apiEndpoint)
 		.then(response => response.json())
@@ -74,11 +52,16 @@ class App extends Component {
 		}
 	)
 }
+<<<<<<< HEAD
 onChangePage(pageOfItems) {
         // estado de actualización con nueva página de elementos
         this.setState({ pageOfItems: pageOfItems });
     }
 	render() {
+=======
+
+render() {
+>>>>>>> 0a8095a8151a9e310fb8718dad18da148808ffd7
 		return (
 				<div className="page">
 					<div className="nav">
@@ -86,7 +69,9 @@ onChangePage(pageOfItems) {
 						<User />
 					</div>
 					<div className="main">
+
 						<ActionsBar />
+<<<<<<< HEAD
 						<ProjectCard />
 						<input id="user-input-id-creator" placeholder="Introduce el id-usuario" onChange={this.onChangeInputUserListener}></input>
 						<input id="user-input-username" placeholder="Introduce el username" onChange={this.onChangeInputUserListener}></input>
@@ -98,6 +83,12 @@ onChangePage(pageOfItems) {
 								<PaginationBar items={this.state.exampleItems} onChangePage={this.onChangePage} />
 							</div>
 						</div>
+=======
+						{this.state.projectsForSpecificUser.map(x =>(
+							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+						))}
+						<PaginationBar />
+>>>>>>> 0a8095a8151a9e310fb8718dad18da148808ffd7
 					</div>
 				</div>
 		);

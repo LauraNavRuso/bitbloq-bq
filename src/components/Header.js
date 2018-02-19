@@ -3,7 +3,10 @@ import icon from './images/icon-bitbloq.svg';
 import iconStory from './images/icon-story.svg';
 import iconStudents from './images/icon-students.svg';
 import iconUser from './images/profile.svg';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a8095a8151a9e310fb8718dad18da148808ffd7
 
 
 class Header extends Component {
