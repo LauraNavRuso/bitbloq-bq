@@ -21,7 +21,11 @@ class User extends Component {
 
 	render() {
 		let ImgUrl = `https://storage.googleapis.com/bitbloq/images/avatar/`;
-		let avatarImgUrl = ImgUrl + "5a5ca1c4458faa001864b94a";
+		let id = this.props.projects.slice(0, 1).map(x => (
+			x.creator._id
+		));
+		let avatarImgUrl = ImgUrl + id;
+		// let avatarImgUrl = ImgUrl + "5a5ca1c4458faa001864b94a";
 
 		return (
 				<div className="profile">

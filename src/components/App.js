@@ -43,7 +43,7 @@ render() {
 				<div className="page">
 					<div className="nav">
 						<Header />
-						<User />
+						<User projects={this.state.projectsForSpecificUser} />
 					</div>
 					<div className="main">
 

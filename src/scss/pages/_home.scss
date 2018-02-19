@@ -59,11 +59,8 @@
 }
 .profile--avatar-image {
   width: 150px;
-  border-radius: 50%;
   height: 150px;
-  // @media all and (min-width:615px) {
-  //   height: 90%;
-  // }
+  border-radius: 50%;
 }
 .profile--name {
   display: flex;
