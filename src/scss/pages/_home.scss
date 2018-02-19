@@ -14,14 +14,20 @@
 //Visualization
 .order--views--container, .filter-search--container {
   display: flex;
+  display: column;
 }
 
 //Filter button container --General container
 .filters {
   display: inline-block;
+  order: 1;
 }
 
-//filter button and opotions container
+//filter button and options container
+.filter-search--container {
+  flex-direction: column;
+}
+
 .filter--container {
   position: relative;
 }
@@ -32,11 +38,13 @@
   position: absolute;
   background: #ffffff;
   // left: 30%;
-  transform: translateX(-68%);
-  width: 99vw;
+  // transform: translateX(-68%);
+  width: 98vw;
   top: 100%;
-  // display: none;
+  right: -7%;
+  //display: none;
   display: flex;
+  justify-content: flex-start;
 }
 //
 .filters--active .filter--options {
@@ -49,7 +57,9 @@
   font-size: 13px;
   text-align: left;
   color: #5d6069;
-  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .list {
@@ -64,6 +74,7 @@
   text-align: left;
   color: #373b44;
 }
+
 .projects, .boards-robots, .components {
   margin: 0;
   padding: 0;

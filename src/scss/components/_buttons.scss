@@ -1,15 +1,14 @@
 //Explore tools bar buttons
 //Order button
-.order--view {
+.order--button {
   width: 170px;
   height: 35px;
   color: #5d6069;
   background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
   background-color: #ffffff;
   background-size: 9px;
-  margin-right: 20px;
-  border-radius: 4px;
-  border-color: #cfcfcf;
+  margin-right: 8px;
+  @include border-round();
   padding-left: 5px;
   /*Delete default icon in select for firefox*/
   -moz-appearance: none;
@@ -28,20 +27,20 @@
 
 //Visualizations action buttons
 .views--grid {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
   width: 35px;
   height: 35px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
   border: 1px solid #cfcfcf;
   background: url(../components/images/ico-vista-galeria.svg) no-repeat 11px 10px;
   background-color: #ebebeb;
 }
 
 .views--list {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
   width: 35px;
   height: 35px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   border: 1px solid #cfcfcf;
   background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
   background-color: #ffffff;
@@ -56,16 +55,16 @@
   background-color: #ffffff;
   background-size: 9px;
   text-align: left;
-  border: 1px solid #cfcfcf;
-  border-radius: 4px;
   margin-right: 20px;
   cursor: pointer;
-  border-color: #cfcfcf;
+  @include border-round();
+  // flex: 1;
+  // order: 2;
 }
 
 //Search input
-.search {
-  width: 170px;
+.search--input {
+  width: 138px;
   height: 31px;
   color: #8c919b;
   background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
@@ -74,9 +73,7 @@
   padding-left:30px;
   text-align: left;
   font-style: italic;
-  border: 1px solid #cfcfcf;
-  border-radius: 4px;
-  border-color: #cfcfcf;
+  @include border-round();
   line-height: 47px;
 }
 
