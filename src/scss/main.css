@@ -340,7 +340,6 @@ input[type="checkbox"]:not(:checked) {
   width: 20px;
   height: 14px;
   border-radius: 3px;
-  background-color: black;
   margin: 0;
   padding: 0; }
 
