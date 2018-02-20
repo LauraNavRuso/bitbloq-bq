@@ -14,7 +14,7 @@ class SocialNetwork extends Component {
 		 	countTwitter: 0,
 			countPinterest: 0,
 			countGoogle: 0,
-			shortUrl:''
+			link:''
 	  };
 
 	 this.handleClick = this.handleClick.bind(this);
@@ -38,18 +38,29 @@ class SocialNetwork extends Component {
 		}
   }
 
-	makeShort(longUrl){
-	  let str ="<a href='"+longUrl+"' target='aboutblank'>"+longUrl+"</a>";
-		document.querySelector(".url--link").innerHTML = str;
-	}
+	// shouldComponentUpdate(nextProps, nextState) {
+	//   this.shortenUrl(window.location.href);
+	// }
 
   componentDidMount() {
+    console.log('Estoy en el componentDidMount');
+		this.shortenUrl(window.location.href);
+  }
+
+	createShortUrllink(shortUrl){
+	  let shortLink ="<a href='"+shortUrl+"' target='aboutblank'>"+shortUrl+"</a>";
+		this.setState({
+			link: shortLink
+		});
+	}
+
+	shortenUrl(url){
 		const { setKey, shorten } = require('react-native-google-shortener');
 		setKey(this.props.apiKey);
-		shorten('www.programadorwebapp.com').then(response => {
-			this.makeShort(response.id);
+		shorten(url).then(response => {
+			this.createShortUrllink(response.id);
 		});
-  }
+	}
 
 	render() {
 		return (
@@ -72,7 +83,7 @@ class SocialNetwork extends Component {
 							<div className="counter">{this.state.countGoogle}</div>
 						</div>
 						<div className="box--link">
-							<button className="button--social url--link" type="submit">{this.state.shortUrl}</button>
+							<button className="button--social url--link" type="submit" dangerouslySetInnerHTML={{__html:this.state.link}}></button>
 						</div>
 					</div>
 				</div>
