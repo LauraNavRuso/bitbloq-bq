@@ -105,7 +105,6 @@ input[type="checkbox"]:not(:checked) {
   width: 20px;
   height: 14px;
   border-radius: 3px;
-  background-color: black;
   margin: 0;
   padding: 0;
 }
@@ -127,8 +126,11 @@ input[type="checkbox"]:not(:checked) {
     height: 60%;
     background: #e0e0e0;
     width: 100%;
-    @media all and (min-width:615px) {
-      height: 50%;
+    @media all and (min-width:578px) {
+      height: 55%;
+    }
+    @media all and (min-width:804px) {
+      height: 52%;
     }
   }
   .wrapper {
@@ -145,12 +147,9 @@ input[type="checkbox"]:not(:checked) {
   grid-row: span 2;
 }
 .profile--avatar-image {
-  width: 100%;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  height: 60%;
-  @media all and (min-width:615px) {
-    height: 90%;
-  }
 }
 .profile--name {
   display: flex;
@@ -199,6 +198,6 @@ input[type="checkbox"]:not(:checked) {
   @media all and (min-width:770px) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: auto;
+    margin-top: 10px;
     }
 }
