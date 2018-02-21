@@ -20,27 +20,27 @@ class Header extends Component {
 							<ul className="header--menu--list">
 								<li className="header--menu--link">
 									<a className="menu--link-projects" href="http://bitbloq.bq.com/#/bloqsproject">
-										<span className="menu--link--span">Proyectos</span>
+										Proyectos
 									</a>
 								</li>
 								<li className="header--menu--link">
 									<a className="menu--link-explore" href="http://bitbloq.bq.com/#/explore">
-										<span className="menu--link--span">Explora</span>
+										Explora
 									</a>
 								</li>
 								<li className="header--menu--link">
 									<a className="menu--link-users" href="">
-										<span className="menu--link--span">Usuarios</span>
+										Usuarios
 									</a>
 								</li>
 								<li className="header--menu--link">
 									<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn">
-										<span className="menu--link--span">Aprende</span>
+										Aprende
 									</a>
 								</li>
 								<li className="header--menu--link">
 									<a className="menu--link-forum" href="http://bitbloq.bq.com/#/forum">
-										<span className="menu--link--span">Foro</span>
+										Foro
 									</a>
 								</li>
 							</ul>

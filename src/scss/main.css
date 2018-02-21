@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto,Roboto-Regular:400,700");
 .order--view {
   width: 170px;
   height: 35px;
@@ -185,7 +185,9 @@ ul {
   width: 100%;
   background-color: #373b44;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  font-family: 'Robotp-Regular'sans-serif;
+  font-size: 13px; }
 
 .header--icon {
   background-color: #82ad3a;
@@ -203,93 +205,108 @@ ul {
 
 .header--menu {
   width: 420px; }
+  @media all and (min-width: 468px) {
+    .header--menu {
+      width: 320px; } }
 
 .header--menu--list {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-top: 25px; }
-  @media all and (max-width: 520px) {
-    .header--menu--list {
-      padding: 0;
-      width: 380px;
-      margin-left: 5px; } }
+  align-items: center;
+  padding-left: 0; }
 
 .menu--link-projects {
-  background-image: url("../components/images/icon-students.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: url("../components/images/icon-students.svg") center 10px no-repeat;
+  padding: 30px 10px 0;
+  display: inline-block;
   text-decoration: none;
-  padding: 0;
-  display: block; }
+  color: #676a71;
+  width: 15px;
+  height: 13px; }
   .menu--link-projects:hover {
-    background-image: url("../components/images/icon-students-2.svg"); }
-  @media all and (max-width: 520px) {
+    background: url("../components/images/icon-students-2.svg");
+    background-repeat: no-repeat;
+    color: #FFFFFF; }
+  @media all and (min-width: 468px) {
     .menu--link-projects {
-      padding: 0; } }
+      background: url("../components/images/icon-students.svg") left center no-repeat;
+      padding: 0 0 0 30px;
+      display: inline-block; } }
 
 .menu--link-explore {
-  background-image: url("../components/images/icon-story.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: url("../components/images/icon-students.svg") center 10px no-repeat;
+  padding: 30px 10px 0;
+  display: inline-block;
   text-decoration: none;
-  padding: 0;
-  display: block; }
+  color: #676a71;
+  width: 15px;
+  height: 13px; }
   .menu--link-explore:hover {
-    background-image: url("../components/images/icon-story-2.svg"); }
-  @media all and (max-width: 520px) {
+    background: url("../components/images/icon-story-2.svg");
+    background-repeat: no-repeat;
+    color: #FFFFFF; }
+  @media all and (min-width: 468px) {
     .menu--link-explore {
-      padding: 0; } }
+      background: urlurl("../components/images/icon-story.svg") left center no-repeat;
+      padding: 0 0 0 30px;
+      display: inline-block;
+      color: #FFFFFF; } }
 
 .menu--link-users {
-  background-image: url("../components/images/icon-students.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: url("../components/images/icon-students.svg") center 10px no-repeat;
+  padding: 30px 10px 0;
+  display: inline-block;
   text-decoration: none;
-  padding: 0;
-  display: block; }
+  color: #676a71;
+  width: 15px;
+  height: 13px; }
   .menu--link-users:hover {
-    background-image: url("../components/images/icon-students-2.svg"); }
-  @media all and (max-width: 520px) {
+    background-image: url("../components/images/icon-students-2.svg");
+    background-repeat: no-repeat;
+    color: #FFFFFF; }
+  @media all and (min-width: 468px) {
     .menu--link-users {
-      padding: 0; } }
+      background: url("../components/images/icon-students.svg") left center no-repeat;
+      padding: 0 0 0 30px;
+      display: inline-block;
+      color: #FFFFFF; } }
 
 .menu--link-learn {
-  background-image: url("../components/images/icon-story.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: url("../components/images/icon-students.svg") center 10px no-repeat;
+  padding: 30px 10px 0;
+  display: inline-block;
   text-decoration: none;
-  padding: 0;
-  display: block; }
+  color: #676a71;
+  width: 15px;
+  height: 13px; }
   .menu--link-learn:hover {
-    background-image: url("../components/images/icon-story-2.svg"); }
-  @media all and (max-width: 520px) {
+    background-image: url("../components/images/icon-story-2.svg");
+    background-repeat: no-repeat;
+    color: #FFFFFF; }
+  @media all and (min-width: 468px) {
     .menu--link-learn {
-      padding: 0; } }
+      background: url("../components/images/icon-story.svg") left center no-repeat;
+      padding: 0 0 0 30px;
+      display: inline-block;
+      color: #FFFFFF; } }
 
 .menu--link-forum {
-  background-image: url("../components/images/icon-students.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: url("../components/images/icon-students.svg") center 10px no-repeat;
+  padding: 30px 10px 0;
+  display: inline-block;
   text-decoration: none;
-  padding: 0;
-  display: block; }
+  color: #676a71;
+  width: 15px;
+  height: 13px; }
   .menu--link-forum:hover {
     background-image: url("../components/images/icon-students-2.svg"); }
-  @media all and (max-width: 520px) {
+  @media all and (min-width: 468px) {
     .menu--link-forum {
-      padding: 0; } }
-
-.menu--link--span {
-  color: #676a71;
-  padding-right: 20px;
-  padding-left: 20px;
-  display: block; }
-  .menu--link--span:hover {
-    color: #FFFFFF; }
-  @media all and (max-width: 520px) {
-    .menu--link--span {
-      padding: 0; } }
+      background: url("../components/images/icon-students.svg") left center no-repeat;
+      padding: 0 0 0 30px;
+      display: inline-block;
+      color: #FFFFFF; } }
 
 .menu--image {
   position: absolute;
