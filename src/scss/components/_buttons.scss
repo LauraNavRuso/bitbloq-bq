@@ -58,21 +58,17 @@
   margin-right: 20px;
   cursor: pointer;
   @include border();
-  // flex: 1;
-  // order: 2;
 }
 
 //Search input
 .search--input {
   width: 138px;
   height: 31px;
-  color: #8c919b;
   background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
   background-color: #ffffff;
   background-size: 17px;
   padding-left:30px;
   text-align: left;
-  font-style: italic;
   @include border();
   line-height: 47px;
 }

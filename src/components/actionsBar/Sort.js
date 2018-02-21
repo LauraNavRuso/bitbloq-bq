@@ -5,7 +5,7 @@ class Sort extends Component {
 		return (
 			<div>
 				<select className="order--button">
-					<option className="order--option" value='' disabled>Orden:</option>
+					<option className="order--option" value='' hidden>Orden:</option>
 					<option className="order--option" value='recientes'>Más recientes</option>
 					<option className="order--option" value='antiguos'>Más antiguos</option>
 					<option className="order--option" value='a-z'>Nombre A-Z</option>

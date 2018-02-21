@@ -102,12 +102,19 @@
 }
 
 input[type="checkbox"]:not(:checked) {
+  width: 30px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
   width: 20px;
   height: 14px;
   border-radius: 3px;
-  margin: 0;
-  padding: 0;
 }
+
+
+//fecha de actualización tenemos que ordenar los filtros
 
 //Profile User
 .wrapper {
