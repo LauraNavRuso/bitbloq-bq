@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', serif;
   box-sizing: border-box;
 }
 
@@ -9,14 +11,19 @@ button, input, select {
   outline: none;
 }
 
-button, select{
+button, select {
   cursor: pointer;
 }
 
-.main{
+ul {
+  list-style: none;
+}
+
+.main {
   background-color:#e0e0e0;
   flex: 1;
 }
+
 .page {
   min-height: 100vh;
   display: flex;
