@@ -356,3 +356,77 @@ button, select {
       flex-direction: row;
       justify-content: space-between;
       margin-top: auto; } }
+
+.projects--general-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 24px;
+  grid-column-gap: 23px;
+  padding: 30px; }
+
+.projects--project-card-container {
+  border: 2px solid grey; }
+
+.project-card--img {
+  width: 100%; }
+
+.project-card--container-info {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: #373b44;
+  background-color: white; }
+
+.project-card--main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 2; }
+
+.project-card--project-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.project-card--username {
+  margin: 0;
+  line-height: 28px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  color: #8c919b; }
+
+.project-card--username-content {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: left;
+  color: #82ad3a; }
+
+.project-card--community-stats {
+  flex-direction: row;
+  margin: 0;
+  line-height: 28px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  color: #8c919b;
+  background-color: #c0c3c9; }
+
+.project-card--timesViewed {
+  display: inline-flex;
+  background-image: url("../components/images/heart.svg");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  padding-right: 9px; }
+
+.project-card--timesAdded {
+  display: inline-flex;
+  background-image: url("../components/images/plus.svg");
+  background-repeat: no-repeat;
+  padding-left: 20px; }
