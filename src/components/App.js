@@ -7,7 +7,6 @@ import PaginationBar from './PaginationBar';
 
 class App extends Component {
 	constructor(props){
-<<<<<<< HEAD
 		super(props);
 		this.requestServer = this.requestServer.bind(this);
 		this.handleInput = this.handleInput.bind(this);
