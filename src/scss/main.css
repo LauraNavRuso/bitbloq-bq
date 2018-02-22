@@ -138,18 +138,15 @@
   line-height: 15px; }
   .pagination-page:hover {
     background-color: #dbdee3;
-    color: #8c919b;
-    cursor: default; }
+    color: #8c919b; }
 
 .button-page {
   overflow: visible;
   background-color: #fff;
-  cursor: pointer;
   line-height: 0; }
   .button-page:hover {
     background-color: #dbdee3;
-    color: #8c919b;
-    cursor: default; }
+    color: #8c919b; }
 
 body {
   margin: 0;
@@ -214,7 +211,10 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0; }
+  padding-left: 5px; }
+  @media all and (min-width: 468px) {
+    .header--menu--list {
+      margin-top: 30px; } }
 
 .menu--link-projects {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -232,7 +232,8 @@ ul {
     .menu--link-projects {
       background: url("../components/images/icon-students.svg") left center no-repeat;
       padding: 0 0 0 30px;
-      display: inline-block; } }
+      display: inline-block;
+      margin-right: 55px; } }
 
 .menu--link-explore {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -248,10 +249,10 @@ ul {
     color: #FFFFFF; }
   @media all and (min-width: 468px) {
     .menu--link-explore {
-      background: urlurl("../components/images/icon-story.svg") left center no-repeat;
+      background: url("../components/images/icon-story.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      color: #FFFFFF; } }
+      margin-right: 40px; } }
 
 .menu--link-users {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -270,7 +271,7 @@ ul {
       background: url("../components/images/icon-students.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      color: #FFFFFF; } }
+      margin-right: 45px; } }
 
 .menu--link-learn {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -289,7 +290,7 @@ ul {
       background: url("../components/images/icon-story.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      color: #FFFFFF; } }
+      margin-right: 45px; } }
 
 .menu--link-forum {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -305,8 +306,7 @@ ul {
     .menu--link-forum {
       background: url("../components/images/icon-students.svg") left center no-repeat;
       padding: 0 0 0 30px;
-      display: inline-block;
-      color: #FFFFFF; } }
+      display: inline-block; } }
 
 .menu--image {
   position: absolute;
