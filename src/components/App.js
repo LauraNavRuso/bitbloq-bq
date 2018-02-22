@@ -10,7 +10,9 @@ class App extends Component {
 			super(props);
 			this.state = {
 				projects: [],
-				projectsForSpecificUser: []
+				projectsForSpecificUser: [],
+				userId: `546e259ce4b0bde006d07afe`    //CON PROYECTOS
+				// userId: '581194d501c9810017bc8f48'      //con datos de usuario
 			};
 		}
 
@@ -18,7 +20,7 @@ class App extends Component {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
-				_id: `546e259ce4b0bde006d07afe`
+				_id: this.state.userId
 			}
 		}
 		let apiPagination = `page=0`;
@@ -59,7 +61,7 @@ render() {
 				<div className="page">
 					<div className="nav">
 						<Header />
-						<User projects={this.state.projectsForSpecificUser} />
+						<User userId={this.state.userId} />
 					</div>
 					<div className="main">
 
