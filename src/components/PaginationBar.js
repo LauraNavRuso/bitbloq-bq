@@ -53,13 +53,15 @@ class PaginationBar extends Component {
 paintPagination(){
 	let buttons = [];
 	for (let i = 1; i<= this.state.totalPagesUser; i++) {
-		// console.log(this.state.totalPagesUser);
+		// console.log('Primer console', this.state.totalPagesUser);
 		buttons.push (<button className="button-page">{i}</button>);
+}
+
 	if (this.state.totalPagesUser === 1){
-		<button className="pagination-page" type="button" disabled>Anterior</button>
+		alert('Hola');
+			// <button className="pagination-page" disabled>Anterior</button>
 	}
 
-	}
 	return(
 		<div className="pagination">
 			<button className="pagination-page" type="button">Anterior</button>
