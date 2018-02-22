@@ -450,3 +450,98 @@ input[type="checkbox"] {
       flex-direction: row;
       justify-content: space-between;
       margin-top: 10px; } }
+
+.projects--general-container {
+  position: relative;
+  top: 210px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-row-gap: 24px;
+  grid-column-gap: 23px;
+  padding: 30px; }
+  @media all and (max-width: 1183px) {
+    .projects--general-container {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media all and (max-width: 700px) {
+    .projects--general-container {
+      grid-template-columns: 1fr 1fr; } }
+  @media all and (max-width: 486px) {
+    .projects--general-container {
+      grid-template-columns: 1fr; } }
+
+.projects--project-card-container {
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  width: 100%; }
+
+.project-card--img {
+  width: 100%; }
+
+.project-card--container-info {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: #373b44;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 16px;
+  padding-top: 17px;
+  padding-bottom: 18px; }
+
+.project-card--main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.project-card--project-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.project-card--username {
+  margin: 0;
+  line-height: 28px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  color: #8c919b; }
+
+.project-card--username-content {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: left;
+  color: #82ad3a; }
+
+.project-card--community-stats {
+  flex-direction: row;
+  margin: 0;
+  line-height: 28px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  color: #8c919b; }
+
+.project-card--timesViewed {
+  display: inline-flex;
+  background-image: url("../components/images/heart.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 20px;
+  padding-right: 9px; }
+
+.project-card--timesAdded {
+  display: inline-flex;
+  background-image: url("../components/images/plus.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 20px; }

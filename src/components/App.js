@@ -89,10 +89,12 @@ class App extends Component {
 					<User projects={this.state.projectsForSpecificUser} />
 				</div>
 				<div className="main">
-					<ActionsBar handleInput={this.handleInput} />
+					<ActionsBar handleInput={this.handleInput}/>
+					<div className="projects--general-container">
 						{this.state.projectsForSpecificUser.map(x =>(
-					<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+						<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
 						))}
+					</div>
 					<PaginationBar />
 				</div>
 			</div>
