@@ -454,7 +454,7 @@ input[type="checkbox"]:not(:checked) {
   position: relative;
   top: 210px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px 300px 300px 300px;
   grid-row-gap: 24px;
   grid-column-gap: 23px;
   padding: 30px; }
@@ -470,7 +470,8 @@ input[type="checkbox"]:not(:checked) {
 
 .projects--project-card-container {
   border: 1px solid #cfcfcf;
-  border-radius: 4px; }
+  border-radius: 4px;
+  width: 100%; }
 
 .project-card--img {
   width: 100%; }
@@ -495,7 +496,10 @@ input[type="checkbox"]:not(:checked) {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 2; }
+  line-height: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 .project-card--project-data {
   display: flex;

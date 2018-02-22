@@ -210,7 +210,7 @@ input[type="checkbox"]:not(:checked) {
 	position: relative;
 	top: 210px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 300px 300px 300px 300px;
 	grid-row-gap: 24px;
 	grid-column-gap: 23px;
 	padding: 30px;
@@ -234,7 +234,7 @@ input[type="checkbox"]:not(:checked) {
 	// border-radius: 20px;
 	// width: 30%;
 	// margin: 20px;
-	// width: 250px;
+	width: 100%;
 }
 
 .project-card--container-img {
@@ -278,9 +278,9 @@ input[type="checkbox"]:not(:checked) {
 	line-height: 2;
 
 
-	// overflow: hidden;
-	// white-space: nowrap;
-	// text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .project-card--project-data {
