@@ -10,18 +10,35 @@ class App extends Component {
 		super(props);
 		this.requestServer = this.requestServer.bind(this);
 		this.handleInput = this.handleInput.bind(this);
+		this.getRandom = this.getRandom.bind(this);
 		this.state = {
 			projectsForSpecificUser: [],
 			projects: [],
+<<<<<<< HEAD
 			userId: '5a8e8d1809d5f4001b7fdea7'
 			};
 		}
+=======
+			randomNumber:0,
+			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6'],
+			userId:''
+		};
+	}
+
+	componentWillMount(){
+		let random = this.getRandom(this.state.userIdArray.length);
+		this.setState({
+			randomNumber:random,
+			userId:this.state.userIdArray[random]
+		});
+	}
+>>>>>>> layout-user
 
 	componentDidMount() {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
-				_id: this.state.userId
+				_id: this.state.userIdArray[this.state.randomNumber]
 			}
 		}
 
@@ -33,6 +50,10 @@ class App extends Component {
 
 		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
 			objectUserInputs, successFn);
+	}
+
+	getRandom(number){
+		return Math.floor(Math.random()*number);
 	}
 
 	requestServer(baseApiUrl, objectUserInputs, callbackFn) {
