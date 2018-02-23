@@ -209,11 +209,14 @@ input[type="checkbox"]:not(:checked) {
 .projects--general-container {
 	position: relative;
 	top: 210px;
+	padding: 30px;
+
 	display: grid;
-	grid-template-columns: 300px 300px 300px 300px;
+	grid-template-columns: repeat(4, 1fr);
 	grid-row-gap: 24px;
 	grid-column-gap: 23px;
-	padding: 30px;
+
+
 	// width: 100%;
 
 	@media all and (max-width: 1183px) {
@@ -230,11 +233,13 @@ input[type="checkbox"]:not(:checked) {
 .projects--project-card-container {
 	// border: 2px solid grey;
 	@include border();
+
 	// border: 1px solid #cfcfcf;
 	// border-radius: 20px;
-	// width: 30%;
 	// margin: 20px;
-	width: 100%;
+	// width: 100%;
+
+	max-width: 285px;
 }
 
 .project-card--container-img {
