@@ -13,13 +13,14 @@ class App extends Component {
 		this.state = {
 			projectsForSpecificUser: [],
 			projects: [],
-			userId: `5a8dc42409d5f4001b7fdea6`
+			userId: '5a8e8d1809d5f4001b7fdea7'
 					// userId: `546e259ce4b0bde006d07afe`    //CON PROYECTOS
 				// userId: '581194d501c9810017bc8f48'      //con datos de usuario
 			};
 		}
 
 	componentDidMount() {
+		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
 				_id: this.state.userId
@@ -92,7 +93,7 @@ class App extends Component {
 			<div className="page">
 				<div className="nav">
 					<Header />
-					<User projects={this.state.userId} />
+					<User projects={this.state.projectsForSpecificUser} userId={this.state.userId} />
 				</div>
 				<div className="main">
 					<ActionsBar handleInput={this.handleInput}/>

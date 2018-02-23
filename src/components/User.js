@@ -25,7 +25,7 @@ class User extends Component {
 				username: usernameData
 			});
 		});
-		let baseQueryCount = 'https://api-beta-bitbloq.bq.com/bitbloq/v1/project?';
+		let baseQueryCount = 'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?';
 		let countAndQuery = 'count=*&query={%22creator%22:{%22_id%22:%22';
 		let closeQuery = '%22}}';
 		let apiQueryCount = baseQueryCount + countAndQuery + this.props.userId + closeQuery;
@@ -39,10 +39,7 @@ class User extends Component {
 	}
 
 	render() {
-		let ImgUrl = `https://storage.googleapis.com/bitbloq/images/avatar/`;
-		// let id = this.props.projects.slice(0, 1).map(x => (
-		// 	x.creator._id
-		// ));
+		let ImgUrl = `http://storage.googleapis.com/bitbloq-next/images/avatar/`;
 		let id = this.props.userId;
 		let avatarImgUrl = ImgUrl + id;
 
@@ -54,7 +51,7 @@ class User extends Component {
 						</div>
 						<div className="user--data">
 							<div className="profile--name">
-								<h1 className="profile--name-real">{this.state.firstName}{this.state.lastName}</h1>
+								<h1 className="profile--name-real">{this.state.firstName} {this.state.lastName}</h1>
 								<h2 className="profile--name-user">{this.state.username}</h2>
 							</div>
 							<div className="proyect">
