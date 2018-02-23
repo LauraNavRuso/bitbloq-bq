@@ -157,6 +157,7 @@ input[type="checkbox"] {
   width: $avatarSize;
   height: $avatarSize;
   border-radius: 50%;
+  border: 2px solid #8c8c8c;
 }
 .profile--name {
   display: flex;

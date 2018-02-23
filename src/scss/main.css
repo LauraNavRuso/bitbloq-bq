@@ -399,7 +399,8 @@ input[type="checkbox"] {
 .profile--avatar-image {
   width: 150px;
   height: 150px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  border: 2px solid #8c8c8c; }
 
 .profile--name {
   display: flex;

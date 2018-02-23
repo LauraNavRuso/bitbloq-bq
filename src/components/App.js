@@ -13,7 +13,7 @@ class App extends Component {
 		this.state = {
 			projectsForSpecificUser: [],
 			projects: [],
-			userId: '5a8dc42409d5f4001b7fdea6'
+			userId: '5a8e8d1809d5f4001b7fdea7'
 			};
 		}
 
