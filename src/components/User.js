@@ -39,10 +39,7 @@ class User extends Component {
 	}
 
 	render() {
-		let ImgUrl = `https://storage.googleapis.com/bitbloq/images/avatar/`;
-		// let id = this.props.projects.slice(0, 1).map(x => (
-		// 	x.creator._id
-		// ));
+		let ImgUrl = `http://storage.googleapis.com/bitbloq-next/images/avatar/`;
 		let id = this.props.userId;
 		let avatarImgUrl = ImgUrl + id;
 
@@ -54,7 +51,7 @@ class User extends Component {
 						</div>
 						<div className="user--data">
 							<div className="profile--name">
-								<h1 className="profile--name-real">{this.state.firstName}{this.state.lastName}</h1>
+								<h1 className="profile--name-real">{this.state.firstName} {this.state.lastName}</h1>
 								<h2 className="profile--name-user">{this.state.username}</h2>
 							</div>
 							<div className="proyect">

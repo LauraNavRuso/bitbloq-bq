@@ -118,7 +118,7 @@ input[type="checkbox"] {
 
 //Profile User
 .wrapper {
-  margin: 0 20px;
+  margin: 0 $iconSize;
 }
 
 .profile {
@@ -146,7 +146,7 @@ input[type="checkbox"] {
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: $iconSize;
   }
  }
 .profile--avatar {
@@ -154,8 +154,8 @@ input[type="checkbox"] {
   grid-row: span 2;
 }
 .profile--avatar-image {
-  width: 150px;
-  height: 150px;
+  width: $avatarSize;
+  height: $avatarSize;
   border-radius: 50%;
 }
 .profile--name {
@@ -196,8 +196,8 @@ input[type="checkbox"] {
     }
 }
 .icon{
-  height: 20px;
-  width: 20px;
+  height: $iconSize;
+  width: $iconSize;
 }
 .user--data{
   display: flex;
@@ -208,9 +208,6 @@ input[type="checkbox"] {
     margin-top: 10px;
     }
 }
-
-
-
 
 //Projects grid
 .projects--general-container {
