@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-.order--button {
+.sort--button {
   width: 170px;
   height: 35px;
   color: #5d6069;
@@ -13,14 +13,13 @@
   /*Delete default icon in select for firefox*/
   -moz-appearance: none;
   /*Delete default icon in select for chrome*/
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  /*Delete default icon in select for explorer*/ }
+  .sort--button-ms-expand {
+    display: none; }
 
-/*Delete default icon in select for explorer*/
-.order--view::-ms-expand {
-  display: none; }
-
-.order--option:hover {
-  background-color: #ebebeb; }
+.sort--option {
+  height: 50px; }
 
 .views--grid {
   width: 35px;

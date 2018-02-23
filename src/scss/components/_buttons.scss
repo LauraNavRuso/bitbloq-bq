@@ -1,6 +1,6 @@
 //Explore tools bar buttons
 //Order button
-.order--button {
+.sort--button {
   width: 170px;
   height: 35px;
   color: #5d6069;
@@ -14,15 +14,14 @@
   -moz-appearance: none;
   /*Delete default icon in select for chrome*/
   -webkit-appearance: none;
+  /*Delete default icon in select for explorer*/
+  &-ms-expand {
+    display:none;
+  }
 }
 
-/*Delete default icon in select for explorer*/
-.order--view::-ms-expand {
-    display: none;
-}
-
-.order--option:hover {
-  background-color: #ebebeb;
+.sort--option {
+  height: 50px;
 }
 
 //Visualizations action buttons

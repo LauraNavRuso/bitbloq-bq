@@ -9,16 +9,18 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.requestServer = this.requestServer.bind(this);
-		this.handleInput = this.handleInput.bind(this);
+		this.handleFilter = this.handleFilter.bind(this);
 		this.state = {
-			projectsForSpecificUser: []
+			projectsForSpecificUser: [],
+			filterQuery: ''
 			};
 		}
 
+	//Method to use a specific user and ask for data to the API
 	componentDidMount() {
 		let objectUserInputs = {
 			creator: {
-				_id: '5a8dc42409d5f4001b7fdea6'
+				_id: '5a8e8d1809d5f4001b7fdea7'
 			}
 		}
 
@@ -32,6 +34,7 @@ class App extends Component {
 			objectUserInputs, successFn);
 	}
 
+	//Ask for data
 	requestServer(baseApiUrl, objectUserInputs, callbackFn) {
 		let creatorData = JSON.stringify(objectUserInputs);
 		let apiEndpoint = baseApiUrl + '&query=' + creatorData;
@@ -46,31 +49,13 @@ class App extends Component {
 		})
 	}
 
-	//Get data from input
-	handleInput(event){
-		const searchValue = event.target.value;
-
-		let filterQuery = {
-		   "$or":[
-		      {
-		         "name":{
-		            "$regex":searchValue,
-		            "$options":"i"
-		         }
-		      },
-
-		      {
-		         "creator":{
-		            "$regex":searchValue,
-		            "$options":"i"
-		         }
-		      }
-		   ]
-		}
+	//Get data from input --search button
+	handleFilter(filterQuery){
+		console.log('filterQuery', filterQuery);
 
 		let successFn = (json) => {
 			this.setState({
-				filter: searchValue,
+				filterQuery: filterQuery,
 				projectsForSpecificUser: json
 			});
 		}
@@ -78,9 +63,6 @@ class App extends Component {
 		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
 			filterQuery, successFn);
 	}
-
-//'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?page=0&query={"$or":[{"name":{"$regex":"coche","$options":"i"}},{"creator":{"$regex":"coche","$options":"i"}}]}
-//'
 
 	render() {
 		return (
@@ -90,7 +72,8 @@ class App extends Component {
 					<User projects={this.state.projectsForSpecificUser} />
 				</div>
 				<div className="main">
-					<ActionsBar handleInput={this.handleInput}/>
+					<ActionsBar handleSearch={this.handleFilter}
+											handleSort={this.handleFilter}/>
 					<div className="projects--general-container">
 						{this.state.projectsForSpecificUser.map(x =>(
 						<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />

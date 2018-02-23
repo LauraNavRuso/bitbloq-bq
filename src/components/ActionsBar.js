@@ -10,12 +10,12 @@ class ActionsBar extends Component {
 			<div className="explore--toolbar">
 				<div className="explore--toolbar--container">
 					<div className="order--views--container">
-						<Sort />
+						<Sort handleSort={this.props.handleSort}/>
 						<Visualization />
 					</div>
 					<div className="filter-search--container">
 						<Filter />
-						<Search handleInput={this.props.handleInput} />
+						<Search handleSearch={this.props.handleSearch} />
 					</div>
 				</div>
 			</div>
