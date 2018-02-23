@@ -14,14 +14,28 @@
 //Visualization
 .order--views--container, .filter-search--container {
   display: flex;
+  display: column;
 }
 
 //Filter button container --General container
 .filters {
   display: inline-block;
+  order: 1;
+
+  @media all and (min-width: 650px) {
+    order: 0;
+  }
 }
 
-//filter button and opotions container
+//filter button and options container
+.filter-search--container {
+  flex-direction: column;
+
+  @media all and (min-width: 650px) {
+    flex-direction: row;
+  }
+}
+
 .filter--container {
   position: relative;
 }
@@ -31,13 +45,19 @@
   padding: 20px 0;
   position: absolute;
   background: #ffffff;
-  // left: 30%;
-  transform: translateX(-45%);
-  width: 99vw;
+  width: 98vw;
   top: 100%;
-  // display: none;
-  display: flex;
+  right: -7%;
+  display: none;
+  // display: flex;
+  justify-content: flex-start;
+  @include border();
+
+  @media all and (min-width: 650px) {
+    right: -97%;
+  }
 }
+
 //
 .filters--active .filter--options {
   display: flex;
@@ -49,7 +69,9 @@
   font-size: 13px;
   text-align: left;
   color: #5d6069;
-  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .list {
@@ -58,12 +80,12 @@
 }
 
 .filter--title {
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
   color: #373b44;
 }
+
 .projects, .boards-robots, .components {
   margin: 0;
   padding: 0;
@@ -80,13 +102,19 @@
 }
 
 input[type="checkbox"]:not(:checked) {
+  width: 30px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+input[type="checkbox"] {
   width: 20px;
   height: 14px;
   border-radius: 3px;
-  background-color: black;
-  margin: 0;
-  padding: 0;
 }
+
+
+//fecha de actualización tenemos que ordenar los filtros
 
 //Profile User
 .wrapper {
@@ -105,8 +133,11 @@ input[type="checkbox"]:not(:checked) {
     height: 60%;
     background: #e0e0e0;
     width: 100%;
-    @media all and (min-width:615px) {
-      height: 50%;
+    @media all and (min-width:578px) {
+      height: 55%;
+    }
+    @media all and (min-width:804px) {
+      height: 52%;
     }
   }
   .wrapper {
@@ -123,12 +154,9 @@ input[type="checkbox"]:not(:checked) {
   grid-row: span 2;
 }
 .profile--avatar-image {
-  width: 100%;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  height: 60%;
-  @media all and (min-width:615px) {
-    height: 90%;
-  }
 }
 .profile--name {
   display: flex;
@@ -177,6 +205,146 @@ input[type="checkbox"]:not(:checked) {
   @media all and (min-width:770px) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: auto;
+    margin-top: 10px;
     }
+}
+
+
+
+
+//Projects grid
+.projects--general-container {
+	position: relative;
+	top: 210px;
+	display: grid;
+	grid-template-columns: 300px 300px 300px 300px;
+	grid-row-gap: 24px;
+	grid-column-gap: 23px;
+	padding: 30px;
+	// width: 100%;
+
+	@media all and (max-width: 1183px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media all and (max-width: 700px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media all and (max-width: 486px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.projects--project-card-container {
+	// border: 2px solid grey;
+	@include border();
+	// border: 1px solid #cfcfcf;
+	// border-radius: 20px;
+	// width: 30%;
+	// margin: 20px;
+	width: 100%;
+}
+
+.project-card--container-img {
+	// width: 285px;
+	// height: 190px;
+
+	// background-image: url('../components/images/placa1.jpg');
+	// background-repeat: no-repeat;
+	// padding: 0;
+}
+
+.project-card--img {
+	width: 100%;
+	// height: 100%;
+
+}
+
+.project-card--container-info {
+	// width: 259px;
+	// height: 40px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #373b44;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 16px;
+	padding-top: 17px;
+	padding-bottom: 18px;
+}
+
+.project-card--main-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 2;
+
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.project-card--project-data {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.project-card--username {
+	margin: 0;
+	line-height: 28px;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+	// line-height: 2.33;
+	color: #8c919b;
+}
+
+.project-card--username-content {
+	font-size: 12px;
+  font-weight: normal;
+  // line-height: 2.33;
+	line-height: 28px;
+	text-align: left;
+  color: #82ad3a;
+}
+
+.project-card--community-stats {
+	flex-direction: row;
+	margin: 0;
+	line-height: 28px;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+	// line-height: 2.33;
+	color: #8c919b;
+}
+
+.project-card--timesViewed {
+	display: inline-flex;
+	background-image: url('../components/images/heart.svg');
+	background-repeat: no-repeat;
+	background-position: left;
+	// padding: 0;
+	padding-left: 20px;
+	padding-right: 9px;
+	// width: 13px;
+	// height: 13px;
+}
+
+.project-card--timesAdded {
+	display: inline-flex;
+	background-image: url('../components/images/plus.svg');
+	background-repeat: no-repeat;
+		background-position: left;
+	// padding: 0;
+	padding-left: 20px;
+	// width: 12px;
+	// height: 12px;
 }

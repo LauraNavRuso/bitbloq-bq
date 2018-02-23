@@ -36,7 +36,7 @@ class Filter extends React.Component {
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="potenciometro"/>Potenciometro</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="led-rgb"/>Led RGB</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="final-carrera"/>Final de carrera</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-ultrason"/>Sensor ultrason....</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-ultrason"/>Sensor ultrasonidos</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="joystick"/>Joystick</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="puerto-serie"/>Puerto serie</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-sonido"/>Sensor de sonido</li>
@@ -44,11 +44,11 @@ class Filter extends React.Component {
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="bluetooth"/>BlueTooth</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="lcd"/>LCD</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="servo"/>Servo</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="reloj-tiempo"/>Reloj de tiempo...</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" value="reloj-tiempo"/>Reloj de tiempo de real</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="boton"/>Botón</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="led"/>LED</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="servo-continuo"/>Servo Continuo</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-humo"/>Sensor de hum...</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-humo"/>Sensor de humedad y temperatura</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="botonera"/>Botonera</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="sensor-luz"/>Sensor de luz</li>
                 <li className="filter--item"><input type="checkbox" className="checkbox" value="zumbador"/>Zumbador</li>

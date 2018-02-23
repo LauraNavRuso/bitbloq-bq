@@ -57,10 +57,10 @@ paintPagination(){
 		buttons.push (<button className="button-page">{i}</button>);
 }
 
-	if (this.state.totalPagesUser === 1){
-		alert('Hola');
-			// <button className="pagination-page" disabled>Anterior</button>
-	}
+	// if (this.state.totalPagesUser === 1){
+	// 	alert('Hola');
+	// 		// <button className="pagination-page" disabled>Anterior</button>
+	// }
 
 	return(
 		<div className="pagination">

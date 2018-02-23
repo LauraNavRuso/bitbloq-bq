@@ -7,17 +7,28 @@ class ProjectCard extends Component {
 		let projectImgUrl = baseImgUrl + this.props.idProject;
 
 		return (
-			<div className="App">
-				<div className="grid--project-card">
-					<div className="App-header">
-						<img className="App-title" src={projectImgUrl} height="100"/>
-					</div>
+			<div className="projects--project-card-container">
+				<div className="project-card--container-img">
+					<img className="project-card--img" src={projectImgUrl}/>
 
-					<div className="App-intro">
-						<p>Usuario: {this.props.username}</p>
-						<p>Nombre del proyecto: {this.props.name}</p>
-						<p>Veces descargado: {this.props.timesAdded}</p>
-						<p>Veces visto: {this.props.timesViewed}</p>
+				</div>
+
+				<div className="project-card--container-info">
+					<h3 className="project-card--main-title">{this.props.name}</h3>
+
+					<div className="project-card--project-data">
+						<p className="project-card--username">de <span className="project-card--username-content" >{this.props.username}</span></p>
+
+						<div className="project-card--community-stats">
+							<div className="project-card--timesViewed">
+								{this.props.timesViewed}
+							</div>
+							<div className="project-card--timesAdded">
+								{this.props.timesAdded}
+							</div>
+
+						</div>
+
 					</div>
 				</div>
 			</div>
