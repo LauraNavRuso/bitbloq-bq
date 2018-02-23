@@ -18,7 +18,25 @@ class SocialNetwork extends Component {
 	  };
 
 	 this.handleClick = this.handleClick.bind(this);
+	 this.getRandom = this.getRandom.bind(this);
  	}
+
+	componentWillMount(){
+		let randomFacebook = this.getRandom();
+		let randomTwitter = this.getRandom();
+		let randomPinterest = this.getRandom();
+		let randomGoogle = this.getRandom();
+		this.setState({
+			countFacebook:randomFacebook,
+			countTwitter:randomTwitter,
+			countPinterest:randomPinterest,
+			countGoogle:randomGoogle
+		});
+	}
+
+	getRandom(){
+		return Math.floor(Math.random()*100);
+	}
 
   handleClick(e) {
 		var socialName = e.currentTarget.value;
