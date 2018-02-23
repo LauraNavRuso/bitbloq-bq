@@ -15,7 +15,7 @@ class App extends Component {
 			projectsForSpecificUser: [],
 			projects: [],
 			randomNumber:0,
-			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6'],
+			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6','581194d501c9810017bc8f48',],
 			userId:''
 		};
 	}
