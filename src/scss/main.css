@@ -56,13 +56,11 @@
 .search--input {
   width: 138px;
   height: 31px;
-  color: #8c919b;
   background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
   background-color: #ffffff;
   background-size: 17px;
   padding-left: 30px;
   text-align: left;
-  font-style: italic;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
   line-height: 47px; }
@@ -78,9 +76,9 @@
 .button--social {
   background-color: #ffffff;
   cursor: pointer;
-  border: 1px solid #e0e0e0;
   padding: 5px 15px 5px 5px;
-  border-radius: 2px 0px 0px 2px; }
+  border: 1px solid #cfcfcf;
+  border-radius: 4px; }
 
 .box--button {
   display: flex;
@@ -356,11 +354,14 @@ ul {
   grid-template-columns: repeat(5, 1fr); }
 
 input[type="checkbox"]:not(:checked) {
+  width: 30px;
+  height: 15px;
+  border-radius: 3px; }
+
+input[type="checkbox"] {
   width: 20px;
   height: 14px;
-  border-radius: 3px;
-  margin: 0;
-  padding: 0; }
+  border-radius: 3px; }
 
 .wrapper {
   margin: 0 20px; }

@@ -58,21 +58,17 @@
   margin-right: 20px;
   cursor: pointer;
   @include border();
-  // flex: 1;
-  // order: 2;
 }
 
 //Search input
 .search--input {
   width: 138px;
   height: 31px;
-  color: #8c919b;
   background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
   background-color: #ffffff;
   background-size: 17px;
   padding-left:30px;
   text-align: left;
-  font-style: italic;
   @include border();
   line-height: 47px;
 }
@@ -88,13 +84,13 @@
 .button--social {
     background-color: #ffffff;
     cursor: pointer;
-    border: 1px solid #e0e0e0;
     padding: 5px 15px 5px 5px;
-    border-radius: 2px 0px 0px 2px;
+    @include border();
+
 }
 .box--button{
 	display: flex;
-  margin-right: 20px;
+  margin-right: $iconSize;
   margin-bottom: 15px;
 }
 .counter {
@@ -131,8 +127,8 @@
   border-width: 6px;
 }
 .icon--social{
-  width: 12px;
-  height: 12px;
+  width: $iconSocialSize;
+  height: $iconSocialSize;
 	background-color: #ffffff;
 
 }

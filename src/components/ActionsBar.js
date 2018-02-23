@@ -15,7 +15,7 @@ class ActionsBar extends Component {
 					</div>
 					<div className="filter-search--container">
 						<Filter />
-						<Search />
+						<Search handleInput={this.props.handleInput} />
 					</div>
 				</div>
 			</div>
