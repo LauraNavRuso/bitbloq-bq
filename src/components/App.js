@@ -14,11 +14,6 @@ class App extends Component {
 		this.state = {
 			projectsForSpecificUser: [],
 			projects: [],
-<<<<<<< HEAD
-			userId: '5a8e8d1809d5f4001b7fdea7'
-			};
-		}
-=======
 			randomNumber:0,
 			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6'],
 			userId:''
@@ -32,7 +27,6 @@ class App extends Component {
 			userId:this.state.userIdArray[random]
 		});
 	}
->>>>>>> layout-user
 
 	componentDidMount() {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
