@@ -153,6 +153,9 @@
     color: #8c919b;
 
 	}
+  &:disabled {
+    opacity: .5;
+  }
 }
 .button-page{
 	overflow: visible;
