@@ -18,7 +18,7 @@ class PaginationBar extends Component {
 	}
 	updatePagination(page){
 
-		const url = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?page=${page}&query=%7B%22creator%22:%7B%22_id%22:%22546e259ce4b0bde006d07afe%22%7D%7D`;
+		const url = `http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?page=${page}`+ this.props.userId;
 
 		if ((page === 0) && (this.state.projectsInfoUpdate === false)) {
 			// llamamos al count
@@ -38,7 +38,7 @@ class PaginationBar extends Component {
 
 		}
 
-		// Llamada de los página de proyectos que toque
+		// Llamada de la página de proyectos que toque
 		fetch(url)
 		.then(response => response.json())
 		.then(json =>{
@@ -101,11 +101,6 @@ paintPagination(){
 		}
 
 	}
-
-	// if (this.state.totalPagesUser === 1){
-	// 	alert('Hola');
-	// 		// <button className="pagination-page" disabled>Anterior</button>
-	// }
 
 	return(
 		<div className="pagination">
