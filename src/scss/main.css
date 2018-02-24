@@ -230,7 +230,7 @@ ul {
   width: 15px;
   height: 13px; }
   .menu--link-projects:hover {
-    background: url("../components/images/folder-1.svg");
+    background-image: url("../components/images/folder-1.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
   @media all and (min-width: 585px) {
@@ -249,7 +249,7 @@ ul {
   width: 15px;
   height: 13px; }
   .menu--link-explore:hover {
-    background: url("../components/images/cloud-1.svg");
+    background-image: url("../components/images/cloud-1.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
   @media all and (min-width: 585px) {
@@ -306,7 +306,8 @@ ul {
   width: 15px;
   height: 16px; }
   .menu--link-forum:hover {
-    background-image: url("../components/images/forum-1.svg"); }
+    background-image: url("../components/images/forum-1.svg");
+    color: white; }
   @media all and (min-width: 585px) {
     .menu--link-forum {
       background: url("../components/images/forum.svg") left center no-repeat;
