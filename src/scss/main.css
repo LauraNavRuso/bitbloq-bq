@@ -203,7 +203,7 @@ ul {
 
 .header--menu {
   width: 420px; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .header--menu {
       width: 320px; } }
 
@@ -214,7 +214,7 @@ ul {
   align-items: center;
   padding-left: 5px;
   width: 300px; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .header--menu--list {
       margin-top: 30px; } }
 
@@ -233,7 +233,7 @@ ul {
     background: url("../components/images/folder-1.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .menu--link-projects {
       background: url("../components/images/folder.svg") left center no-repeat;
       padding: 0 0 0 30px;
@@ -252,7 +252,7 @@ ul {
     background: url("../components/images/cloud-1.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .menu--link-explore {
       background: url("../components/images/cloud.svg") left center no-repeat;
       padding: 0 0 0 30px;
@@ -271,7 +271,7 @@ ul {
     background-image: url("../components/images/icon-students-2.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .menu--link-users {
       background: url("../components/images/icon-students.svg") left center no-repeat;
       padding: 0 0 0 30px;
@@ -290,7 +290,7 @@ ul {
     background-image: url("../components/images/book-1.svg");
     background-repeat: no-repeat;
     color: #FFFFFF; }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .menu--link-learn {
       background: url("../components/images/book.svg") left center no-repeat;
       padding: 0 0 0 30px;
@@ -307,7 +307,7 @@ ul {
   height: 16px; }
   .menu--link-forum:hover {
     background-image: url("../components/images/forum-1.svg"); }
-  @media all and (min-width: 468px) {
+  @media all and (min-width: 585px) {
     .menu--link-forum {
       background: url("../components/images/forum.svg") left center no-repeat;
       padding: 0 0 0 30px;
@@ -320,7 +320,7 @@ ul {
   display: flex;
   align-items: center;
   margin-right: 20px; }
-  @media all and (max-width: 520px) {
+  @media all and (max-width: 585px) {
     .menu--image {
       margin-right: 25px; } }
 
