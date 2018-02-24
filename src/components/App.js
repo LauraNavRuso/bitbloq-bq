@@ -17,8 +17,11 @@ class App extends Component {
 			randomNumber:0,
 			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6','581194d501c9810017bc8f48',],
 			userId:''
-		};
-	}
+			//userId: '5a8e8d1809d5f4001b7fdea7'
+					// userId: `546e259ce4b0bde006d07afe`    //CON PROYECTOS
+				// userId: '581194d501c9810017bc8f48'      //con datos de usuario
+			};
+		}
 
 	componentWillMount(){
 		let random = this.getRandom(this.state.userIdArray.length);
@@ -85,6 +88,7 @@ class App extends Component {
 		         }
 		      }
 		   ]
+
 		}
 
 		let successFn = (json) => {
