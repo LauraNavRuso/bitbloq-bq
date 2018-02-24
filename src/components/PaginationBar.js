@@ -7,7 +7,7 @@ class PaginationBar extends Component {
 		this.updateActualPage=this.updateActualPage.bind(this);
 		this.state = {
 			projectsInfoUpdate: false,
-			totalProjectsUser: 0,
+			totalProjectsUsers: 0,
 			totalPagesUser: 0,
 			pageProjects: [],
 			actualPage: 1
@@ -45,7 +45,7 @@ class PaginationBar extends Component {
 				let totalPages = Math.ceil(totalProjects/20);
 				if (totalPages === 0) totalPages = 1
 				this.setState({
-					totalProjectsUser: totalProjects,
+					totalProjectsUsers: totalProjects,
 					totalPagesUser: totalPages,
 					projectsInfoUpdate: true
 				});
