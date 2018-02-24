@@ -25,7 +25,7 @@ class User extends Component {
 				username: usernameData
 			});
 		});
-		let baseQueryCount = 'https://api-beta-bitbloq.bq.com/bitbloq/v1/project?';
+		let baseQueryCount = 'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?';
 		let countAndQuery = 'count=*&query={%22creator%22:{%22_id%22:%22';
 		let closeQuery = '%22}}';
 		let apiQueryCount = baseQueryCount + countAndQuery + this.props.userId + closeQuery;

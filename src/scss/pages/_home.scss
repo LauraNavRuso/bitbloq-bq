@@ -48,8 +48,8 @@
   width: 98vw;
   top: 100%;
   right: -7%;
-  //display: none;
-  display: flex;
+  display: none;
+  // display: flex;
   justify-content: flex-start;
   @include border();
 
@@ -157,6 +157,7 @@ input[type="checkbox"] {
   width: $avatarSize;
   height: $avatarSize;
   border-radius: 50%;
+  border: 2px solid #8c8c8c;
 }
 .profile--name {
   display: flex;
