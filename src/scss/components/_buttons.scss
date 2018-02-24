@@ -83,13 +83,13 @@
 .button--social {
     background-color: #ffffff;
     cursor: pointer;
-    border: 1px solid #e0e0e0;
     padding: 5px 15px 5px 5px;
-    border-radius: 2px 0px 0px 2px;
+    @include border();
+
 }
 .box--button{
 	display: flex;
-  margin-right: 20px;
+  margin-right: $iconSize;
   margin-bottom: 15px;
 }
 .counter {
@@ -126,8 +126,8 @@
   border-width: 6px;
 }
 .icon--social{
-  width: 12px;
-  height: 12px;
+  width: $iconSocialSize;
+  height: $iconSocialSize;
 	background-color: #ffffff;
 
 }
@@ -150,17 +150,19 @@
 	&:hover{
 		background-color: #dbdee3;
     color: #8c919b;
-    cursor: default;
+
 	}
+  &:disabled {
+    opacity: .5;
+  }
 }
 .button-page{
 	overflow: visible;
 	background-color: #fff;
-	cursor: pointer;
 	line-height: 0;
 	&:hover{
 		background-color: #dbdee3;
     color: #8c919b;
-    cursor: default;
+
 	}
 }
