@@ -329,10 +329,6 @@ ul {
   height: 40px;
   background-color: white;
   border-radius: 50%; }
-  @media all and (max-width: 520px) {
-    .header--menu-image {
-      width: 30px;
-      height: 30px; } }
 
 .explore--toolbar {
   width: 100;
