@@ -6,7 +6,7 @@ class Search extends Component {
 		const searchValue = event.target.value;
 
 		let filterQuery = {
-			 "$or":[
+			 "$and":[
 					{
 						 "name":{
 								"$regex":searchValue,
@@ -16,8 +16,7 @@ class Search extends Component {
 
 					{
 						 "creator":{
-								"$regex":searchValue,
-								"$options":"i"
+								"_id":this.props.currentUserId
 						 }
 					}
 			 ]

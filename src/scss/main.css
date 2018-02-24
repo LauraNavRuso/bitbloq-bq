@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-.sort--button {
-=======
 @import url("https://fonts.googleapis.com/css?family=Roboto,Roboto-Regular:400,700");
-.order--button {
->>>>>>> dev
+.sort--button {
   width: 170px;
   height: 35px;
   color: #5d6069;
