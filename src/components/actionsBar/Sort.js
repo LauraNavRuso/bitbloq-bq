@@ -5,6 +5,7 @@ class Sort extends Component {
 	handleSort(event) {
 
 		let filterQuery = {};
+		//this.props.projectsForSpecificUser.sort();
 
 		this.props.handleSort(filterQuery);
 	}
