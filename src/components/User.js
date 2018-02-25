@@ -60,8 +60,6 @@ class User extends Component {
 						</div>
 						<SocialNetwork className="profile--role"/>
 					</div>
-
-
 			</div>
 
 		);

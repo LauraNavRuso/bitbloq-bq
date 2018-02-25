@@ -5,12 +5,31 @@ import ActionsBar from './ActionsBar';
 import ProjectCard from './ProjectCard';
 import PaginationBar from './PaginationBar';
 
+class Project {
+	constructor (_id, name, codeProject, creator) {
+		this._id = _id;
+		this.name = name;
+		this.codeProject = codeProject;
+		this.creator = creator;
+		this.timesLiked = this.getRandomInt(1,150);
+		this.timesDownloaded = this.getRandomInt(1,100);
+	}
+
+	getRandomInt(min, max){
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+}
+
 class App extends Component {
 	constructor(props){
 		super(props);
 		this.requestServer = this.requestServer.bind(this);
 		this.handleFilter = this.handleFilter.bind(this);
 		this.getRandom = this.getRandom.bind(this);
+		this.createProjectsWithStats = this.createProjectsWithStats.bind(this);
+
+		// this.handleLikeClick = this.handleLikeClick.bind(this);
+
 		this.state = {
 			projectsForSpecificUser: [],
 			filterQuery: '',
@@ -32,6 +51,16 @@ class App extends Component {
 	}
 
 
+	createProjectsWithStats(json) {
+		let projectsWithStats = json.map( x =>
+		{
+			return new Project(x._id, x.name, x.codeProject, x.creator);
+		})
+
+		return projectsWithStats;
+	}
+
+
 	componentDidMount() {
 		let baseApiUrl = `http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
@@ -42,7 +71,7 @@ class App extends Component {
 
 		let successFn = (json) => {
 			this.setState({
-				projectsForSpecificUser: json
+				projectsForSpecificUser: this.createProjectsWithStats(json)
 			});
 		}
 
@@ -76,12 +105,12 @@ class App extends Component {
 		let successFn = (json) => {
 			this.setState({
 				filterQuery: filterQuery,
-				projectsForSpecificUser: json
+				projectsForSpecificUser: this.createProjectsWithStats(json)
 			});
 		}
 
 		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
-			filterQuery, successFn);
+		filterQuery, successFn);
 	}
 
 	render() {
@@ -97,10 +126,14 @@ class App extends Component {
 											currentUserId={this.state.userId}/>
 					<div className="projects--general-container">
 						{this.state.projectsForSpecificUser.map(x =>(
-							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
+								timesLiked={x.timesLiked}
+								timesDownloaded={x.timesDownloaded}
+							/>
 						))}
+
 					</div>
-					<PaginationBar projects={this.state.projectsForSpecificUser} userId={this.state.userId}/>
+					<PaginationBar userId={this.state.userId}/>
 				</div>
 			</div>
 		);
