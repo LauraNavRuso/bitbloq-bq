@@ -84,8 +84,15 @@ paintPagination() {
 
 	//Depending on the pages
 	for (let i = 1; i<= this.state.totalPagesUser; i++) {
-			buttons.push (<button className="button-page">{i}</button>);
+		if ( this.state.totalPagesUser === 1) {
+			buttons.push (<button className="button-page" disabled>{i}</button>);
+		} else {
+			buttons.push (<button className="button-page" data-page={i} onClick={this.updateActualPage}>{i}</button>);
+		}
 	}
+	// for (let i = 1; i<= this.state.totalPagesUser; i++) {
+	// 		buttons.push (<button className="button-page">{i}</button>);
+	// }
 
 	//Next button
 	if (this.state.totalPagesUser === 1) {
