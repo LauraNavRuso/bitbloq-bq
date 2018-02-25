@@ -212,6 +212,8 @@ input[type="checkbox"] {
 
 //Projects grid
 .projects--general-container {
+	display: none;
+	visibility: hidden;
 	position: relative;
 	top: 210px;
 	padding: 30px;

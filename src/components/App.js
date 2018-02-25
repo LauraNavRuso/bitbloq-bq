@@ -119,7 +119,7 @@ class App extends Component {
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
 						))}
 					</div>
-					<PaginationBar projects={this.state.projectsForSpecificUser} userId={this.state.userId}/>
+					<PaginationBar userId={this.state.userId}/>
 				</div>
 			</div>
 		);
