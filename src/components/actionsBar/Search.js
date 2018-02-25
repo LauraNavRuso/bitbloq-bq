@@ -22,7 +22,7 @@ class Search extends Component {
 			 ]
 		}
 
-		this.props.handleSearch(filterQuery);
+		this.props.handleSearch(JSON.stringify(filterQuery));
 	}
 
 	render() {

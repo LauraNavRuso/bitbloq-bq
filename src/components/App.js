@@ -46,7 +46,7 @@ class App extends Component {
 			});
 		}
 
-		this.requestServer(baseApiUrl, objectUserInputs, successFn);
+		this.requestServer(baseApiUrl, JSON.stringify(objectUserInputs), successFn);
 	}
 
 	//Ask for data
@@ -54,9 +54,10 @@ class App extends Component {
 		return Math.floor(Math.random()*number);
 	}
 
-	requestServer(baseApiUrl, objectUserInputs, callbackFn) {
-		let creatorData = JSON.stringify(objectUserInputs);
-		let apiEndpoint = baseApiUrl + '&query=' + creatorData;
+	requestServer(baseApiUrl, queryUrl, callbackFn) {
+		//let creatorData = JSON.stringify(objectUserInputs);
+		console.log(queryUrl);
+		let apiEndpoint = baseApiUrl + '&query=' + queryUrl;
 
 		fetch(apiEndpoint)
 		.then(response => response.json())
