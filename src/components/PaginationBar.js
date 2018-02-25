@@ -6,6 +6,7 @@ class PaginationBar extends React.Component {
 		super(props);
 		this.updatePagination=this.updatePagination.bind(this);
 		this.paintPagination=this.paintPagination.bind(this);
+		this.updateActualPage=this.updateActualPage.bind(this);
 
 		this.state = {
 			projectsInfoUpdate: false,

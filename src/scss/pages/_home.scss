@@ -212,7 +212,6 @@ input[type="checkbox"] {
 
 //Projects grid
 .projects--general-container {
-	display: none;
 	visibility: hidden;
 	position: relative;
 	top: 210px;
@@ -331,7 +330,7 @@ input[type="checkbox"] {
 	color: #8c919b;
 }
 
-.project-card--timesViewed {
+.project-card--timesLiked {
 	display: inline-flex;
 	background-image: url('../components/images/heart.svg');
 	background-repeat: no-repeat;
@@ -343,7 +342,7 @@ input[type="checkbox"] {
 	// height: 13px;
 }
 
-.project-card--timesAdded {
+.project-card--timesDownloaded {
 	display: inline-flex;
 	background-image: url('../components/images/plus.svg');
 	background-repeat: no-repeat;
