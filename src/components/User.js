@@ -12,7 +12,7 @@ class User extends Component {
 			};
 		}
 	componentDidMount(){
-		let apiQueryUser = 'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/user/'+this.props.userId;
+		let apiQueryUser = 'https://api-next.bitbloq.k8s.bq.com/bitbloq/v1/user/'+this.props.userId;
 		fetch(apiQueryUser)
 		.then(response => response.json())
 		.then(json =>{
@@ -39,7 +39,7 @@ class User extends Component {
 	}
 
 	render() {
-		let ImgUrl = `http://storage.googleapis.com/bitbloq-next/images/avatar/`;
+		let ImgUrl = `https://storage.googleapis.com/bitbloq-next/images/avatar/`;
 		let id = this.props.userId;
 		let avatarImgUrl = ImgUrl + id;
 

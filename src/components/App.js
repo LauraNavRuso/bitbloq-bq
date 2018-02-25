@@ -65,7 +65,7 @@ class App extends Component {
 
 
 	componentDidMount() {
-		let baseApiUrl = `http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?`;
+		let baseApiUrl = `https://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
 			creator: {
 				_id: this.state.userIdArray[this.state.randomNumber]
@@ -112,7 +112,7 @@ class App extends Component {
 			});
 		}
 
-		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
+		this.requestServer('https://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
 		filterQuery, successFn);
 	}
 	handleInput(event){
@@ -145,7 +145,7 @@ class App extends Component {
 							});
 						}
 
-						this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
+						this.requestServer('https://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
 						filterQuery, successFn);
 						}
 

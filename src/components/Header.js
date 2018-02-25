@@ -13,19 +13,19 @@ class Header extends Component {
 		return (
 			<header className="header">
 				<div className="header--icon">
-					<a href="http://bitbloq.bq.com/#/">
+					<a href="https://bitbloq.bq.com/#/">
 						<img src={icon} className="header--icon--logo" alt="icon-header--menu" />
 					</a>
 				</div>
 				<nav className="header--menu">
 					<ul className="header--menu--list">
 						<li className="header--menu--link">
-							<a className="menu--link-projects" href="http://bitbloq.bq.com/#/bloqsproject" target="_blank">
+							<a className="menu--link-projects" href="https://bitbloq.bq.com/#/bloqsproject" target="_blank">
 								Proyectos
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-explore" href="http://bitbloq.bq.com/#/explore" target="_blank">
+							<a className="menu--link-explore" href="https://bitbloq.bq.com/#/explore" target="_blank">
 								Explora
 							</a>
 						</li>
@@ -35,12 +35,12 @@ class Header extends Component {
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn" target="_blank">
+							<a className="menu--link-learn" href="https://bitbloq.bq.com/#/learn" target="_blank">
 								Aprende
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-forum" href="http://bitbloq.bq.com/#/forum" target="_blank">
+							<a className="menu--link-forum" href="https://bitbloq.bq.com/#/forum" target="_blank">
 								Foro
 							</a>
 						</li>
