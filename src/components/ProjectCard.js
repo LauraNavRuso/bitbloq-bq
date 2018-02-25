@@ -3,7 +3,7 @@ import placa1 from './images/placa1.jpg';
 
 class ProjectCard extends Component {
 	render() {
-		let baseImgUrl = `https://storage.googleapis.com/bitbloq/images/project/`;
+		let baseImgUrl = `http://storage.googleapis.com/bitbloq-next/images/project/`;
 		let projectImgUrl = baseImgUrl + this.props.idProject;
 
 		return (
