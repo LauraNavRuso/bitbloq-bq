@@ -27,6 +27,8 @@ class App extends Component {
 		this.handleFilter = this.handleFilter.bind(this);
 		this.getRandom = this.getRandom.bind(this);
 		this.createProjectsWithStats = this.createProjectsWithStats.bind(this);
+		this.handleClickListViewMode =
+		this.handleClickListViewMode.bind(this);
 
 		// this.handleLikeClick = this.handleLikeClick.bind(this);
 
@@ -35,12 +37,13 @@ class App extends Component {
 			filterQuery: '',
 			randomNumber:0,
 			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6','581194d501c9810017bc8f48',],
-			userId:''
-			};
-		}
+			userId:'',
+			visualizationMode: 'grid'
 			//userId: '5a8e8d1809d5f4001b7fdea7'
 					// userId: `546e259ce4b0bde006d07afe`    //CON PROYECTOS
 				// userId: '581194d501c9810017bc8f48'      //con datos de usuario
+			}
+		}
 
 	componentWillMount(){
 		let random = this.getRandom(this.state.userIdArray.length);
@@ -112,6 +115,48 @@ class App extends Component {
 		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
 		filterQuery, successFn);
 	}
+	handleInput(event){
+		const searchValue = event.target.value;
+
+		let filterQuery = {
+			 "$or":[
+					{
+						 "name":{
+								"$regex":searchValue,
+								"$options":"i"
+						 }
+					},
+
+
+						{
+							"creator":{
+								"$regex":searchValue,
+								"$options":"i"
+							}
+						}
+						]
+
+						}
+
+						let successFn = (json) => {
+							this.setState({
+								filter: searchValue,
+								projectsForSpecificUser: this.createProjectsWithStats(json)
+							});
+						}
+
+						this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?',
+						filterQuery, successFn);
+						}
+
+						//'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?page=0&query={"$or":[{"name":{"$regex":"coche","$options":"i"}},{"creator":{"$regex":"coche","$options":"i"}}]}
+						//'
+
+			handleClickListViewMode() {
+				this.setState({
+					visualizationMode: 'list'
+				})
+			}
 
 	render() {
 		return (
@@ -122,9 +167,11 @@ class App extends Component {
 				</div>
 				<div className="main">
 					<ActionsBar handleSearch={this.handleFilter}
-											handleSort={this.handleFilter}
-											currentUserId={this.state.userId}/>
-					<div className="projects--general-container">
+						handleSort={this.handleFilter}
+						currentUserId={this.state.userId}
+						handleInput={this.handleInput}
+						handleClickListViewMode={this.handleClickListViewMode}/>
+					<div className={`projects--general-container-${this.state.visualizationMode}`}>
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
 								timesLiked={x.timesLiked}
