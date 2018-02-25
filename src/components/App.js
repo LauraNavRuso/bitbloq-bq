@@ -139,7 +139,7 @@ class App extends Component {
 						let successFn = (json) => {
 							this.setState({
 								filter: searchValue,
-								projectsForSpecificUser: json
+								projectsForSpecificUser: this.createProjectsWithStats(json)
 							});
 						}
 
