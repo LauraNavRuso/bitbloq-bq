@@ -146,6 +146,8 @@
     opacity: .5; }
 
 .button-page {
+  width: 41px;
+  height: 35px;
   overflow: visible;
   background-color: #fff;
   line-height: 0; }
