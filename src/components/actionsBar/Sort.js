@@ -5,9 +5,9 @@ class Sort extends Component {
 	handleSort(event) {
 		const sortValue = event.target.value;
 
-		let sortDate = '&sort={"updatedAt":"' + sortValue + '"}';
-
-		let filterObject = (sortValue[0] === 'n') ? {"name": sortValue.substr(1)} : {"updatedAt": sortValue};
+		let sortFilter = (sortValue[0] === 'n') ?
+					'&sort={"name":"' + sortValue.substr(1) + '"}' :
+					'&sort={"updatedAt":"' + sortValue + '"}';
 
 		let query = {
 				"creator":{
@@ -15,8 +15,7 @@ class Sort extends Component {
 				}
 		}
 
-
-		let	filterQuery = JSON.stringify(query) + sortDate;
+		let	filterQuery = JSON.stringify(query) + sortFilter;
 
 		this.props.handleSort(filterQuery);
 	}
