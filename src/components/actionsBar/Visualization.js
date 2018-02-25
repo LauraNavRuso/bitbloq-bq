@@ -5,7 +5,7 @@ class Visualization extends Component {
 		return (
 			<div className="container--views">
 				<button className="views--grid"></button>
-				<button className="views--list"></button>
+				<button className="views--list" onClick={this.props.handleClickListViewMode}></button>
 			</div>
 		);
 	}

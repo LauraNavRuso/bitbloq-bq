@@ -11,7 +11,7 @@ class ActionsBar extends Component {
 				<div className="explore--toolbar--container">
 					<div className="order--views--container">
 						<Sort />
-						<Visualization />
+						<Visualization handleClickListViewMode={this.props.handleClickListViewMode} />
 					</div>
 					<div className="filter-search--container">
 						<Filter />

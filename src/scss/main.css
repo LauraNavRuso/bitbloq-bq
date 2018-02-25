@@ -512,20 +512,50 @@ input[type="checkbox"] {
       justify-content: space-between;
       margin-top: 10px; } }
 
-.projects--general-container {
+.projects--general-container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 24px;
   grid-column-gap: 23px;
   padding: 30px; }
+  .projects--general-container-grid .project-card--container-info {
+    padding-left: 10px;
+    padding-right: 16px;
+    padding-top: 17px;
+    padding-bottom: 18px; }
   @media all and (max-width: 1183px) {
-    .projects--general-container {
+    .projects--general-container-grid {
       grid-template-columns: repeat(3, 1fr); } }
   @media all and (max-width: 700px) {
-    .projects--general-container {
+    .projects--general-container-grid {
       grid-template-columns: repeat(2, 1fr); } }
   @media all and (max-width: 486px) {
-    .projects--general-container {
+    .projects--general-container-grid {
+      grid-template-columns: 1fr; } }
+
+.projects--general-container-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  padding: 30px; }
+  .projects--general-container-list .project-card--container-img {
+    max-width: 196px;
+    height: 133px; }
+  .projects--general-container-list .projects--project-card-container {
+    display: inline-block; }
+  .projects--general-container-list .project-card--container-info {
+    padding-left: 21px;
+    padding-right: 32px;
+    padding-top: 20px;
+    padding-bottom: 21px; }
+  @media all and (max-width: 1183px) {
+    .projects--general-container-list {
+      grid-template-columns: 1fr; } }
+  @media all and (max-width: 700px) {
+    .projects--general-container-list {
+      grid-template-columns: 1fr; } }
+  @media all and (max-width: 486px) {
+    .projects--general-container-list {
       grid-template-columns: 1fr; } }
 
 .projects--project-card-container {
@@ -549,11 +579,7 @@ input[type="checkbox"] {
   letter-spacing: normal;
   text-align: left;
   color: #373b44;
-  background-color: white;
-  padding-left: 10px;
-  padding-right: 16px;
-  padding-top: 17px;
-  padding-bottom: 18px; }
+  background-color: white; }
 
 .project-card--main-title {
   margin-top: 0;

@@ -15,15 +15,8 @@ class ProjectCard extends Component {
 		return (
 			<div className="projects--project-card-container">
 				<div className="project-card--container-img"
-					
-					style={divStyleEachImg}>
-
-				</div>
-
-				<div>
-
-					</div>
-
+					style={divStyleEachImg}
+				/>
 				<div className="project-card--container-info">
 					<h3 className="project-card--main-title">{this.props.name}</h3>
 
