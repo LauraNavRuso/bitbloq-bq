@@ -590,7 +590,7 @@ input[type="checkbox"] {
   font-weight: normal;
   color: #8c919b; }
 
-.project-card--timesViewed {
+.project-card--timesLiked {
   display: inline-flex;
   background-image: url("../components/images/heart.svg");
   background-repeat: no-repeat;
@@ -598,7 +598,7 @@ input[type="checkbox"] {
   padding-left: 20px;
   padding-right: 9px; }
 
-.project-card--timesAdded {
+.project-card--timesDownloaded {
   display: inline-flex;
   background-image: url("../components/images/plus.svg");
   background-repeat: no-repeat;

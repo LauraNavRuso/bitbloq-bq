@@ -6,13 +6,13 @@ import ProjectCard from './ProjectCard';
 import PaginationBar from './PaginationBar';
 
 class Project {
-	constructor (_id, name, codeProject, creator, timesViewed) {
+	constructor (_id, name, codeProject, creator) {
 		this._id = _id;
 		this.name = name;
 		this.codeProject = codeProject;
 		this.creator = creator;
-		this.timesViewed = timesViewed;
 		this.timesLiked = this.getRandomInt(1,150);
+		this.timesDownloaded = this.getRandomInt(1,100);
 	}
 
 	getRandomInt(min, max){
@@ -23,12 +23,11 @@ class Project {
 class App extends Component {
 	constructor(props){
 		super(props);
-		this.props = {
-			timesLiked: []
-		}
 		this.requestServer = this.requestServer.bind(this);
 		this.handleInput = this.handleInput.bind(this);
 		this.getRandom = this.getRandom.bind(this);
+		this.createProjectsWithStats = this.createProjectsWithStats.bind(this);
+
 		// this.handleLikeClick = this.handleLikeClick.bind(this);
 
 		this.state = {
@@ -51,6 +50,16 @@ class App extends Component {
 	}
 
 
+	createProjectsWithStats(json) {
+		let projectsWithStats = json.map( x =>
+		{
+			return new Project(x._id, x.name, x.codeProject, x.creator);
+		})
+
+		return projectsWithStats;
+	}
+
+
 	componentDidMount() {
 		let baseApiUrl = `https://api-beta-bitbloq.bq.com/bitbloq/v1/project?`;
 		let objectUserInputs = {
@@ -60,13 +69,8 @@ class App extends Component {
 		}
 
 		let successFn = (json) => {
-			let projectsWithStats = json.map( x =>
-			{
-				return new Project(x._id, x.name, x.codeProject, x.creator, x.timesViewed);
-			})
-
 			this.setState({
-				projectsForSpecificUser: projectsWithStats
+				projectsForSpecificUser: this.createProjectsWithStats(json)
 			});
 		}
 
@@ -147,25 +151,6 @@ class App extends Component {
 						//'
 
 						render() {
-							// const getRandomInt = (min, max) =>
-							// 	Math.floor(Math.random() * (max - min + 1) + min);
-							//
-							// const timesLikedArray = [];
-							//
-							// for (var i = 0; i < 45; i++) {
-							// 	const numberToPushToArray = getRandomInt(1,150);
-							// 	timesLikedArray.push(numberToPushToArray);
-							// }
-
-							// this.setState({
-							// 	timesLiked: timesLikedArray
-							// })
-
-							// console.log(timesLikedArray);
-							//
-							// {this.state.projectsForSpecificUser.map(x => (
-							// 	x.timesLiked = timesLikedArray
-							// ))}
 		return (
 			<div className="page">
 				<div className="nav">
@@ -176,7 +161,10 @@ class App extends Component {
 					<ActionsBar handleInput={this.handleInput}/>
 					<div className="projects--general-container">
 						{this.state.projectsForSpecificUser.map(x =>(
-							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
+								timesLiked={x.timesLiked}
+								timesDownloaded={x.timesDownloaded}
+							/>
 						))}
 
 					</div>

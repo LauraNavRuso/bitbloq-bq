@@ -20,14 +20,11 @@ class ProjectCard extends Component {
 						<p className="project-card--username">de <span className="project-card--username-content" >{this.props.username}</span></p>
 
 						<div className="project-card--community-stats">
-							<div className="project-card--timesViewed" id={this.props.idProject} value={this.props.idProject}>
-								{this.props.timesViewed}
-							</div>
-							<div className="project-card--timesAdded">
-								{this.props.timesAdded}
-							</div>
 							<div className="project-card--timesLiked" id={this.props.idProject} value={this.props.timesLiked}>
 								{this.props.timesLiked}
+							</div>
+							<div className="project-card--timesDownloaded">
+								{this.props.timesDownloaded}
 							</div>
 
 						</div>
