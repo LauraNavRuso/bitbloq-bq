@@ -168,18 +168,18 @@ input[type="checkbox"] {
 .profile--name-real{
   margin-bottom: 5px;
   margin-right: 15px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   @media all and (min-width:770px) {
     font-size: 1.5em;
     }
 }
 .profile--name-user{
-  font-size: 0.8em;
+  font-size: 1em;
   color: #8c8c8c;
   margin-top: 18px;
   @media all and (min-width:770px) {
-    margin-top: 23px;
-    font-size: 1em;
+    margin-top: 18px;
+    font-size: 1.3em;
     }
 }
 .profile--role {
