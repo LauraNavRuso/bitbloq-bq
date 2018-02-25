@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 class PaginationBar extends React.Component {
@@ -26,7 +27,7 @@ class PaginationBar extends React.Component {
 		let apiPageUser = baseApi + countApi + this.props.userId + closeApi;
 
 		if ((page === 0) && (this.state.projectsInfoUpdate === false)) {
-			// we call the count
+			// llamamos al count
 			fetch(apiPageUser)
 			.then(response => response.json())
 			.then(json =>{
@@ -44,7 +45,7 @@ class PaginationBar extends React.Component {
 			});
 		}
 
-		// We call the projects page that I touch
+		// Llamada a la página de proyectos que toque
 		fetch(apiPageUser)
 		.then(response => response.json())
 		.then(json =>{
@@ -56,35 +57,35 @@ class PaginationBar extends React.Component {
 		});
 	}
 
-updateActualPage(e){
-	const nextPage =parseInt(e.target.getAttribute('data-page'));
-console.log('> página actual: ' + this.state.actualPage);
-console.log('> página next: ' + nextPage);
-
-	if (nextPage != this.state.actualPage) {
-		this.updatePagination(nextPage);
-	}
-}
+// updateActualPage(e){
+// 	const nextPage =parseInt(e.target.getAttribute('data-page'));
+// console.log('> página actual: ' + this.state.actualPage);
+// console.log('> página next: ' + nextPage);
+//
+// 	if (nextPage != this.state.actualPage) {
+// 		this.updatePagination(nextPage);
+// 	}
+// }
 
 paintPagination() {
 	let buttons = [];
 
-	// Previous button
+	// Botón Anterior
 	if (this.state.totalPagesUser === 1) {
 		buttons.push(<button className="pagination-page" type="button" disabled>Anterior</button>);
 	} else {
 		if (this.state.actualPage > 1 ) {
-			//I can go back
+			//puedo retroceder
 			buttons.push(<button className="pagination-page" type="button" data-page={this.state.actualPage-1}>Anterior</button>);
 		} else {
 			buttons.push(<button className="pagination-page" type="button" disabled>Anterior</button>);
 		}
 	}
 
-	//Depending on the pages
+	//Dependiendo de las páginas
 	for (let i = 1; i<= this.state.totalPagesUser; i++) {
-		buttons.push (<button className="button-page">{i}</button>);
-}
+			buttons.push (<button className="button-page">{i}</button>);
+	}	
 	// for (let i = 1; i<= this.state.totalPagesUser; i++) {
 	// 	if ( this.state.totalPagesUser === 1) {
 	// 		buttons.push (<button className="button-page" disabled>{i}</button>);
@@ -93,12 +94,12 @@ paintPagination() {
 	// 	}
 	// }
 
-	//Next button
+	// Botón Siguiente
 	if (this.state.totalPagesUser === 1) {
 		buttons.push(<button className="pagination-page" type="button" disabled>Siguiente</button>);
 	} else {
 		if (this.state.actualPage < this.state.totalPagesUser ) {
-			//I can go back
+			//puedo retroceder
 			buttons.push(<button className="pagination-page" type="button" data-page={this.state.actualPage+1}>Siguiente</button>);
 		} else {
 			buttons.push(<button className="pagination-page" type="button" disabled>Siguiente</button>);
@@ -113,11 +114,12 @@ paintPagination() {
 	)
 }
 
-	render() {
-		return (
-			<div>{this.paintPagination()}</div>
+		render() {
+			return (
+				<div>{this.paintPagination()}</div>
 		);
 	}
+
 }
 
 export default PaginationBar;
