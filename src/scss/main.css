@@ -207,7 +207,8 @@ ul {
   width: 420px; }
   @media all and (min-width: 585px) {
     .header--menu {
-      width: 320px; } }
+      width: 320px;
+      margin-left: 20px; } }
 
 .header--menu--list {
   list-style: none;
@@ -229,6 +230,8 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
+  font-size: 15px;
+  font-weight: bold;
   width: 15px;
   height: 13px; }
   .menu--link-projects:hover {
@@ -248,6 +251,8 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
+  font-size: 15px;
+  font-weight: bold;
   width: 15px;
   height: 13px; }
   .menu--link-explore:hover {
@@ -259,7 +264,7 @@ ul {
       background: url("../components/images/cloud.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      margin-right: 40px; } }
+      margin-right: 55px; } }
 
 .menu--link-users {
   background: url("../components/images/icon-students.svg") center 10px no-repeat;
@@ -267,6 +272,8 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
+  font-size: 15px;
+  font-weight: bold;
   width: 15px;
   height: 13px; }
   .menu--link-users:hover {
@@ -278,7 +285,7 @@ ul {
       background: url("../components/images/icon-students.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      margin-right: 45px; } }
+      margin-right: 55px; } }
 
 .menu--link-learn {
   background: url("../components/images/book.svg") center 10px no-repeat;
@@ -286,6 +293,8 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
+  font-size: 15px;
+  font-weight: bold;
   width: 15px;
   height: 13px; }
   .menu--link-learn:hover {
@@ -297,7 +306,7 @@ ul {
       background: url("../components/images/book.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      margin-right: 45px; } }
+      margin-right: 55px; } }
 
 .menu--link-forum {
   background: url("../components/images/forum.svg") center 10px no-repeat;
@@ -305,6 +314,8 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
+  font-size: 15px;
+  font-weight: bold;
   width: 15px;
   height: 16px; }
   .menu--link-forum:hover {

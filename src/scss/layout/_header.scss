@@ -30,6 +30,7 @@
 	width: 420px;
 	@media all and (min-width: 585px) {
 		width: 320px;
+		margin-left: 20px;
 	}
 }
 
@@ -56,6 +57,8 @@
 	display: inline-block;
 	text-decoration: none;
 	color: #676a71;
+	font-size: 15px;
+	font-weight: bold;
 	width: 15px;
 	height: 13px;
 	&:hover {
@@ -78,6 +81,8 @@
 	display: inline-block;
 	text-decoration: none;
 	color: #676a71;
+	font-size: 15px;
+	font-weight: bold;
 	width: 15px;
 	height: 13px;
 	&:hover {
@@ -89,7 +94,7 @@
 		background: url('../components/images/cloud.svg')left center no-repeat;
 		padding: 0 0 0 30px;
 		display: inline-block;
-		margin-right: 40px;
+		margin-right: 55px;
 	}
 }
 
@@ -99,6 +104,8 @@
 	display: inline-block;
 	text-decoration: none;
 	color: #676a71;
+	font-size: 15px;
+	font-weight: bold;
 	width: 15px;
 	height: 13px;
 	&:hover {
@@ -110,7 +117,7 @@
 		background: url('../components/images/icon-students.svg')left center no-repeat;
 		padding: 0 0 0 30px;
 		display: inline-block;
-		margin-right: 45px;
+		margin-right: 55px;
 	}
 }
 
@@ -120,6 +127,8 @@
 	display: inline-block;
 	text-decoration: none;
 	color: #676a71;
+	font-size: 15px;
+	font-weight: bold;
 	width: 15px;
 	height: 13px;
 	&:hover {
@@ -131,7 +140,7 @@
 		background: url('../components/images/book.svg')left center no-repeat;
 		padding: 0 0 0 30px;
 		display: inline-block;
-		margin-right: 45px;
+		margin-right: 55px;
 	}
 }
 
@@ -141,6 +150,8 @@
 	display: inline-block;
 	text-decoration: none;
 	color: #676a71;
+	font-size: 15px;
+	font-weight: bold;
 	width: 15px;
 	height: 16px;
 	&:hover {
