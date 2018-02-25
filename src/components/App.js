@@ -5,6 +5,21 @@ import ActionsBar from './ActionsBar';
 import ProjectCard from './ProjectCard';
 import PaginationBar from './PaginationBar';
 
+class Project {
+	constructor (_id, name, codeProject, creator, timesViewed) {
+		this._id = _id;
+		this.name = name;
+		this.codeProject = codeProject;
+		this.creator = creator;
+		this.timesViewed = timesViewed;
+		this.timesLiked = this.getRandomInt(1,150);
+	}
+
+	getRandomInt(min, max){
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+}
+
 class App extends Component {
 	constructor(props){
 		super(props);
@@ -14,11 +29,10 @@ class App extends Component {
 		this.requestServer = this.requestServer.bind(this);
 		this.handleInput = this.handleInput.bind(this);
 		this.getRandom = this.getRandom.bind(this);
-		this.handleLikeClick = this.handleLikeClick.bind(this);
+		// this.handleLikeClick = this.handleLikeClick.bind(this);
 
 		this.state = {
 			projectsForSpecificUser: [],
-			projects: [],
 			randomNumber:0,
 			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6','581194d501c9810017bc8f48',],
 			userId:''
@@ -46,8 +60,13 @@ class App extends Component {
 		}
 
 		let successFn = (json) => {
+			let projectsWithStats = json.map( x =>
+			{
+				return new Project(x._id, x.name, x.codeProject, x.creator, x.timesViewed);
+			})
+
 			this.setState({
-				projectsForSpecificUser: json
+				projectsForSpecificUser: projectsWithStats
 			});
 		}
 
@@ -73,20 +92,20 @@ class App extends Component {
 		})
 	}
 
-	handleLikeClick(e) {
-		var idClickedProject = e.currentTarget.value;
-
-		document.querySe
-
-
-		this.props.timesLiked +1
-
-		// 
-		// switch (socialName) {
-		// 	case 'facebook':
-		// 		this.setState({countFacebook: this.state.countFacebook + 1});
-			}
-		}
+	// handleLikeClick(e) {
+	// 	var idClickedProject = e.currentTarget.value;
+	//
+	// 	document.querySe
+	//
+	//
+	// 	this.props.timesLiked +1
+	//
+	// 	//
+	// 	// switch (socialName) {
+	// 	// 	case 'facebook':
+	// 	// 		this.setState({countFacebook: this.state.countFacebook + 1});
+	// 		}
+	// 	}
 
 
 	//Get data from input
