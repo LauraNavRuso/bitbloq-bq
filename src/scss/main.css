@@ -513,7 +513,6 @@ input[type="checkbox"] {
       margin-top: 10px; } }
 
 .projects--general-container {
-  display: none;
   visibility: hidden;
   position: relative;
   top: 210px;
