@@ -4,6 +4,7 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.toogleFilter = this.toogleFilter.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
     this.state = {
       showFilter: false
     }
@@ -12,6 +13,19 @@ class Filter extends React.Component {
   toogleFilter() {
     this.setState({showFilter: !this.state.showFilter})
   }
+
+  handleFilter(event) {
+		const filterValue = event.target.value;
+
+		let filterQuery = {
+				"creator":{
+					"_id":this.props.currentUserId
+				}
+		}
+
+		this.props.handleSort(JSON.stringify(filterQuery));
+	}
+
 
   render() {
     let filterClassName = (this.state.showFilter) ? 'filter--options' : 'filter--options filter--off';
