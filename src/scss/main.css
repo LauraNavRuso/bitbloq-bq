@@ -513,31 +513,31 @@ input[type="checkbox"] {
       margin-top: 10px; } }
 
 .projects--general-container {
-  visibility: hidden;
-  position: relative;
-  top: 210px;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 24px;
   grid-column-gap: 23px;
   padding: 30px; }
   @media all and (max-width: 1183px) {
     .projects--general-container {
-      grid-template-columns: 1fr 1fr 1fr; } }
+      grid-template-columns: repeat(3, 1fr); } }
   @media all and (max-width: 700px) {
     .projects--general-container {
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: repeat(2, 1fr); } }
   @media all and (max-width: 486px) {
     .projects--general-container {
       grid-template-columns: 1fr; } }
 
 .projects--project-card-container {
   border: 1px solid #cfcfcf;
-  border-radius: 4px;
-  width: 100%; }
+  border-radius: 4px; }
 
-.project-card--img {
-  width: 100%; }
+.project-card--container-img {
+  max-width: 287px;
+  height: 190px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
 
 .project-card--container-info {
   font-family: Roboto;
