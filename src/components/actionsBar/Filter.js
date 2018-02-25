@@ -6,8 +6,12 @@ class Filter extends React.Component {
     this.toogleFilter = this.toogleFilter.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
     this.handleProjects = this.handleProjects.bind(this);
+    this.handleBoards = this.handleBoards.bind(this);
+    this.handleComponents = this.handleComponents.bind(this);
+
     this.state = {
-      showFilter: false
+      showFilter: false,
+      components: []
     }
   }
 
@@ -21,15 +25,52 @@ class Filter extends React.Component {
 				"creator":{
 					"_id":this.props.currentUserId
 				}
-		}
+    }
 
-		this.props.handleFilter(JSON.stringify(filterQuery) + query);
+    if (typeof query === "object"){
+      filterQuery = JSON.stringify({...filterQuery, query});
+    } else {
+      filterQuery = JSON.stringify(filterQuery) + query;
+    }
+    console.log('filterQuery', filterQuery);
+    
+		this.props.handleFilter(filterQuery);
   }
   
   handleProjects(event){
     const projectValue = event.target.value;
 
     const filterQuery = '&project=' + projectValue;
+    console.log(filterQuery);
+
+    this.handleFilter(filterQuery);
+  }
+
+  handleBoards(event){
+    const boardValue = event.target.value;
+
+    const filterQuery = '&board=' + boardValue;
+    console.log(filterQuery);
+
+    this.handleFilter(filterQuery);
+  }
+
+  handleComponents(event){
+    const componentValue = event.target.value;
+
+    if (this.state.components.includes(componentValue)){
+      this.state.components = this.state.components.filter((element) => {
+        return element !== componentValue
+      });
+    } else {
+      this.state.components.push(componentValue);
+    }
+    const filterQuery = {
+      "hardwareTags": {
+        "$all": this.state.components
+      }
+    };
+
     console.log(filterQuery);
 
     this.handleFilter(filterQuery);
@@ -53,42 +94,42 @@ class Filter extends React.Component {
             <div className="list">
               <h4 className="filter--title">Placas y Robots</h4>
               <ul className="boards-robots">
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="bqZum"/>BQ ZUM</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="freaduinoUNO"/>Freaduino UNO</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="arduino-uno"/>Arduino UNO</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="zowi"/>Zowi</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="evolution"/>Evolution</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="mcore"/>mBot</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="meauriga"/>mRanger</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="meorion"/>starter Kit</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="Echidna"/>Echidna</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="bqZum"/>BQ ZUM</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="FreaduinoUNO"/>Freaduino UNO</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="ArduinoUNO"/>Arduino UNO</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="zowi"/>Zowi</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="evolution"/>Evolution</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="mcore"/>mBot</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="meauriga"/>mRanger</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="meorion"/>starter Kit</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleBoards} value="Echidna"/>Echidna</li>
               </ul>
             </div>
             <div className="list">
               <h4 className="filter--title">Componentes</h4>
               <ul className="components">
-                <li className="filter--item"><input type="checkbox" className="checkbox"  value="without-components"/>Sin componentes</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="irs"/>Sensor infrarrojo</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="pot"/>Potenciometro</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="RGBled"/>Led RGB</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="limitswitch"/>Final de carrera</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="us"/>Sensor ultrasonidos</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="joystick"/>Joystick</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="sp"/>Puerto serie</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="sound"/>Sensor de sonido</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="bitbloqconnect"/>Bitbloq Connect</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="bt"/>BlueTooth</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="lcd"/>LCD</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="servo"/>Servo</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="rtc"/>Reloj de tiempo de real</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="button"/>Botón</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="led"/>LED</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="servocont"/>Servo Continuo</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="hts221"/>Sensor de humedad y temperatura</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="buttons"/>Botonera</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="ldrs"/>Sensor de luz</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="buzz"/>Zumbador</li>
-                <li className="filter--item"><input type="checkbox" className="checkbox" value="encoder"/>Encoder</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="without-components"/>Sin componentes</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="irs"/>Sensor infrarrojo</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="pot"/>Potenciometro</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="RGBled"/>Led RGB</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="limitswitch"/>Final de carrera</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="us"/>Sensor ultrasonidos</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="joystick"/>Joystick</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="sp"/>Puerto serie</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="sound"/>Sensor de sonido</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="bitbloqconnect"/>Bitbloq Connect</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="bt"/>BlueTooth</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="lcd"/>LCD</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="servo"/>Servo</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="rtc"/>Reloj de tiempo de real</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="button"/>Botón</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="led"/>LED</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="servocont"/>Servo Continuo</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="hts221"/>Sensor de humedad y temperatura</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="buttons"/>Botonera</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="ldrs"/>Sensor de luz</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="buzz"/>Zumbador</li>
+                <li className="filter--item"><input type="checkbox" className="checkbox" onChange={this.handleComponents} value="encoder"/>Encoder</li>
               </ul>
             </div>
           </div>
