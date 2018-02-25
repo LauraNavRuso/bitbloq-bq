@@ -26,7 +26,10 @@ class ProjectCard extends Component {
 							<div className="project-card--timesAdded">
 								{this.props.timesAdded}
 							</div>
-
+							<div className="project-card--timesLiked">
+								{this.props.timesLiked}
+							</div>
+							
 						</div>
 
 					</div>

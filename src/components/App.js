@@ -6,10 +6,12 @@ import ProjectCard from './ProjectCard';
 import PaginationBar from './PaginationBar';
 
 class App extends Component {
-	constructor(props){
+	constructor(props) {
 			super(props);
+			this.props = {
+				timesLiked: []
+			}
 			this.state = {
-				projects: [],
 				projectsForSpecificUser: []
 			};
 		}
@@ -31,30 +33,47 @@ class App extends Component {
 			this.setState({
 				projectsForSpecificUser: json
 			});
-			console.log(json);
 		})
 		.catch(function(error){
 			console.log('Ha sucedido un error: ' + error);
-		}
-	)
+		})
+
+
+
+
+		// for (var i = 0; i < this.state.projectsForSpecificUser.length; i++) {
+		// 	this.state.projectsForSpecificUser.timesLiked=timesLikedArray[i];
+		// }
+
+		// for (var i = 0; i < this.state.projectsForSpecificUser.length; i++) {
+		// 	this.setState({
+		// 		projectsForSpecificUser.timesLiked=timesLikedArray[i];
+		// 	})
+		// }
+		// console.log(this.state.projectsForSpecificUser);
 }
 
-//Get dta from API with promises
-	// componentDidMount() {
-	// 	fetch('https://hp-api.herokuapp.com/api/characters')
-	// 	.then(response => response.json())
-	// 	.then(json => {
-	// 		this.setState({
-	// 			projects: json
-	// 		});
-	// 	});
-	// }
+		render() {
+			// const getRandomInt = (min, max) =>
+			// 	Math.floor(Math.random() * (max - min + 1) + min);
+			//
+			// const timesLikedArray = [];
+			//
+			// for (var i = 0; i < 45; i++) {
+			// 	const numberToPushToArray = getRandomInt(1,150);
+			// 	timesLikedArray.push(numberToPushToArray);
+			// }
 
+			// this.setState({
+			// 	timesLiked: timesLikedArray
+			// })
 
+			// console.log(timesLikedArray);
+			//
+			// {this.state.projectsForSpecificUser.map(x => (
+			// 	x.timesLiked = timesLikedArray
+			// ))}
 
-
-
-render() {
 		return (
 				<div className="page">
 					<div className="nav">
@@ -65,8 +84,12 @@ render() {
 
 						<ActionsBar />
 						<div className="projects--general-container">
+
+
+
 							{this.state.projectsForSpecificUser.map(x =>(
-								<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
+								<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed}
+								/>
 							))}
 						</div>
 						<PaginationBar />
