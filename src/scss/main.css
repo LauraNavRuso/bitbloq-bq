@@ -128,7 +128,7 @@
   justify-content: center; }
 
 .pagination-page {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 1px 3px #c7c7c7;
   padding-left: 20px;
@@ -149,7 +149,7 @@
   width: 41px;
   height: 35px;
   overflow: visible;
-  background-color: #fff;
+  background-color: #ffffff;
   line-height: 0; }
   .button-page:hover {
     background-color: #dbdee3;

@@ -5,7 +5,7 @@
   height: 35px;
   color: #5d6069;
   background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
-  background-color: #ffffff;
+  background-color: $colorBackground;
   background-size: 9px;
   margin-right: 8px;
   @include border();
@@ -31,7 +31,7 @@
   height: 35px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border: 1px solid #cfcfcf;
+  border: 1px solid $colorBorder;
   background: url(../components/images/ico-vista-galeria.svg) no-repeat 11px 10px;
   background-color: #ebebeb;
 }
@@ -41,9 +41,9 @@
   height: 35px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  border: 1px solid #cfcfcf;
+  border: 1px solid $colorBorder;
   background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
-  background-color: #ffffff;
+  background-color: $colorBackground;
 }
 
 //Filter
@@ -52,7 +52,7 @@
   height: 35px;
   color: #5d6069;
   background: url(../components/images/icon-caret-bottom.svg) no-repeat 145px 12px;
-  background-color: #ffffff;
+  background-color: $colorBackground;
   background-size: 9px;
   text-align: left;
   margin-right: 20px;
@@ -65,7 +65,7 @@
   width: 138px;
   height: 31px;
   background: url(../components/images/ico-buscar.svg) no-repeat 10px 10px;
-  background-color: #ffffff;
+  background-color: $colorBackground;
   background-size: 17px;
   padding-left:30px;
   text-align: left;
@@ -82,7 +82,7 @@
     }
 }
 .button--social {
-    background-color: #ffffff;
+    background-color: $colorBackground;
     cursor: pointer;
     padding: 5px 15px 5px 5px;
     @include border();
@@ -95,7 +95,7 @@
 }
 .counter {
     position: relative;
-    background: #ffffff;
+    background: $colorBackground;
     padding: 5px;
     font-size: 15px;
     border-top: 1px solid #e0e0e0;
@@ -129,7 +129,7 @@
 .icon--social{
   width: $iconSocialSize;
   height: $iconSocialSize;
-	background-color: #ffffff;
+	background-color: $colorBackground;
 
 }
 
@@ -140,7 +140,7 @@
 }
 
 .pagination-page{
-	background-color: #fff;
+	background-color: $colorBackground;
 	border-radius: 4px;
 	box-shadow: 0 1px 3px #c7c7c7;
 	padding-left: 20px;
@@ -164,7 +164,7 @@
 	width: 41px;
 	height: 35px;
 	overflow: visible;
-	background-color: #fff;
+	background-color: $colorBackground;
 	line-height: 0;
 	&:hover{
 		background-color: #dbdee3;
