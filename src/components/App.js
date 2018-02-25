@@ -14,6 +14,8 @@ class App extends Component {
 		this.requestServer = this.requestServer.bind(this);
 		this.handleInput = this.handleInput.bind(this);
 		this.getRandom = this.getRandom.bind(this);
+		this.handleLikeClick = this.handleLikeClick.bind(this);
+
 		this.state = {
 			projectsForSpecificUser: [],
 			projects: [],
@@ -70,6 +72,22 @@ class App extends Component {
 		.catch(function(error){
 		})
 	}
+
+	handleLikeClick(e) {
+		var idClickedProject = e.currentTarget.value;
+
+		document.querySe
+
+
+		this.props.timesLiked +1
+
+		// 
+		// switch (socialName) {
+		// 	case 'facebook':
+		// 		this.setState({countFacebook: this.state.countFacebook + 1});
+			}
+		}
+
 
 	//Get data from input
 	handleInput(event){
@@ -141,7 +159,7 @@ class App extends Component {
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}  timesAdded={x.timesAdded} timesViewed={x.timesViewed} />
 						))}
-						
+
 					</div>
 					<PaginationBar projects={this.state.projectsForSpecificUser} userId={this.state.userId}/>
 				</div>
