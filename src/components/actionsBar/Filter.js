@@ -1,12 +1,26 @@
 import React from 'react';
 
 class Filter extends React.Component {
-  render(){
+  constructor(props) {
+    super(props);
+    this.toogleFilter = this.toogleFilter.bind(this);
+    this.state = {
+      showFilter: false
+    }
+  }
+
+  toogleFilter() {
+    this.setState({showFilter: !this.state.showFilter})
+  }
+
+  render() {
+    let filterClassName = (this.state.showFilter) ? 'filter--options' : 'filter--options filter--off';
+
     return(
       <div className="filters">
         <div className="filter--container">
-          <button className="filter--button">Filtrar por:</button>
-          <div className="filter--options">
+          <button className="filter--button" onClick={this.toogleFilter}>Filtrar por:</button>
+          <div className={filterClassName}>
             <div className="list">
               <h4 className="filter--title">Proyectos</h4>
               <ul className="projects">

@@ -367,7 +367,7 @@ ul {
   width: 98vw;
   top: 100%;
   right: -7%;
-  display: none;
+  display: flex;
   justify-content: flex-start;
   border: 1px solid #cfcfcf;
   border-radius: 4px; }
@@ -375,9 +375,8 @@ ul {
     .filter--options {
       right: -97%; } }
 
-.filters--active .filter--options {
-  display: flex;
-  flex-direction: column; }
+.filter--off {
+  display: none; }
 
 .filter--item {
   font-family: 'Roboto', sans-serif;
