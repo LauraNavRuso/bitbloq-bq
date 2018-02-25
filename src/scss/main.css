@@ -146,6 +146,8 @@
     opacity: .5; }
 
 .button-page {
+  width: 41px;
+  height: 35px;
   overflow: visible;
   background-color: #fff;
   line-height: 0; }
@@ -511,6 +513,8 @@ input[type="checkbox"] {
       margin-top: 10px; } }
 
 .projects--general-container {
+  display: none;
+  visibility: hidden;
   position: relative;
   top: 210px;
   display: grid;

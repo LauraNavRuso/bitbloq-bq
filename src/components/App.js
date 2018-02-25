@@ -168,7 +168,7 @@ class App extends Component {
 						))}
 
 					</div>
-					<PaginationBar projects={this.state.projectsForSpecificUser} userId={this.state.userId}/>
+					<PaginationBar userId={this.state.userId}/>
 				</div>
 			</div>
 		);
