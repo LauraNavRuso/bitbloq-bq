@@ -219,7 +219,7 @@ ul {
   width: 300px; }
   @media all and (min-width: 585px) {
     .header--menu--list {
-      margin-top: 30px; } }
+      margin: 0; } }
 
 .menu--link {
   text-decoration: none; }
@@ -230,10 +230,11 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   width: 15px;
-  height: 13px; }
+  height: 13px;
+  margin-right: 10px; }
   .menu--link-projects:hover {
     background-image: url("../components/images/folder-1.svg");
     background-repeat: no-repeat;
@@ -243,7 +244,7 @@ ul {
       background: url("../components/images/folder.svg") left center no-repeat;
       padding: 0 0 0 30px;
       display: inline-block;
-      margin-right: 55px; } }
+      margin-right: 65px; } }
 
 .menu--link-explore {
   background: url("../components/images/cloud.svg") center 10px no-repeat;
@@ -251,7 +252,7 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   width: 15px;
   height: 13px; }
@@ -272,7 +273,7 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   width: 15px;
   height: 13px; }
@@ -293,7 +294,7 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   width: 15px;
   height: 13px; }
@@ -314,7 +315,7 @@ ul {
   display: inline-block;
   text-decoration: none;
   color: #676a71;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   width: 15px;
   height: 16px; }
