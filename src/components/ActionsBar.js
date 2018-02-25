@@ -15,7 +15,8 @@ class ActionsBar extends Component {
 						<Visualization />
 					</div>
 					<div className="filter-search--container">
-						<Filter />
+						<Filter handleFilter={this.props.handleFilter} 
+								currentUserId={this.props.currentUserId}/>
 						<Search handleSearch={this.props.handleSearch}
 						 				currentUserId={this.props.currentUserId}/>
 					</div>

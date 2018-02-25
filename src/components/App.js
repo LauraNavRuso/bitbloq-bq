@@ -122,8 +122,9 @@ class App extends Component {
 				</div>
 				<div className="main">
 					<ActionsBar handleSearch={this.handleFilter}
-											handleSort={this.handleFilter}
-											currentUserId={this.state.userId}/>
+								handleSort={this.handleFilter}
+								handleFilter={this.handleFilter}
+								currentUserId={this.state.userId}/>
 					<div className="projects--general-container">
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
