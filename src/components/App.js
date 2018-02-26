@@ -88,7 +88,6 @@ class App extends Component {
 
 	requestServer(baseApiUrl, queryUrl, callbackFn) {
 		//let creatorData = JSON.stringify(objectUserInputs);
-		(queryUrl);
 		let apiEndpoint = baseApiUrl + '&query=' + queryUrl;
 
 		fetch(apiEndpoint)
@@ -103,7 +102,6 @@ class App extends Component {
 
 	//Get data from input --search button
 	handleFilter(filterQuery){
-		('filterQuery', filterQuery);
 
 		let successFn = (json) => {
 			this.setState({
