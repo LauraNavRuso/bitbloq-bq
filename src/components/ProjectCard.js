@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import placa1 from './images/placa1.jpg';
 
 class ProjectCard extends Component {
 	render() {
