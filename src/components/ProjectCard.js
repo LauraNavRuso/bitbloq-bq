@@ -15,8 +15,9 @@ class ProjectCard extends Component {
 		return (
 			<div className="projects--project-card-container">
 				<div className="project-card--container-img"
-					style={divStyleEachImg}
-				>
+					style={divStyleEachImg}>
+					<a className="project-card--img-link" href="http://front-next.bitbloq.k8s.bq.com/#/bloqsproject/5a8fe5cbeca0ca001790e1b0" target="_blank">
+					</a>
 				</div>
 				<div className="project-card--container-info">
 					<h3 className="project-card--main-title">{this.props.name}</h3>

@@ -532,6 +532,8 @@ input[type="checkbox"] {
   .projects--general-container-grid .project-card--container-img {
     max-width: 285px;
     height: 190px; }
+  .projects--general-container-grid .project-card--img-link {
+    height: 190px; }
   .projects--general-container-grid .project-card--container-info {
     padding-left: 10px;
     padding-right: 16px;
@@ -559,6 +561,8 @@ input[type="checkbox"] {
   .projects--general-container-list .project-card--container-img {
     flex-basis: 196px;
     height: 133px; }
+  .projects--general-container-list .project-card--img-link {
+    height: 133px; }
   .projects--general-container-list .project-card--container-info {
     width: auto;
     width: 100%;
@@ -584,7 +588,11 @@ input[type="checkbox"] {
 .project-card--container-img {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  cursor: pointer; }
+
+.project-card--img-link {
+  display: block; }
 
 .project-card--container-info {
   font-family: Roboto;
