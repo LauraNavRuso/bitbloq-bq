@@ -53,6 +53,7 @@ class SocialNetwork extends Component {
 			case 'google':
 				this.setState({countGoogle: this.state.countGoogle + 1});
 				break;
+			default:
 		}
   }
 
