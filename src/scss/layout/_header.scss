@@ -1,6 +1,6 @@
 .header {
-	height: 70px;
-	max-height: 70px;
+	height: $standarSize;
+	max-height: $standarSize;
 	width: 100%;
 	background-color: #373b44;
 	display: flex;
@@ -11,8 +11,8 @@
 
 .header--icon {
 	background-color: #82ad3a;
-	height: 70px;
-	width: 70px;
+	height: $standarSize;
+	width: $standarSize;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -56,7 +56,7 @@
 	padding: 30px 10px 0;
 	display: inline-block;
 	text-decoration: none;
-	color: #676a71;
+	color: $colorMenu;
 	font-size: 16px;
 	font-weight: bold;
 	width: 15px;
@@ -65,7 +65,7 @@
 	&:hover {
 		background-image: url('../components/images/folder-1.svg');
 		background-repeat: no-repeat;
-		color: #FFFFFF;
+		color: $colorBackground;
 	}
 	@media all and (min-width: 585px) {
 		background: url('../components/images/folder.svg')left center no-repeat;
@@ -81,7 +81,7 @@
 	padding: 30px 10px 0;
 	display: inline-block;
 	text-decoration: none;
-	color: #676a71;
+	color: $colorMenu;
 	font-size: 16px;
 	font-weight: bold;
 	width: 15px;
@@ -89,7 +89,7 @@
 	&:hover {
 		background-image: url('../components/images/cloud-1.svg');
 		background-repeat: no-repeat;
-		color: #FFFFFF;
+		color: $colorBackground;
 	}
 	@media all and (min-width: 585px) {
 		background: url('../components/images/cloud.svg')left center no-repeat;
@@ -104,7 +104,7 @@
 	padding: 30px 10px 0;
 	display: inline-block;
 	text-decoration: none;
-	color: #676a71;
+	color: $colorMenu;
 	font-size: 16px;
 	font-weight: bold;
 	width: 15px;
@@ -112,7 +112,7 @@
 	&:hover {
 		background-image: url('../components/images/icon-students-2.svg');
 		background-repeat: no-repeat;
-		color: #FFFFFF;
+		color: $colorBackground;
 	}
 	@media all and (min-width: 585px) {
 		background: url('../components/images/icon-students.svg')left center no-repeat;
@@ -127,7 +127,7 @@
 	padding: 30px 10px 0;
 	display: inline-block;
 	text-decoration: none;
-	color: #676a71;
+	color: $colorMenu;
 	font-size: 16px;
 	font-weight: bold;
 	width: 15px;
@@ -135,7 +135,7 @@
 	&:hover {
 		background-image: url('../components/images/book-1.svg');
 		background-repeat: no-repeat;
-		color: #FFFFFF;
+		color: $colorBackground;
 	}
 	@media all and (min-width: 585px) {
 		background: url('../components/images/book.svg')left center no-repeat;
@@ -150,14 +150,14 @@
 	padding: 30px 10px 0;
 	display: inline-block;
 	text-decoration: none;
-	color: #676a71;
+	color: $colorMenu;
 	font-size: 16px;
 	font-weight: bold;
 	width: 15px;
 	height: 16px;
 	&:hover {
 		background-image: url('../components/images/forum-1.svg');
-		color: white;
+		color: $colorBackground;
 	}
 	@media all and (min-width: 585px) {
 		background: url('../components/images/forum.svg')left center no-repeat;
@@ -170,7 +170,7 @@
 .menu--image {
 	position: absolute;
 	right: 0;
-	height: 70px;
+	height: $standarSize;
 	display: flex;
 	align-items: center;
 	margin-right: 20px;
@@ -182,7 +182,7 @@
 .header--menu-image {
 	width: 40px;
 	height: 40px;
-	background-color: white;
+	background-color: $colorBackground;
 	border-radius: 50%;
 
 }

@@ -117,12 +117,12 @@
 }
 .counter:after {
   top: 14px;
-  border-color: transparent white transparent transparent;
+  border-color: transparent $colorBackground transparent transparent;
   border-width: 5px;
 }
 .counter:before {
   top: 13px;
-  border-color: transparent #959595 transparent transparent;
+  border-color: transparent $colorName transparent transparent;
   border-width: 6px;
 }
 .icon--social{
