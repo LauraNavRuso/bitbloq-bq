@@ -33,7 +33,7 @@ class Header extends Component {
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn" target="_blank"> rel="noopener noreferrer"
+							<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn" target="_blank" rel="noopener noreferrer">
 								Aprende
 							</a>
 						</li>
