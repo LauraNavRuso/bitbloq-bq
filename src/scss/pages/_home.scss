@@ -129,7 +129,7 @@ input[type="checkbox"] {
     left:0;
     bottom: 0;
     height: 60%;
-    background: $colorBackground;
+    background: #e0e0e0;
     width: 100%;
     @media all and (min-width:578px) {
       height: 55%;
@@ -155,7 +155,8 @@ input[type="checkbox"] {
   width: $avatarSize;
   height: $avatarSize;
   border-radius: 50%;
-  border: 2px solid $colorName;
+  border: 2px solid $colorName
+  background-color: $colorBackground;
 }
 .profile--name {
   display: flex;
