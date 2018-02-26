@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import placa1 from './images/placa1.jpg';
+import CommunityStats from './projectCard/CommunityStats';
 
 class ProjectCard extends Component {
 	render() {
@@ -28,15 +28,7 @@ class ProjectCard extends Component {
 
 					<div className="project-card--project-data">
 						<p className="project-card--username">de <span className="project-card--username-content" >{this.props.username}</span></p>
-
-						<div className="project-card--community-stats">
-							<div className="project-card--timesLiked" id={this.props.idProject} value={this.props.timesLiked}>
-								{this.props.timesLiked}
-							</div>
-							<div className="project-card--timesDownloaded">
-								{this.props.timesDownloaded}
-							</div>
-						</div>
+						<CommunityStats  timesLiked={this.props.timesLiked} timesDownloaded={this.props.timesDownloaded} />
 					</div>
 				</div>
 			</div>
@@ -44,17 +36,3 @@ class ProjectCard extends Component {
 	}
 }
 export default ProjectCard;
-
-			{/* <img className="project-card--img" src={projectImgUrl}/> */}
-
-					// style={{backgroundImage: "url(" + Background + ")"}}
-
-					// background: 'url('+ imgUrl + ') noRepeat center center fixed',
-					// backgroundSize: 'cover',
-
-				// background: `url( ${projectImgUrl})`,
-
-
-			{/* <img src="http://via.placeholder.com/350x100" /> */}
-
-						// background: `url( ${projectImgUrl})`,

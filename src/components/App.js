@@ -31,6 +31,7 @@ class App extends Component {
 		this.handleClickListViewMode.bind(this);
 		this.handleClickGridViewMode =
 		this.handleClickGridViewMode.bind(this);
+		this.handlePagination = this.handlePagination.bind(this);
 
 		this.state = {
 			projectsForSpecificUser: [],
@@ -164,6 +165,31 @@ class App extends Component {
 				})
 			}
 
+			handlePagination(currentPage){
+		let successFn = (json) => {
+
+			this.setState({
+				projectsForSpecificUser: this.createProjectsWithStats(json),
+				hasFilterBeenRefreshed : false
+			});
+		}
+
+		var paginationQuery = "page="+ currentPage;
+
+		var filter = this.state.filterQuery;
+		if ( !filter ){
+			filter = {
+				creator: {
+					_id: this.state.userIdArray[this.state.randomNumber]
+				}
+			}
+			filter = JSON.stringify(filter);
+		}
+
+		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?' + paginationQuery,
+		filter, successFn);
+	}
+
 	render() {
 		return (
 			<div className="page">
@@ -177,7 +203,9 @@ class App extends Component {
 						currentUserId={this.state.userId}
 						handleInput={this.handleInput}
 						handleClickListViewMode={this.handleClickListViewMode}
-						handleClickGridViewMode={this.handleClickListViewMode}/>
+						handleClickGridViewMode={this.handleClickGridViewMode}
+						visualizationMode={this.state.visualizationMode}
+					/>
 					<div className={`projects--general-container-${this.state.visualizationMode}`}>
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
@@ -187,7 +215,8 @@ class App extends Component {
 						))}
 
 					</div>
-					<PaginationBar userId={this.state.userId}/>
+					<PaginationBar userId={this.state.userId}
+						handlePagination={this.handlePagination} filterQuery={this.state.filterQuery} />
 				</div>
 			</div>
 		);
