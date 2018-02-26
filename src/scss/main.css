@@ -479,7 +479,8 @@ input[type="checkbox"] {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 2px solid #8c8c8c; }
+  border: 2px solid #8c8c8c;
+  background-color: #ffffff; }
 
 .profile--name {
   display: flex;
