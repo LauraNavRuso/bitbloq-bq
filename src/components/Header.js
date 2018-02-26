@@ -45,7 +45,7 @@ class Header extends Component {
 					</ul>
 				</nav>
 				<div className="menu--image">
-					<img className="header--menu-image" src={iconUser} />
+					<img className="header--menu-image" src={iconUser} alt="icon-user-image"/>
 				</div>
 			</header>
 );
