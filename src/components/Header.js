@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import icon from './images/icon-bitbloq.svg';
 import iconUser from './images/robot.png';
 
-
-
 class Header extends Component {
-
-
 	render() {
 		return (
 			<header className="header">

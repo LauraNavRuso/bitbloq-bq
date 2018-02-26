@@ -4,8 +4,6 @@ import Twitter from '../images/twitter.svg';
 import Pinterest from '../images/pinterest.svg';
 import Google from '../images/google-plus-logo.svg';
 
-//API KEY - AIzaSyBSUbqT3dIdr5ulOjOfHdgCFf7sdFeG484
-
 class SocialNetwork extends Component {
 	constructor(props) {
 		super(props);
@@ -56,10 +54,6 @@ class SocialNetwork extends Component {
 			default:
 		}
   }
-
-	// shouldComponentUpdate(nextProps, nextState) {
-	//   this.shortenUrl(window.location.href);
-	// }
 
   componentDidMount() {
     ('Estoy en el componentDidMount');

@@ -29,19 +29,17 @@ class App extends Component {
 		this.createProjectsWithStats = this.createProjectsWithStats.bind(this);
 		this.handleClickListViewMode =
 		this.handleClickListViewMode.bind(this);
-
-		// this.handleLikeClick = this.handleLikeClick.bind(this);
+		this.handleClickGridViewMode =
+		this.handleClickGridViewMode.bind(this);
+		this.handlePagination = this.handlePagination.bind(this);
 
 		this.state = {
 			projectsForSpecificUser: [],
 			filterQuery: '',
 			randomNumber:0,
-			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a8dc42409d5f4001b7fdea6','581194d501c9810017bc8f48',],
+			userIdArray: ['5a8e8d1809d5f4001b7fdea7','5a928bdeeca0ca001790e1b2','581194d501c9810017bc8f48',],
 			userId:'',
 			visualizationMode: 'grid'
-			//userId: '5a8e8d1809d5f4001b7fdea7'
-					// userId: `546e259ce4b0bde006d07afe`    //CON PROYECTOS
-				// userId: '581194d501c9810017bc8f48'      //con datos de usuario
 			}
 		}
 
@@ -146,14 +144,42 @@ class App extends Component {
 						filterQuery, successFn);
 						}
 
-						//'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?page=0&query={"$or":[{"name":{"$regex":"coche","$options":"i"}},{"creator":{"$regex":"coche","$options":"i"}}]}
-						//'
-
 			handleClickListViewMode() {
 				this.setState({
 					visualizationMode: 'list'
 				})
 			}
+
+			handleClickGridViewMode() {
+				this.setState({
+					visualizationMode: 'grid'
+				})
+			}
+
+			handlePagination(currentPage){
+		let successFn = (json) => {
+
+			this.setState({
+				projectsForSpecificUser: this.createProjectsWithStats(json),
+				hasFilterBeenRefreshed : false
+			});
+		}
+
+		var paginationQuery = "page="+ currentPage;
+
+		var filter = this.state.filterQuery;
+		if ( !filter ){
+			filter = {
+				creator: {
+					_id: this.state.userIdArray[this.state.randomNumber]
+				}
+			}
+			filter = JSON.stringify(filter);
+		}
+
+		this.requestServer('http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?' + paginationQuery,
+		filter, successFn);
+	}
 
 	render() {
 		return (
@@ -167,17 +193,21 @@ class App extends Component {
 						handleSort={this.handleFilter}
 						currentUserId={this.state.userId}
 						handleInput={this.handleInput}
-						handleClickListViewMode={this.handleClickListViewMode}/>
+						handleClickListViewMode={this.handleClickListViewMode}
+						handleClickGridViewMode={this.handleClickGridViewMode}
+						visualizationMode={this.state.visualizationMode}
+					/>
 					<div className={`projects--general-container-${this.state.visualizationMode}`}>
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}
 								timesLiked={x.timesLiked}
 								timesDownloaded={x.timesDownloaded}
+								handleClickTimesLiked={this.handleClickTimesLiked}
 							/>
 						))}
-
 					</div>
-					<PaginationBar userId={this.state.userId}/>
+					<PaginationBar userId={this.state.userId}
+						handlePagination={this.handlePagination} filterQuery={this.state.filterQuery} />
 				</div>
 			</div>
 		);

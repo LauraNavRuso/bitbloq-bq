@@ -24,15 +24,21 @@
   height: 50px;
 }
 
-//Visualizations action buttons
+//Visualization action buttons
 .views--grid {
   width: 35px;
   height: 35px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border: 1px solid $colorBorder;
-  background: url(../components/images/ico-vista-galeria.svg) no-repeat 11px 10px;
-  background-color: #ebebeb;
+}
+
+.views--grid-gridActive {
+	background: url(../components/images/ico-vista-galeria-soft.svg) #ebebeb no-repeat 11px 10px;
+}
+
+.views--grid-listActive {
+	background: url(../components/images/ico-vista-galeria.svg) $colorBackground no-repeat 11px 10px;
 }
 
 .views--list {
@@ -41,8 +47,14 @@
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border: 1px solid $colorBorder;
-  background: url(../components/images/ico-vista-listado.svg) no-repeat 10px 10px;
-  background-color: $colorBackground;
+}
+
+.views--list-gridActive {
+  background: url(../components/images/ico-vista-listado.svg) $colorBackground no-repeat 10px 10px;
+}
+
+.views--list-listActive {
+	background: url(../components/images/ico-vista-listado-soft.svg) #ebebeb no-repeat 10px 10px;
 }
 
 //Filter
