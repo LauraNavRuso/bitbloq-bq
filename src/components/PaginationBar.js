@@ -50,15 +50,15 @@ class PaginationBar extends React.Component {
 		.then(json =>{
 			this.setState({
 				pageProjects: json,
-				actualPage: parseInt(page) +1
+				actualPage: parseInt(page, radix) +1
 			});
 		});
 	}
 
 updateActualPage(e){
-	const nextPage =parseInt(e.target.getAttribute('data-page'));
+	const nextPage =parseInt(e.target.getAttribute('data-page'), radix);
 
-	if (nextPage != this.state.actualPage) {
+	if (nextPage !== this.state.actualPage) {
 		this.updatePagination(nextPage);
 	}
 }
