@@ -61,7 +61,7 @@ class SocialNetwork extends Component {
 	// }
 
   componentDidMount() {
-    console.log('Estoy en el componentDidMount');
+    ('Estoy en el componentDidMount');
 		this.shortenUrl(window.location.href);
   }
 

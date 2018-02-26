@@ -33,10 +33,10 @@ class PaginationBar extends React.Component {
 			.then(response => response.json())
 			.then(json =>{
 				const totalProjects = json.count;
-						console.log('Tenemos los proyectos ' + totalProjects);
+						('Tenemos los proyectos ' + totalProjects);
 
 				let totalPages = Math.ceil(totalProjects/20);
-				console.log('Tenemos las páginas ' + page);
+				('Tenemos las páginas ' + page);
 				if (totalPages === 0) totalPages = 1
 				this.setState({
 					totalProjectsUsers: totalProjects,
@@ -50,7 +50,7 @@ class PaginationBar extends React.Component {
 		fetch(apiPageUser)
 		.then(response => response.json())
 		.then(json =>{
-			console.log('Recibiendo página ' + page);
+			('Recibiendo página ' + page);
 			this.setState({
 				pageProjects: json,
 				actualPage: parseInt(page) +1
@@ -60,8 +60,8 @@ class PaginationBar extends React.Component {
 
 updateActualPage(e){
 	const nextPage =parseInt(e.target.getAttribute('data-page'));
-console.log('> página actual: ' + this.state.actualPage);
-console.log('> página next: ' + nextPage);
+('> página actual: ' + this.state.actualPage);
+('> página next: ' + nextPage);
 
 	if (nextPage != this.state.actualPage) {
 		this.updatePagination(nextPage);

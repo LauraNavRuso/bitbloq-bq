@@ -88,14 +88,14 @@ class App extends Component {
 
 	requestServer(baseApiUrl, queryUrl, callbackFn) {
 		//let creatorData = JSON.stringify(objectUserInputs);
-		console.log(queryUrl);
+		(queryUrl);
 		let apiEndpoint = baseApiUrl + '&query=' + queryUrl;
 
 		fetch(apiEndpoint)
 		.then(response => response.json())
 		.then(json => {
 			callbackFn(json);
-			console.log(json);
+			(json);
 		})
 		.catch(function(error){
 		})
@@ -103,7 +103,7 @@ class App extends Component {
 
 	//Get data from input --search button
 	handleFilter(filterQuery){
-		console.log('filterQuery', filterQuery);
+		('filterQuery', filterQuery);
 
 		let successFn = (json) => {
 			this.setState({

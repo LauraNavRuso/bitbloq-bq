@@ -32,8 +32,6 @@ class Filter extends React.Component {
     } else {
       filterQuery = JSON.stringify(filterQuery) + query;
     }
-    console.log('filterQuery', filterQuery);
-
 		this.props.handleFilter(filterQuery);
   }
 
@@ -41,7 +39,6 @@ class Filter extends React.Component {
     const projectValue = event.target.value;
 
     const filterQuery = '&project=' + projectValue;
-    console.log(filterQuery);
 
     this.handleFilter(filterQuery);
   }
@@ -50,7 +47,6 @@ class Filter extends React.Component {
     const boardValue = event.target.value;
 
     const filterQuery = '&board=' + boardValue;
-    console.log(filterQuery);
 
     this.handleFilter(filterQuery);
   }
@@ -70,8 +66,6 @@ class Filter extends React.Component {
         "$all": this.state.components
       }
     };
-
-    console.log(filterQuery);
 
     this.handleFilter(filterQuery);
   }
