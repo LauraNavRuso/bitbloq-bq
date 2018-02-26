@@ -29,8 +29,8 @@ class App extends Component {
 		this.createProjectsWithStats = this.createProjectsWithStats.bind(this);
 		this.handleClickListViewMode =
 		this.handleClickListViewMode.bind(this);
-
-		// this.handleLikeClick = this.handleLikeClick.bind(this);
+		this.handleClickGridViewMode =
+		this.handleClickGridViewMode.bind(this);
 
 		this.state = {
 			projectsForSpecificUser: [],
@@ -158,6 +158,12 @@ class App extends Component {
 				})
 			}
 
+			handleClickGridViewMode() {
+				this.setState({
+					visualizationMode: 'grid'
+				})
+			}
+
 	render() {
 		return (
 			<div className="page">
@@ -170,7 +176,8 @@ class App extends Component {
 						handleSort={this.handleFilter}
 						currentUserId={this.state.userId}
 						handleInput={this.handleInput}
-						handleClickListViewMode={this.handleClickListViewMode}/>
+						handleClickListViewMode={this.handleClickListViewMode}
+						handleClickGridViewMode={this.handleClickListViewMode}/>
 					<div className={`projects--general-container-${this.state.visualizationMode}`}>
 						{this.state.projectsForSpecificUser.map(x =>(
 							<ProjectCard idProject={x._id} name={x.name} username={x.creator.username}

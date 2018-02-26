@@ -12,8 +12,8 @@ class ActionsBar extends Component {
 					<div className="order--views--container">
 						<Sort handleSort={this.props.handleSort}
 							currentUserId={this.props.currentUserId}/>
-						<Visualization handleClickListViewMode={this.props.handleClickListViewMode} />
-											</div>
+						<Visualization handleClickListViewMode={this.props.handleClickListViewMode} handleClickGridViewMode={this.props.handleClickGridViewMode} />
+					</div>
 					<div className="filter-search--container">
 						<Filter />
 						<Search handleSearch={this.props.handleSearch}
