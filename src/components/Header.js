@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import icon from './images/icon-bitbloq.svg';
-import iconStory from './images/icon-story.svg';
-import iconStudents from './images/icon-students.svg';
 import iconUser from './images/robot.png';
 
 
@@ -20,12 +18,12 @@ class Header extends Component {
 				<nav className="header--menu">
 					<ul className="header--menu--list">
 						<li className="header--menu--link">
-							<a className="menu--link-projects" href="http://bitbloq.bq.com/#/bloqsproject" target="_blank">
+							<a className="menu--link-projects" href="http://bitbloq.bq.com/#/bloqsproject" target="_blank" rel="noopener noreferrer">
 								Proyectos
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-explore" href="http://bitbloq.bq.com/#/explore" target="_blank">
+							<a className="menu--link-explore" href="http://bitbloq.bq.com/#/explore" target="_blank" rel="noopener noreferrer">
 								Explora
 							</a>
 						</li>
@@ -35,12 +33,12 @@ class Header extends Component {
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn" target="_blank">
+							<a className="menu--link-learn" href="http://bitbloq.bq.com/#/learn" target="_blank"> rel="noopener noreferrer"
 								Aprende
 							</a>
 						</li>
 						<li className="header--menu--link">
-							<a className="menu--link-forum" href="http://bitbloq.bq.com/#/forum" target="_blank">
+							<a className="menu--link-forum" href="http://bitbloq.bq.com/#/forum" target="_blank" rel="noopener noreferrer">
 								Foro
 							</a>
 						</li>
