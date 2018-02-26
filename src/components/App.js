@@ -94,7 +94,6 @@ class App extends Component {
 		.then(response => response.json())
 		.then(json => {
 			callbackFn(json);
-			(json);
 		})
 		.catch(function(error){
 		})
