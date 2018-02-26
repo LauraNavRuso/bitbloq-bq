@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import CommunityStats from './projectCard/CommunityStats';
 
 class ProjectCard extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			likedState: 'notLiked'
+	}
+}
+
 	render() {
 		let baseImgUrl = `http://storage.googleapis.com/bitbloq-next/images/project/`;
 		let projectImgUrl = baseImgUrl + this.props.idProject;
-		// let projectImgUrl =	'http://via.placeholder.com/350x150';
 
 		const divStyleEachImg = {
 			backgroundImage: `url('${projectImgUrl}' )`,
@@ -28,7 +34,10 @@ class ProjectCard extends Component {
 
 					<div className="project-card--project-data">
 						<p className="project-card--username">de <span className="project-card--username-content" >{this.props.username}</span></p>
-						<CommunityStats  timesLiked={this.props.timesLiked} timesDownloaded={this.props.timesDownloaded} />
+						<CommunityStats  timesLiked={this.props.timesLiked} timesDownloaded={this.props.timesDownloaded}
+							idProject={this.props.idProject}
+							handleClickTimesLiked={this.props.handleClickTimesLiked}
+							likedState={this.state.likedState}/>
 					</div>
 				</div>
 			</div>

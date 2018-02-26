@@ -4,11 +4,7 @@ import iconStory from './images/icon-story.svg';
 import iconStudents from './images/icon-students.svg';
 import iconUser from './images/robot.png';
 
-
-
 class Header extends Component {
-
-
 	render() {
 		return (
 			<header className="header">

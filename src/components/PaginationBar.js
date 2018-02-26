@@ -25,7 +25,7 @@ class PaginationBar extends React.Component {
 	}
 
 	updatePagination(page){
-		let baseApi = 'https://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?';
+		let baseApi = 'http://api-next.bitbloq.k8s.bq.com/bitbloq/v1/project?';
 		let countApi = 'count=*&page=0';
 
 		var filter = this.props.filterQuery;
