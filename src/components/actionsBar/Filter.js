@@ -55,7 +55,7 @@ class Filter extends React.Component {
     const componentValue = event.target.value;
 
     if (this.state.components.includes(componentValue)){
-      this.state.components = this.state.components.filter((element) => {
+      this.setState.components = this.state.components.filter((element) => {
         return element !== componentValue
       });
     } else {
