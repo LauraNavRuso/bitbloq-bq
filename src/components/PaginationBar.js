@@ -63,7 +63,7 @@ class PaginationBar extends React.Component {
 		else
 		{
 
-		if ( page != 0 && (this.props.filterQuery === this.state.currentFilter)){
+		if ( page !== 0 && (this.props.filterQuery === this.state.currentFilter)){
 		//We call the projects page that I touch
 		fetch(apiPageUser)
 		.then(response => response.json())
